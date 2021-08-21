@@ -1,6 +1,6 @@
 {
   "name": "cssville",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -11,15 +11,16 @@
     "watch:nodemon": "nodemon -e * './build/index.js'",
     "watch:server": "lite-server -c lite-server-config.json",
     "copy-files": "copyfiles -u 1 src/**/*.html src/**/*.css build/",
-    "start": "npm-run-all clean build copy-files generate --parallel watch:build watch:nodemon watch:server --print-label"
+    "start": "npm-run-all clean build copy-files generate --parallel watch:build watch:nodemon watch:server --print-label",
+    "deploy-prepare": "npm-run-all clean build copy-files"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cssville/cssville.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "elv1s42",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/cssville/cssville/issues"
   },
