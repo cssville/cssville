@@ -2,7 +2,12 @@
   "name": "cssville",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "cssville.css",
+  "style": "cssville.css",
+  "files": [
+    "LICENSE.md",
+    "cssville.css"
+  ],
   "scripts": {
     "clean": "rimraf build",
     "build": "tsc",
@@ -10,8 +15,9 @@
     "watch:build": "tsc --watch",
     "watch:nodemon": "nodemon -e * './build/index.js'",
     "watch:server": "lite-server -c lite-server-config.json",
-    "copy-files": "copyfiles -u 1 src/**/*.html src/**/*.css build/",
-    "start": "npm-run-all clean build copy-files generate --parallel watch:build watch:nodemon watch:server --print-label",
+    "copy-files": "copyfiles -u 1 src/**/*.html src/**/*.css *.md build/",
+    "copy-css": "copyfiles -u 1 build/cssville.css /",
+    "start": "npm-run-all clean build copy-files generate copy-css --parallel watch:build watch:nodemon watch:server --print-label",
     "deploy-prepare": "npm-run-all clean build copy-files"
   },
   "repository": {
