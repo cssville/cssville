@@ -24,7 +24,7 @@ jobs:
     needs: build
     if: success() && github.ref == 'refs/heads/prod'
     steps:
-      - run: npm pack .
-      - run: npm publish .
+      - run: npm pack ./
+      - run: npm publish ./
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
