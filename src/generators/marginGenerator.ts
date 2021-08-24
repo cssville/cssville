@@ -11,6 +11,7 @@ export class MarginGenerator extends GeneratorBase {
         ["5", "64px"],
     ]);
     cssData = [
+        new CssClassData("m", ["margin"]),
         new CssClassData("mt", ["margin-top"]),
         new CssClassData("mb", ["margin-bottom"]),
         new CssClassData("ml", ["margin-left"]),

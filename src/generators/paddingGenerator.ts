@@ -11,6 +11,7 @@ export class PaddingGenerator extends GeneratorBase {
         ["5", "64px"],
     ]);
     cssData = [
+        new CssClassData("p", ["padding"]),
         new CssClassData("pt", ["padding-top"]),
         new CssClassData("pb", ["padding-bottom"]),
         new CssClassData("pl", ["padding-left"]),

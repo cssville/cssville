@@ -31,6 +31,7 @@ var MarginGenerator = /** @class */ (function (_super) {
             ["5", "64px"],
         ]);
         _this.cssData = [
+            new cssClassData_1.CssClassData("m", ["margin"]),
             new cssClassData_1.CssClassData("mt", ["margin-top"]),
             new cssClassData_1.CssClassData("mb", ["margin-bottom"]),
             new cssClassData_1.CssClassData("ml", ["margin-left"]),

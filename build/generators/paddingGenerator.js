@@ -31,6 +31,7 @@ var PaddingGenerator = /** @class */ (function (_super) {
             ["5", "64px"],
         ]);
         _this.cssData = [
+            new cssClassData_1.CssClassData("p", ["padding"]),
             new cssClassData_1.CssClassData("pt", ["padding-top"]),
             new cssClassData_1.CssClassData("pb", ["padding-bottom"]),
             new cssClassData_1.CssClassData("pl", ["padding-left"]),
