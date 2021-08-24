@@ -17,7 +17,8 @@
     "watch:server": "lite-server -c lite-server-config.json",
     "copy-files": "copyfiles -u 1 src/**/*.html src/**/*.css build/",
     "copy-css": "copyfiles -u 1 build/cssville.css .",
-    "start": "npm-run-all clean build copy-files generate copy-css --parallel watch:build watch:nodemon watch:server --print-label",
+    "copy-css-src": "copyfiles -u 1 build/cssville.css src/",
+    "start": "npm-run-all clean build copy-files generate copy-css copy-css-src --parallel watch:build watch:nodemon watch:server --print-label",
     "deploy-prepare": "npm-run-all clean build copy-files"
   },
   "repository": {
