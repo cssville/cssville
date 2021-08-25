@@ -15,37 +15,38 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.PaddingGenerator = void 0;
+exports.FontWeightGenerator = void 0;
 var cssClassData_1 = require("../data/cssClassData");
-var GeneratorBase_1 = require("./../GeneratorBase");
-var PaddingGenerator = /** @class */ (function (_super) {
-    __extends(PaddingGenerator, _super);
-    function PaddingGenerator() {
+var GeneratorBase_1 = require("../GeneratorBase");
+var FontWeightGenerator = /** @class */ (function (_super) {
+    __extends(FontWeightGenerator, _super);
+    function FontWeightGenerator() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.postfixValueMap = new Map([
-            ["0", "0px"],
-            ["1", "4px"],
-            ["2", "8px"],
-            ["3", "16px"],
-            ["4", "32px"],
-            ["5", "64px"],
+            ["normal", "normal"],
+            ["bold", "bold"],
+            ["lighter", "lighter"],
+            ["bolder", "bolder"],
+            ["100", "100"],
+            ["200", "200"],
+            ["300", "300"],
+            ["400", "400"],
+            ["500", "500"],
+            ["600", "600"],
+            ["700", "700"],
+            ["800", "800"],
+            ["900", "900"],
             ["inherit", "inherit"],
             ["initial", "initial"],
             ["revert", "revert"],
             ["unset", "unset"]
         ]);
         _this.cssData = [
-            new cssClassData_1.CssClassData("p", ["padding"]),
-            new cssClassData_1.CssClassData("pt", ["padding-top"]),
-            new cssClassData_1.CssClassData("pb", ["padding-bottom"]),
-            new cssClassData_1.CssClassData("pl", ["padding-left"]),
-            new cssClassData_1.CssClassData("pr", ["padding-right"]),
-            new cssClassData_1.CssClassData("px", ["padding-left", "padding-right"]),
-            new cssClassData_1.CssClassData("py", ["padding-top", "padding-bottom"]),
+            new cssClassData_1.CssClassData("fw", ["font-weight"])
         ];
         return _this;
     }
-    return PaddingGenerator;
+    return FontWeightGenerator;
 }(GeneratorBase_1.GeneratorBase));
-exports.PaddingGenerator = PaddingGenerator;
-//# sourceMappingURL=paddingGenerator.js.map
+exports.FontWeightGenerator = FontWeightGenerator;
+//# sourceMappingURL=fontWeightGenerator.js.map

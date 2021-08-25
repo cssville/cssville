@@ -15,37 +15,28 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.PaddingGenerator = void 0;
+exports.FlexWrapGenerator = void 0;
 var cssClassData_1 = require("../data/cssClassData");
-var GeneratorBase_1 = require("./../GeneratorBase");
-var PaddingGenerator = /** @class */ (function (_super) {
-    __extends(PaddingGenerator, _super);
-    function PaddingGenerator() {
+var GeneratorBase_1 = require("../GeneratorBase");
+var FlexWrapGenerator = /** @class */ (function (_super) {
+    __extends(FlexWrapGenerator, _super);
+    function FlexWrapGenerator() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.postfixValueMap = new Map([
-            ["0", "0px"],
-            ["1", "4px"],
-            ["2", "8px"],
-            ["3", "16px"],
-            ["4", "32px"],
-            ["5", "64px"],
+            ["nowrap", "nowrap"],
+            ["wrap", "wrap"],
+            ["wrap-reverse", "wrap-reverse"],
             ["inherit", "inherit"],
             ["initial", "initial"],
             ["revert", "revert"],
             ["unset", "unset"]
         ]);
         _this.cssData = [
-            new cssClassData_1.CssClassData("p", ["padding"]),
-            new cssClassData_1.CssClassData("pt", ["padding-top"]),
-            new cssClassData_1.CssClassData("pb", ["padding-bottom"]),
-            new cssClassData_1.CssClassData("pl", ["padding-left"]),
-            new cssClassData_1.CssClassData("pr", ["padding-right"]),
-            new cssClassData_1.CssClassData("px", ["padding-left", "padding-right"]),
-            new cssClassData_1.CssClassData("py", ["padding-top", "padding-bottom"]),
+            new cssClassData_1.CssClassData("flex-wrap", ["flex-wrap"])
         ];
         return _this;
     }
-    return PaddingGenerator;
+    return FlexWrapGenerator;
 }(GeneratorBase_1.GeneratorBase));
-exports.PaddingGenerator = PaddingGenerator;
-//# sourceMappingURL=paddingGenerator.js.map
+exports.FlexWrapGenerator = FlexWrapGenerator;
+//# sourceMappingURL=flexWrapGenerator.js.map

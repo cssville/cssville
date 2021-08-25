@@ -9,6 +9,11 @@ export class MarginGenerator extends GeneratorBase {
         ["3", "16px"],
         ["4", "32px"],
         ["5", "64px"],
+        ["auto", "auto"],
+        ["inherit", "inherit"],
+        ["initial", "initial"],
+        ["revert", "revert"],
+        ["unset", "unset"]
     ]);
     cssData = [
         new CssClassData("m", ["margin"]),

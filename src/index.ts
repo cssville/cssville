@@ -1,6 +1,15 @@
+import { IGenerator } from "./IGenerator";
 import { PaddingGenerator} from "./generators/paddingGenerator";
 import { MarginGenerator} from "./generators/marginGenerator";
-import { IGenerator } from "./IGenerator";
+import { DisplayGenerator } from "./generators/displayGenerator";
+import { FlexDirectionGenerator } from "./generators/flexDirectionGenerator";
+import { FlexGrowGenerator } from "./generators/flexGrowGenerator";
+import { FlexWrapGenerator } from "./generators/flexWrapGenerator";
+import { FlexShrinkGenerator } from "./generators/flexShrinkGenerator";
+import { FloatGenerator } from "./generators/floatGenerator";
+import { FontWeightGenerator } from "./generators/fontWeightGenerator";
+import { WidthGenerator } from "./generators/widthGenerator";
+import { FontSizeGenerator } from "./generators/fontSizeGenerator";
 
 export class Cssville {
     
@@ -8,6 +17,15 @@ export class Cssville {
     [
         new PaddingGenerator(),
         new MarginGenerator(),
+        new DisplayGenerator(),
+        new FlexDirectionGenerator(),
+        new FlexGrowGenerator(),
+        new FlexShrinkGenerator(),
+        new FlexWrapGenerator(),
+        new FloatGenerator(),
+        new FontSizeGenerator(),
+        new FontWeightGenerator(),
+        new WidthGenerator(),
     ];
 
     static css() : string {

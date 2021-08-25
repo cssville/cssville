@@ -9,6 +9,10 @@ export class PaddingGenerator extends GeneratorBase {
         ["3", "16px"],
         ["4", "32px"],
         ["5", "64px"],
+        ["inherit", "inherit"],
+        ["initial", "initial"],
+        ["revert", "revert"],
+        ["unset", "unset"]
     ]);
     cssData = [
         new CssClassData("p", ["padding"]),

@@ -15,7 +15,7 @@
     "watch:build": "tsc --watch",
     "watch:nodemon": "nodemon -e * './build/index.js'",
     "watch:server": "lite-server -c lite-server-config.json",
-    "copy-files": "copyfiles -u 1 src/**/*.html src/**/*.css build/",
+    "copy-files": "copyfiles -u 1 src/**/*.html src/**/*.css src/**/*.svg build/",
     "copy-css": "copyfiles -u 1 build/cssville.css .",
     "copy-css-src": "copyfiles -u 1 build/cssville.css src/",
     "start": "npm-run-all clean build copy-files generate copy-css copy-css-src --parallel watch:build watch:nodemon watch:server --print-label",

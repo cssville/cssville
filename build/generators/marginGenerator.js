@@ -29,6 +29,11 @@ var MarginGenerator = /** @class */ (function (_super) {
             ["3", "16px"],
             ["4", "32px"],
             ["5", "64px"],
+            ["auto", "auto"],
+            ["inherit", "inherit"],
+            ["initial", "initial"],
+            ["revert", "revert"],
+            ["unset", "unset"]
         ]);
         _this.cssData = [
             new cssClassData_1.CssClassData("m", ["margin"]),
