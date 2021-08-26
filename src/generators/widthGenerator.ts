@@ -6,6 +6,7 @@ export class WidthGenerator extends GeneratorBase {
         ["auto", "auto"],
         ["max-content", "max-content"],
         ["min-content", "min-content"],
+        ["fit-content", "fit-content"],
         ["0", "0%"],
         ["1", "8.333%"],
         ["2", "16.666%"],
@@ -27,7 +28,12 @@ export class WidthGenerator extends GeneratorBase {
         ["sm", "544px"],
         ["md", "768px"],
         ["lg", "1012px"],
-        ["xl", "1280px"]
+        ["xl", "1280px"],
+        ["16px", "16px"],
+        ["24px", "24px"],
+        ["32px", "32px"],
+        ["48px", "48px"],
+        ["64px", "64px"]
     ]);
     cssData = [
         new CssClassData("w", ["width"]),

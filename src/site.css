@@ -1,0 +1,24 @@
+html, body {
+    color: #343A40;
+    font-family: 'Nunito', sans-serif;
+}
+
+.light-green {
+    background-color: #00FFD1;
+}
+
+.dark {
+    background-color: #343A40;
+}
+
+.grey {
+    color: #cccccc;
+}
+
+.npm {
+    color: #F4F442;
+}
+
+.code {
+    font-family: 'JetBrains Mono', monospace;
+}

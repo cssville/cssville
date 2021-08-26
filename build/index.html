@@ -19,21 +19,47 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="keywords" content="CSS utility-first framework" />
     <link rel="stylesheet" type="text/css" href="cssville.css">
+    <link rel="stylesheet" type="text/css" href="site.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body style="font-family: 'Nunito', sans-serif;" class="p-0 m-0">
     <div class="mx-auto max-w-lg p-3">
-      <div class="d-flex flex-direction-row mb-5">
+      <div class="d-flex flex-direction-row pb-5">
         <img src="logo.svg" alt="logo"/>
         <img src="cssville.svg" alt="cssville" class="p-3"/>
+        <div class="flex-grow-1"></div>
+        <div class="d-flex align-items-center justify-content-center">
+          <a class="d-flex px-3 py-2 text-decoration-none color-black light-green br-2" 
+            href="https://github.com/cssville/cssville" target="_blank" rel="noopener">
+            <img src="mark-github.svg" alt="mark-github" class="h-32px w-32px"/>
+            <div class="d-flex align-items-center justify-content-center px-2">
+              <span class="fs-large fw-bold">Open source</span>
+            </div>
+          </a>
+        </div>
       </div>
-      <div class="my-5">
-        <h1 class="fs-xxx-large">Enhance your UI with <br> ready-to-use CSS utility classes</h1>
-        <p>Cssville is a utility-first CSS framework with zero dependencies.<br>
-          Apply pre-defined classes directly in your HTML <br>
-          and create a web UI ready for production.</p>
+      <div class="d-flex my-5">
+        <div class="position-absolute">
+          <h1 class="fs-xxx-large m-0 pb-4">Construct your UI with <br> ready-to-use CSS utility classes</h1>
+          <p class="fs-x-large pb-5">Cssville is a utility-first CSS framework with zero dependencies.<br>
+            Apply pre-defined classes directly in your HTML <br>
+            and create a web UI ready for production.</p>
+          <div>
+            <a class="d-flex px-3 py-2 text-decoration-none color-black light-green br-2 w-fit-content" 
+              href="https://github.com/cssville/cssville" target="_blank" rel="noopener">
+              <img src="chevron-right.svg" alt="mark-github" class="h-32px w-32px"/>
+              <div class="d-flex align-items-center justify-content-center px-2">
+                <span class="fs-large fw-bold">npm install cssville</span>
+              </div>
+              <img src="copy.svg" alt="mark-github" class="h-32px w-32px"/>
+            </a>            
+          </div>
+        </div>
+        <div class="w-12">
+          <img src="city.svg" alt="city" class="max-w-sm float-right pt-4"/>
+        </div>
       </div>
     </div>
   </body>

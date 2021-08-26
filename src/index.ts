@@ -10,11 +10,21 @@ import { FloatGenerator } from "./generators/floatGenerator";
 import { FontWeightGenerator } from "./generators/fontWeightGenerator";
 import { WidthGenerator } from "./generators/widthGenerator";
 import { FontSizeGenerator } from "./generators/fontSizeGenerator";
+import { PositionGenerator } from "./generators/positionGenerator";
+import { AlignItemsGenerator } from "./generators/alignItemsGenerator";
+import { JustifyContentGenerator } from "./generators/justifyContentGenerator";
+import { TextDecorationGenerator } from "./generators/textDecorationGenerator";
+import { HeightGenerator } from "./generators/heightGenerator";
+import { ColorGenerator } from "./generators/colorGenerator";
+import { BorderRadiusGenerator } from "./generators/borderRadiusGenerator";
 
 export class Cssville {
     
     public static generators: IGenerator[] = 
     [
+        new AlignItemsGenerator(),
+        new BorderRadiusGenerator(),
+        new ColorGenerator(),
         new PaddingGenerator(),
         new MarginGenerator(),
         new DisplayGenerator(),
@@ -25,7 +35,11 @@ export class Cssville {
         new FloatGenerator(),
         new FontSizeGenerator(),
         new FontWeightGenerator(),
+        new HeightGenerator(),
+        new JustifyContentGenerator(),
         new WidthGenerator(),
+        new TextDecorationGenerator(),
+        new PositionGenerator(),
     ];
 
     static css() : string {

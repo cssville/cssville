@@ -12,6 +12,13 @@ var floatGenerator_1 = require("./generators/floatGenerator");
 var fontWeightGenerator_1 = require("./generators/fontWeightGenerator");
 var widthGenerator_1 = require("./generators/widthGenerator");
 var fontSizeGenerator_1 = require("./generators/fontSizeGenerator");
+var positionGenerator_1 = require("./generators/positionGenerator");
+var alignItemsGenerator_1 = require("./generators/alignItemsGenerator");
+var justifyContentGenerator_1 = require("./generators/justifyContentGenerator");
+var textDecorationGenerator_1 = require("./generators/textDecorationGenerator");
+var heightGenerator_1 = require("./generators/heightGenerator");
+var colorGenerator_1 = require("./generators/colorGenerator");
+var borderRadiusGenerator_1 = require("./generators/borderRadiusGenerator");
 var Cssville = /** @class */ (function () {
     function Cssville() {
     }
@@ -40,6 +47,9 @@ var Cssville = /** @class */ (function () {
         return css;
     };
     Cssville.generators = [
+        new alignItemsGenerator_1.AlignItemsGenerator(),
+        new borderRadiusGenerator_1.BorderRadiusGenerator(),
+        new colorGenerator_1.ColorGenerator(),
         new paddingGenerator_1.PaddingGenerator(),
         new marginGenerator_1.MarginGenerator(),
         new displayGenerator_1.DisplayGenerator(),
@@ -50,7 +60,11 @@ var Cssville = /** @class */ (function () {
         new floatGenerator_1.FloatGenerator(),
         new fontSizeGenerator_1.FontSizeGenerator(),
         new fontWeightGenerator_1.FontWeightGenerator(),
+        new heightGenerator_1.HeightGenerator(),
+        new justifyContentGenerator_1.JustifyContentGenerator(),
         new widthGenerator_1.WidthGenerator(),
+        new textDecorationGenerator_1.TextDecorationGenerator(),
+        new positionGenerator_1.PositionGenerator(),
     ];
     return Cssville;
 }());
