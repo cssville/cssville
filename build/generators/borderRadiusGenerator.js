@@ -29,6 +29,7 @@ var BorderRadiusGenerator = /** @class */ (function (_super) {
             ["3", "16px"],
             ["4", "32px"],
             ["5", "64px"],
+            ["50p", "50%"],
             ["inherit", "inherit"],
             ["initial", "initial"],
             ["revert", "revert"],

@@ -3,12 +3,12 @@ html, body {
     font-family: 'Nunito', sans-serif;
 }
 
-.light-green {
-    background-color: #00FFD1;
-}
-
 .dark {
     background-color: #343A40;
+}
+
+.red {
+    background-color: #FF6584;
 }
 
 .grey {

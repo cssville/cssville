@@ -42,7 +42,7 @@ var Cssville = /** @class */ (function () {
                 var g = Cssville.generators[x];
                 innerCss += g.generate(prefix);
             }
-            css += "@media (min-width: " + value + ") { " + innerCss + "} ";
+            css += "@media (max-width: " + value + ") { " + innerCss + "} ";
         });
         return css;
     };
