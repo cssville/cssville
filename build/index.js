@@ -25,11 +25,11 @@ var Cssville = /** @class */ (function () {
     Cssville.css = function () {
         var css = "";
         var prefixValueMap = new Map([
-            ["xs", "320px"],
-            ["sm", "544px"],
-            ["md", "768px"],
+            ["xl", "1280px"],
             ["lg", "1012px"],
-            ["xl", "1280px"]
+            ["md", "768px"],
+            ["sm", "544px"],
+            ["xs", "320px"],
         ]);
         for (var x = 0; x < Cssville.generators.length; x++) {
             var g = Cssville.generators[x];
