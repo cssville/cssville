@@ -5,13 +5,13 @@ export class GeneratorBase implements IGenerator {
 
     public constructor () { }
 
-    public postfixValueMap: Map<string, string> = new Map();
+    public postfixValuesMap: Map<string, string[]> = new Map();
     public cssData: CssClassData[] = [];
 
     generate(prefix: string = ""): string {
         var cssPart = "";
         this.cssData.forEach(data => {
-            cssPart += data.css(prefix, this.postfixValueMap);
+            cssPart += data.css(prefix, this.postfixValuesMap);
         });
         return cssPart;
     }

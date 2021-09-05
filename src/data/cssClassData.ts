@@ -7,13 +7,15 @@ export class CssClassData {
     public className : string;
     public cssProperties : string[];
 
-    css(prefix: string = "", postfixValueMap: Map<string, string>): string {
+    css(prefix: string = "", postfixValuesMap: Map<string, string[]>): string {
         var css = "";
-        postfixValueMap.forEach((value: string, key: string) => {
+        postfixValueMap.forEach((value: string[], key: string) => {
             var postfix = key;
             var innerProperties = "";
             this.cssProperties.forEach(cssProperty => {
-                innerProperties += `${cssProperty}: ${value}; `;
+                value.forEach(v => {
+                   innerProperties += `${cssProperty}: ${v}; `; 
+                });
             });
 
             css += `.${prefix === "" ? "" : `${prefix}-`}${this.className}-${postfix} { ${innerProperties}} `;

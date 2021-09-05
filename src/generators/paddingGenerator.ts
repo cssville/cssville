@@ -3,16 +3,16 @@ import { GeneratorBase } from "./../GeneratorBase";
 
 export class PaddingGenerator extends GeneratorBase {
     postfixValueMap = new Map([
-        ["0", "0px"],
-        ["1", "4px"],
-        ["2", "8px"],
-        ["3", "16px"],
-        ["4", "32px"],
-        ["5", "64px"],
-        ["inherit", "inherit"],
-        ["initial", "initial"],
-        ["revert", "revert"],
-        ["unset", "unset"]
+        ["0", ["0px"]],
+        ["1", ["4px"]],
+        ["2", ["8px"]],
+        ["3", ["16px"]],
+        ["4", ["32px"]],
+        ["5", ["64px"]],
+        ["inherit", ["inherit"]],
+        ["initial", ["initial"]],
+        ["revert", ["revert"]],
+        ["unset", ["unset"]]
     ]);
     cssData = [
         new CssClassData("p", ["padding"]),
