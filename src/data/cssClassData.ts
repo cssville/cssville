@@ -9,7 +9,7 @@ export class CssClassData {
 
     css(prefix: string = "", postfixValuesMap: Map<string, string[]>): string {
         var css = "";
-        postfixValueMap.forEach((value: string[], key: string) => {
+        postfixValuesMap.forEach((value: string[], key: string) => {
             var postfix = key;
             var innerProperties = "";
             this.cssProperties.forEach(cssProperty => {
