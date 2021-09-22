@@ -2,7 +2,7 @@ import { CssClassData } from "../data/cssClassData";
 import { GeneratorBase } from "../GeneratorBase";
 
 export class HeightGenerator extends GeneratorBase {
-    postfixValueMap = new Map([
+    postfixValuesMap = new Map([
         ["auto", ["auto"]],
         ["max-content", ["max-content"]],
         ["min-content", ["min-content"]],

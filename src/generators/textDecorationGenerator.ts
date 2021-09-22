@@ -2,7 +2,7 @@ import { CssClassData } from "../data/cssClassData";
 import { GeneratorBase } from "../GeneratorBase";
 
 export class TextDecorationGenerator extends GeneratorBase {
-    postfixValueMap = new Map([
+    postfixValuesMap = new Map([
         ["underline", ["underline"]],
         ["overline", ["overline"]],
         ["none", ["none"]],

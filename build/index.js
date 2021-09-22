@@ -33,14 +33,16 @@ var Cssville = /** @class */ (function () {
         ]);
         for (var x = 0; x < Cssville.generators.length; x++) {
             var g = Cssville.generators[x];
-            css += g.generate("");
+            var cssPart = g.generate("");
+            css += cssPart;
         }
         prefixValueMap.forEach(function (value, key) {
             var innerCss = "";
             var prefix = key;
             for (var x = 0; x < Cssville.generators.length; x++) {
                 var g = Cssville.generators[x];
-                innerCss += g.generate(prefix);
+                var cssPartForPrefix = g.generate(prefix);
+                innerCss += cssPartForPrefix;
             }
             css += "@media (max-width: " + value + ") { " + innerCss + "} ";
         });

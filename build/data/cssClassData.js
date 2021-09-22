@@ -6,15 +6,17 @@ var CssClassData = /** @class */ (function () {
         this.className = className;
         this.cssProperties = cssProperties;
     }
-    CssClassData.prototype.css = function (prefix, postfixValueMap) {
+    CssClassData.prototype.css = function (prefix, postfixValuesMap) {
         var _this = this;
         if (prefix === void 0) { prefix = ""; }
         var css = "";
-        postfixValueMap.forEach(function (value, key) {
+        postfixValuesMap.forEach(function (value, key) {
             var postfix = key;
             var innerProperties = "";
             _this.cssProperties.forEach(function (cssProperty) {
-                innerProperties += cssProperty + ": " + value + "; ";
+                value.forEach(function (v) {
+                    innerProperties += cssProperty + ": " + v + "; ";
+                });
             });
             css += "." + (prefix === "" ? "" : prefix + "-") + _this.className + "-" + postfix + " { " + innerProperties + "} ";
         });

@@ -2,7 +2,7 @@ import { CssClassData } from "../data/cssClassData";
 import { GeneratorBase } from "../GeneratorBase";
 
 export class FontWeightGenerator extends GeneratorBase {
-    postfixValueMap = new Map([
+    postfixValuesMap = new Map([
         ["normal", ["normal"]],
         ["bold", ["bold"]],
         ["lighter", ["lighter"]],

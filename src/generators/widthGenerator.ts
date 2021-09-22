@@ -2,8 +2,7 @@ import { CssClassData } from "../data/cssClassData";
 import { GeneratorBase } from "../GeneratorBase";
 
 export class WidthGenerator extends GeneratorBase {
-    postfixValueMap = new Map([
-        ["auto", ["auto"]],
+    postfixValuesMap = new Map([
         ["max-content", ["max-content"]],
         ["min-content", ["min-content"]],
         ["fit-content", ["fit-content"]],

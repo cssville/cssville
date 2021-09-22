@@ -2,7 +2,7 @@ import { CssClassData } from "../data/cssClassData";
 import { GeneratorBase } from "../GeneratorBase";
 
 export class MarginGenerator extends GeneratorBase {
-    postfixValueMap = new Map([
+    postfixValuesMap = new Map([
         ["0", ["0px"]],
         ["1", ["4px"]],
         ["2", ["8px"]],

@@ -22,24 +22,24 @@ var FontWeightGenerator = /** @class */ (function (_super) {
     __extends(FontWeightGenerator, _super);
     function FontWeightGenerator() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.postfixValueMap = new Map([
-            ["normal", "normal"],
-            ["bold", "bold"],
-            ["lighter", "lighter"],
-            ["bolder", "bolder"],
-            ["100", "100"],
-            ["200", "200"],
-            ["300", "300"],
-            ["400", "400"],
-            ["500", "500"],
-            ["600", "600"],
-            ["700", "700"],
-            ["800", "800"],
-            ["900", "900"],
-            ["inherit", "inherit"],
-            ["initial", "initial"],
-            ["revert", "revert"],
-            ["unset", "unset"]
+        _this.postfixValuesMap = new Map([
+            ["normal", ["normal"]],
+            ["bold", ["bold"]],
+            ["lighter", ["lighter"]],
+            ["bolder", ["bolder"]],
+            ["100", ["100"]],
+            ["200", ["200"]],
+            ["300", ["300"]],
+            ["400", ["400"]],
+            ["500", ["500"]],
+            ["600", ["600"]],
+            ["700", ["700"]],
+            ["800", ["800"]],
+            ["900", ["900"]],
+            ["inherit", ["inherit"]],
+            ["initial", ["initial"]],
+            ["revert", ["revert"]],
+            ["unset", ["unset"]]
         ]);
         _this.cssData = [
             new cssClassData_1.CssClassData("fw", ["font-weight"])

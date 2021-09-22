@@ -22,17 +22,17 @@ var PaddingGenerator = /** @class */ (function (_super) {
     __extends(PaddingGenerator, _super);
     function PaddingGenerator() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.postfixValueMap = new Map([
-            ["0", "0px"],
-            ["1", "4px"],
-            ["2", "8px"],
-            ["3", "16px"],
-            ["4", "32px"],
-            ["5", "64px"],
-            ["inherit", "inherit"],
-            ["initial", "initial"],
-            ["revert", "revert"],
-            ["unset", "unset"]
+        _this.postfixValuesMap = new Map([
+            ["0", ["0px"]],
+            ["1", ["4px"]],
+            ["2", ["8px"]],
+            ["3", ["16px"]],
+            ["4", ["32px"]],
+            ["5", ["64px"]],
+            ["inherit", ["inherit"]],
+            ["initial", ["initial"]],
+            ["revert", ["revert"]],
+            ["unset", ["unset"]]
         ]);
         _this.cssData = [
             new cssClassData_1.CssClassData("p", ["padding"]),

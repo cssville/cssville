@@ -2,7 +2,7 @@ import { CssClassData } from "../data/cssClassData";
 import { GeneratorBase } from "../GeneratorBase";
 
 export class FlexDirectionGenerator extends GeneratorBase {
-    postfixValueMap = new Map([
+    postfixValuesMap = new Map([
         ["row", ["row"]],
         ["row-reverse", ["row-reverse"]],
         ["column", ["column"]],

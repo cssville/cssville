@@ -22,26 +22,26 @@ var FontSizeGenerator = /** @class */ (function (_super) {
     __extends(FontSizeGenerator, _super);
     function FontSizeGenerator() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.postfixValueMap = new Map([
-            ["xx-small", "xx-small"],
-            ["x-small", "x-small"],
-            ["small", "small"],
-            ["medium", "medium"],
-            ["large", "large"],
-            ["x-large", "x-large"],
-            ["xx-large", "xx-large"],
-            ["xxx-large", "xxx-large"],
-            ["smaller", "smaller"],
-            ["larger", "larger"],
-            ["1rem", "1rem"],
-            ["2rem", "2rem"],
-            ["3rem", "3rem"],
-            ["4rem", "4rem"],
-            ["5rem", "5rem"],
-            ["inherit", "inherit"],
-            ["initial", "initial"],
-            ["revert", "revert"],
-            ["unset", "unset"]
+        _this.postfixValuesMap = new Map([
+            ["xx-small", ["xx-small"]],
+            ["x-small", ["x-small"]],
+            ["small", ["small"]],
+            ["medium", ["medium"]],
+            ["large", ["large"]],
+            ["x-large", ["x-large"]],
+            ["xx-large", ["xx-large"]],
+            ["xxx-large", ["48px", "xxx-large"]],
+            ["smaller", ["smaller"]],
+            ["larger", ["larger"]],
+            ["1rem", ["1rem"]],
+            ["2rem", ["2rem"]],
+            ["3rem", ["3rem"]],
+            ["4rem", ["4rem"]],
+            ["5rem", ["5rem"]],
+            ["inherit", ["inherit"]],
+            ["initial", ["initial"]],
+            ["revert", ["revert"]],
+            ["unset", ["unset"]]
         ]);
         _this.cssData = [
             new cssClassData_1.CssClassData("fs", ["font-size"])

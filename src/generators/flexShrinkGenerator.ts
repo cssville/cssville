@@ -2,7 +2,7 @@ import { CssClassData } from "../data/cssClassData";
 import { GeneratorBase } from "../GeneratorBase";
 
 export class FlexShrinkGenerator extends GeneratorBase {
-    postfixValueMap = new Map([
+    postfixValuesMap = new Map([
         ["0", ["0"]],
         ["1", ["1"]],
         ["2", ["2"]],
@@ -13,6 +13,6 @@ export class FlexShrinkGenerator extends GeneratorBase {
         ["unset", ["unset"]]
     ]);
     cssData = [
-        new CssClassData("flex-shrink", ["flex-shrink"])
+        new CssClassData("flex-shrink", ["-o-flex-shrink", "-webkit-flex-shrink", "flex-shrink"])
     ];
 }

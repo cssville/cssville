@@ -22,15 +22,15 @@ var FlexDirectionGenerator = /** @class */ (function (_super) {
     __extends(FlexDirectionGenerator, _super);
     function FlexDirectionGenerator() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.postfixValueMap = new Map([
-            ["row", "row"],
-            ["row-reverse", "row-reverse"],
-            ["column", "column"],
-            ["column-reverse", "column-reverse"],
-            ["inherit", "inherit"],
-            ["initial", "initial"],
-            ["revert", "revert"],
-            ["unset", "unset"]
+        _this.postfixValuesMap = new Map([
+            ["row", ["row"]],
+            ["row-reverse", ["row-reverse"]],
+            ["column", ["column"]],
+            ["column-reverse", ["column-reverse"]],
+            ["inherit", ["inherit"]],
+            ["initial", ["initial"]],
+            ["revert", ["revert"]],
+            ["unset", ["unset"]]
         ]);
         _this.cssData = [
             new cssClassData_1.CssClassData("flex-direction", ["flex-direction"])

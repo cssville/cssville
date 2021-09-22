@@ -2,7 +2,7 @@ import { CssClassData } from "../data/cssClassData";
 import { GeneratorBase } from "../GeneratorBase";
 
 export class BorderRadiusGenerator extends GeneratorBase {
-    postfixValueMap = new Map([
+    postfixValuesMap = new Map([
         ["0", ["0px"]],
         ["1", ["4px"]],
         ["2", ["8px"]],
@@ -16,10 +16,10 @@ export class BorderRadiusGenerator extends GeneratorBase {
         ["unset", ["unset"]]
     ]);
     cssData = [
-        new CssClassData("br", ["border-radius"]),
-        new CssClassData("br-top-left", ["border-top-left-radius"]),
-        new CssClassData("br-top-right", ["border-top-right-radius"]),
-        new CssClassData("br-bottom-right", ["border-bottom-right-radius"]),
-        new CssClassData("br-bottom-left", ["border-bottom-left-radius"])
+        new CssClassData("br", ["-ms-border-radius", "border-radius"]),
+        new CssClassData("br-top-left", ["-ms-border-top-left-radius", "border-top-left-radius"]),
+        new CssClassData("br-top-right", ["-ms-border-top-right-radius", "border-top-right-radius"]),
+        new CssClassData("br-bottom-right", ["-ms-border-bottom-right-radius", "border-bottom-right-radius"]),
+        new CssClassData("br-bottom-left", ["-ms-border-bottom-left-radius", "border-bottom-left-radius"])
     ];
 }

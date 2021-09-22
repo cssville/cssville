@@ -22,18 +22,18 @@ var FlexGrowGenerator = /** @class */ (function (_super) {
     __extends(FlexGrowGenerator, _super);
     function FlexGrowGenerator() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.postfixValueMap = new Map([
-            ["0", "0"],
-            ["1", "1"],
-            ["2", "2"],
-            ["3", "3"],
-            ["inherit", "inherit"],
-            ["initial", "initial"],
-            ["revert", "revert"],
-            ["unset", "unset"]
+        _this.postfixValuesMap = new Map([
+            ["0", ["0"]],
+            ["1", ["1"]],
+            ["2", ["2"]],
+            ["3", ["3"]],
+            ["inherit", ["inherit"]],
+            ["initial", ["initial"]],
+            ["revert", ["revert"]],
+            ["unset", ["unset"]]
         ]);
         _this.cssData = [
-            new cssClassData_1.CssClassData("flex-grow", ["flex-grow"])
+            new cssClassData_1.CssClassData("flex-grow", ["-o-flex-grow", "-webkit-flex-grow", "flex-grow"])
         ];
         return _this;
     }

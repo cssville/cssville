@@ -22,17 +22,17 @@ var FlexWrapGenerator = /** @class */ (function (_super) {
     __extends(FlexWrapGenerator, _super);
     function FlexWrapGenerator() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.postfixValueMap = new Map([
-            ["nowrap", "nowrap"],
-            ["wrap", "wrap"],
-            ["wrap-reverse", "wrap-reverse"],
-            ["inherit", "inherit"],
-            ["initial", "initial"],
-            ["revert", "revert"],
-            ["unset", "unset"]
+        _this.postfixValuesMap = new Map([
+            ["nowrap", ["nowrap"]],
+            ["wrap", ["wrap"]],
+            ["wrap-reverse", ["wrap-reverse"]],
+            ["inherit", ["inherit"]],
+            ["initial", ["initial"]],
+            ["revert", ["revert"]],
+            ["unset", ["unset"]]
         ]);
         _this.cssData = [
-            new cssClassData_1.CssClassData("flex-wrap", ["flex-wrap"])
+            new cssClassData_1.CssClassData("flex-wrap", ["-moz-flex-wrap", "-ms-flex-wrap", "-o-flex-wrap", "-webkit-flex-wrap", "flex-wrap"])
         ];
         return _this;
     }

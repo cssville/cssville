@@ -22,16 +22,16 @@ var PositionGenerator = /** @class */ (function (_super) {
     __extends(PositionGenerator, _super);
     function PositionGenerator() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.postfixValueMap = new Map([
-            ["static", "static"],
-            ["relative", "relative"],
-            ["absolute", "absolute"],
-            ["fixed", "fixed"],
-            ["sticky", "sticky"],
-            ["inherit", "inherit"],
-            ["initial", "initial"],
-            ["revert", "revert"],
-            ["unset", "unset"]
+        _this.postfixValuesMap = new Map([
+            ["static", ["static"]],
+            ["relative", ["relative"]],
+            ["absolute", ["absolute"]],
+            ["fixed", ["fixed"]],
+            ["sticky", ["sticky"]],
+            ["inherit", ["inherit"]],
+            ["initial", ["initial"]],
+            ["revert", ["revert"]],
+            ["unset", ["unset"]]
         ]);
         _this.cssData = [
             new cssClassData_1.CssClassData("position", ["position"]),

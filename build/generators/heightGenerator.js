@@ -22,19 +22,19 @@ var HeightGenerator = /** @class */ (function (_super) {
     __extends(HeightGenerator, _super);
     function HeightGenerator() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.postfixValueMap = new Map([
-            ["auto", "auto"],
-            ["max-content", "max-content"],
-            ["min-content", "min-content"],
-            ["inherit", "inherit"],
-            ["initial", "initial"],
-            ["revert", "revert"],
-            ["unset", "unset"],
-            ["16px", "16px"],
-            ["24px", "24px"],
-            ["32px", "32px"],
-            ["48px", "48px"],
-            ["64px", "64px"]
+        _this.postfixValuesMap = new Map([
+            ["auto", ["auto"]],
+            ["max-content", ["max-content"]],
+            ["min-content", ["min-content"]],
+            ["inherit", ["inherit"]],
+            ["initial", ["initial"]],
+            ["revert", ["revert"]],
+            ["unset", ["unset"]],
+            ["16px", ["16px"]],
+            ["24px", ["24px"]],
+            ["32px", ["32px"]],
+            ["48px", ["48px"]],
+            ["64px", ["64px"]]
         ]);
         _this.cssData = [
             new cssClassData_1.CssClassData("h", ["height"])

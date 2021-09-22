@@ -14,7 +14,7 @@ export class CssClassData {
             var innerProperties = "";
             this.cssProperties.forEach(cssProperty => {
                 value.forEach(v => {
-                   innerProperties += `${cssProperty}: ${v}; `; 
+                   innerProperties += `${cssProperty}: ${v}; `;
                 });
             });
 

@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.GeneratorBase = void 0;
 var GeneratorBase = /** @class */ (function () {
     function GeneratorBase() {
-        this.postfixValueMap = new Map();
+        this.postfixValuesMap = new Map();
         this.cssData = [];
     }
     GeneratorBase.prototype.generate = function (prefix) {
@@ -11,7 +11,7 @@ var GeneratorBase = /** @class */ (function () {
         if (prefix === void 0) { prefix = ""; }
         var cssPart = "";
         this.cssData.forEach(function (data) {
-            cssPart += data.css(prefix, _this.postfixValueMap);
+            cssPart += data.css(prefix, _this.postfixValuesMap);
         });
         return cssPart;
     };

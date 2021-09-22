@@ -22,14 +22,14 @@ var TextDecorationGenerator = /** @class */ (function (_super) {
     __extends(TextDecorationGenerator, _super);
     function TextDecorationGenerator() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.postfixValueMap = new Map([
-            ["underline", "underline"],
-            ["overline", "overline"],
-            ["none", "none"],
-            ["inherit", "inherit"],
-            ["initial", "initial"],
-            ["revert", "revert"],
-            ["unset", "unset"]
+        _this.postfixValuesMap = new Map([
+            ["underline", ["underline"]],
+            ["overline", ["overline"]],
+            ["none", ["none"]],
+            ["inherit", ["inherit"]],
+            ["initial", ["initial"]],
+            ["revert", ["revert"]],
+            ["unset", ["unset"]]
         ]);
         _this.cssData = [
             new cssClassData_1.CssClassData("text-decoration", ["text-decoration"])

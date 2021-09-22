@@ -2,7 +2,7 @@ import { CssClassData } from "../data/cssClassData";
 import { GeneratorBase } from "../GeneratorBase";
 
 export class FlexGrowGenerator extends GeneratorBase {
-    postfixValueMap = new Map([
+    postfixValuesMap = new Map([
         ["0", ["0"]],
         ["1", ["1"]],
         ["2", ["2"]],
@@ -13,6 +13,6 @@ export class FlexGrowGenerator extends GeneratorBase {
         ["unset", ["unset"]]
     ]);
     cssData = [
-        new CssClassData("flex-grow", ["flex-grow"])
+        new CssClassData("flex-grow", ["-o-flex-grow", "-webkit-flex-grow", "flex-grow"])
     ];
 }

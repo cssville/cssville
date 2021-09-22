@@ -22,14 +22,14 @@ var ColorGenerator = /** @class */ (function (_super) {
     __extends(ColorGenerator, _super);
     function ColorGenerator() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.postfixValueMap = new Map([
-            ["black", "black"],
-            ["white", "white"],
-            ["transparent", "transparent"],
-            ["inherit", "inherit"],
-            ["initial", "initial"],
-            ["revert", "revert"],
-            ["unset", "unset"]
+        _this.postfixValuesMap = new Map([
+            ["black", ["black"]],
+            ["white", ["white"]],
+            ["transparent", ["transparent"]],
+            ["inherit", ["inherit"]],
+            ["initial", ["initial"]],
+            ["revert", ["revert"]],
+            ["unset", ["unset"]]
         ]);
         _this.cssData = [
             new cssClassData_1.CssClassData("color", ["color"])

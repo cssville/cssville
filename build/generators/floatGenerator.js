@@ -22,16 +22,14 @@ var FloatGenerator = /** @class */ (function (_super) {
     __extends(FloatGenerator, _super);
     function FloatGenerator() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.postfixValueMap = new Map([
-            ["left", "left"],
-            ["right", "right"],
-            ["none", "none"],
-            ["inline-start", "inline-start"],
-            ["inline-end", "inline-end"],
-            ["inherit", "inherit"],
-            ["initial", "initial"],
-            ["revert", "revert"],
-            ["unset", "unset"]
+        _this.postfixValuesMap = new Map([
+            ["left", ["left"]],
+            ["right", ["right"]],
+            ["none", ["none"]],
+            ["inherit", ["inherit"]],
+            ["initial", ["initial"]],
+            ["revert", ["revert"]],
+            ["unset", ["unset"]]
         ]);
         _this.cssData = [
             new cssClassData_1.CssClassData("float", ["float"])

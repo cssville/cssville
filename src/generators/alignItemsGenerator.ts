@@ -2,7 +2,7 @@ import { CssClassData } from "../data/cssClassData";
 import { GeneratorBase } from "../GeneratorBase";
 
 export class AlignItemsGenerator extends GeneratorBase {
-    postfixValueMap = new Map([
+    postfixValuesMap = new Map([
         ["normal", ["normal"]],
         ["stretch", ["stretch"]],
         ["center", ["center"]],
@@ -21,6 +21,6 @@ export class AlignItemsGenerator extends GeneratorBase {
         ["unset", ["unset"]]
     ]);
     cssData = [
-        new CssClassData("align-items", ["align-items"])
+        new CssClassData("align-items", ["-ms-align-items", "-o-align-items", "-webkit-align-items", "align-items"])
     ];
 }

@@ -22,26 +22,26 @@ var JustifyContentGenerator = /** @class */ (function (_super) {
     __extends(JustifyContentGenerator, _super);
     function JustifyContentGenerator() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.postfixValueMap = new Map([
-            ["center", "center"],
-            ["start", "start"],
-            ["flex-start", "flex-start"],
-            ["end", "end"],
-            ["flex-end", "flex-end"],
-            ["normal", "normal"],
-            ["space-between", "space-between"],
-            ["space-around", "space-around"],
-            ["space-evenly", "space-evenly"],
-            ["stretch", "stretch"],
-            ["safe-center", "safe center"],
-            ["unsafe-center", "unsafe center"],
-            ["inherit", "inherit"],
-            ["initial", "initial"],
-            ["revert", "revert"],
-            ["unset", "unset"]
+        _this.postfixValuesMap = new Map([
+            ["center", ["center"]],
+            ["start", ["start"]],
+            ["flex-start", ["flex-start"]],
+            ["end", ["end"]],
+            ["flex-end", ["flex-end"]],
+            ["normal", ["normal"]],
+            ["space-between", ["space-between"]],
+            ["space-around", ["space-around"]],
+            ["space-evenly", ["space-evenly"]],
+            ["stretch", ["stretch"]],
+            ["safe-center", ["safe center"]],
+            ["unsafe-center", ["unsafe center"]],
+            ["inherit", ["inherit"]],
+            ["initial", ["initial"]],
+            ["revert", ["revert"]],
+            ["unset", ["unset"]]
         ]);
         _this.cssData = [
-            new cssClassData_1.CssClassData("justify-content", ["justify-content"])
+            new cssClassData_1.CssClassData("justify-content", ["-o-justify-content", "-webkit-justify-content", "justify-content"])
         ];
         return _this;
     }

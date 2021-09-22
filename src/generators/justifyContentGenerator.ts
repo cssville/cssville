@@ -2,7 +2,7 @@ import { CssClassData } from "../data/cssClassData";
 import { GeneratorBase } from "../GeneratorBase";
 
 export class JustifyContentGenerator extends GeneratorBase {
-    postfixValueMap = new Map([
+    postfixValuesMap = new Map([
         ["center", ["center"]],
         ["start", ["start"]],
         ["flex-start", ["flex-start"]],
@@ -21,6 +21,6 @@ export class JustifyContentGenerator extends GeneratorBase {
         ["unset", ["unset"]]
     ]);
     cssData = [
-        new CssClassData("justify-content", ["justify-content"])
+        new CssClassData("justify-content", ["-o-justify-content", "-webkit-justify-content", "justify-content"])
     ];
 }

@@ -1,5 +1,5 @@
 import fs = require('fs');
 import { Cssville } from '.';
 
-
-fs.writeFile("build/cssville.css", Cssville.css(), () => {});
+var css = Cssville.css();
+fs.writeFile("build/cssville.css", css, () => { console.log("done."); });
