@@ -20,6 +20,7 @@ var heightGenerator_1 = require("./generators/heightGenerator");
 var colorGenerator_1 = require("./generators/colorGenerator");
 var borderRadiusGenerator_1 = require("./generators/borderRadiusGenerator");
 var cursorGenerator_1 = require("./generators/cursorGenerator");
+var backgroundColorGenerator_1 = require("./generators/backgroundColorGenerator");
 var Cssville = /** @class */ (function () {
     function Cssville() {
     }
@@ -52,6 +53,7 @@ var Cssville = /** @class */ (function () {
     Cssville.generators = [
         new alignItemsGenerator_1.AlignItemsGenerator(),
         new borderRadiusGenerator_1.BorderRadiusGenerator(),
+        new backgroundColorGenerator_1.BackgroundColorGenerator(),
         new colorGenerator_1.ColorGenerator(),
         new cursorGenerator_1.CursorGenerator(),
         new paddingGenerator_1.PaddingGenerator(),

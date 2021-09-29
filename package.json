@@ -1,6 +1,6 @@
 {
   "name": "cssville",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "",
   "main": "cssville.css",
   "style": "cssville.css",
@@ -18,7 +18,7 @@
     "copy-css": "copyfiles -u 1 build/cssville.css .",
     "copy-css-src": "copyfiles -u 1 build/cssville.css src/",
     "start": "npm-run-all clean build copy-files generate copy-css copy-css-src --parallel watch:build watch:server --print-label",
-    "deploy-prepare": "npm-run-all clean build copy-files"
+    "deploy-prepare": "npm-run-all clean build copy-files generate copy-css copy-css-src"
   },
   "repository": {
     "type": "git",
