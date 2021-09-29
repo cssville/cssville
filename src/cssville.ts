@@ -18,6 +18,7 @@ import { HeightGenerator } from "./generators/heightGenerator";
 import { ColorGenerator } from "./generators/colorGenerator";
 import { BorderRadiusGenerator } from "./generators/borderRadiusGenerator";
 import { CursorGenerator } from "./generators/cursorGenerator";
+import { BackgroundColorGenerator } from "./generators/backgroundColorGenerator";
 
 export class Cssville {
     
@@ -25,6 +26,7 @@ export class Cssville {
     [
         new AlignItemsGenerator(),
         new BorderRadiusGenerator(),
+        new BackgroundColorGenerator(),
         new ColorGenerator(),
         new CursorGenerator(),
         new PaddingGenerator(),
