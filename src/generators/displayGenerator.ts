@@ -23,6 +23,8 @@ export class DisplayGenerator extends GeneratorBase {
         ["block-flow-root", ["block flow-root"]],
         ["table", ["table"]],
         ["table-row", ["table-row"]],
+        ["table-column", ["table-column"]],
+        ["table-cell", ["table-cell"]],
         ["list-item", ["list-item"]],
         ["inherit", ["inherit"]],
         ["initial", ["initial"]],
