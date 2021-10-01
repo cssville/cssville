@@ -21,6 +21,7 @@ var colorGenerator_1 = require("./generators/colorGenerator");
 var borderRadiusGenerator_1 = require("./generators/borderRadiusGenerator");
 var cursorGenerator_1 = require("./generators/cursorGenerator");
 var backgroundColorGenerator_1 = require("./generators/backgroundColorGenerator");
+var textAlignGenerator_1 = require("./generators/textAlignGenerator");
 var Cssville = /** @class */ (function () {
     function Cssville() {
     }
@@ -69,6 +70,7 @@ var Cssville = /** @class */ (function () {
         new heightGenerator_1.HeightGenerator(),
         new justifyContentGenerator_1.JustifyContentGenerator(),
         new widthGenerator_1.WidthGenerator(),
+        new textAlignGenerator_1.TextAlignGenerator(),
         new textDecorationGenerator_1.TextDecorationGenerator(),
         new positionGenerator_1.PositionGenerator(),
     ];
