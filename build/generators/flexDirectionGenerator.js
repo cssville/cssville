@@ -33,7 +33,7 @@ var FlexDirectionGenerator = /** @class */ (function (_super) {
             ["unset", ["unset"]]
         ]);
         _this.cssData = [
-            new cssClassData_1.CssClassData("flex-direction", ["flex-direction"])
+            new cssClassData_1.CssClassData("flex-direction", ["flex-direction"], _this.postfixValuesMap)
         ];
         return _this;
     }

@@ -11,7 +11,7 @@ export class GeneratorBase implements IGenerator {
     generate(prefix: string = ""): string {
         var cssPart = "";
         this.cssData.forEach(data => {
-            cssPart += data.css(prefix, this.postfixValuesMap);
+            cssPart += data.css(prefix);
         });
         return cssPart;
     }

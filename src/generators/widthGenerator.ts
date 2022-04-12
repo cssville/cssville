@@ -35,8 +35,8 @@ export class WidthGenerator extends GeneratorBase {
         ["64px", ["64px"]]
     ]);
     cssData = [
-        new CssClassData("w", ["width"]),
-        new CssClassData("max-w", ["max-width"]),
-        new CssClassData("min-w", ["min-width"])
+        new CssClassData("w", ["width"], this.postfixValuesMap),
+        new CssClassData("max-w", ["max-width"], this.postfixValuesMap),
+        new CssClassData("min-w", ["min-width"], this.postfixValuesMap)
     ];
 }

@@ -35,13 +35,13 @@ var PaddingGenerator = /** @class */ (function (_super) {
             ["unset", ["unset"]]
         ]);
         _this.cssData = [
-            new cssClassData_1.CssClassData("p", ["padding"]),
-            new cssClassData_1.CssClassData("pt", ["padding-top"]),
-            new cssClassData_1.CssClassData("pb", ["padding-bottom"]),
-            new cssClassData_1.CssClassData("pl", ["padding-left"]),
-            new cssClassData_1.CssClassData("pr", ["padding-right"]),
-            new cssClassData_1.CssClassData("px", ["padding-left", "padding-right"]),
-            new cssClassData_1.CssClassData("py", ["padding-top", "padding-bottom"]),
+            new cssClassData_1.CssClassData("p", ["padding"], _this.postfixValuesMap),
+            new cssClassData_1.CssClassData("pt", ["padding-top"], _this.postfixValuesMap),
+            new cssClassData_1.CssClassData("pb", ["padding-bottom"], _this.postfixValuesMap),
+            new cssClassData_1.CssClassData("pl", ["padding-left"], _this.postfixValuesMap),
+            new cssClassData_1.CssClassData("pr", ["padding-right"], _this.postfixValuesMap),
+            new cssClassData_1.CssClassData("px", ["padding-left", "padding-right"], _this.postfixValuesMap),
+            new cssClassData_1.CssClassData("py", ["padding-top", "padding-bottom"], _this.postfixValuesMap),
         ];
         return _this;
     }

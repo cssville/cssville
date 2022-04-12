@@ -13,6 +13,6 @@ export class FlexGrowGenerator extends GeneratorBase {
         ["unset", ["unset"]]
     ]);
     cssData = [
-        new CssClassData("flex-grow", ["-o-flex-grow", "-webkit-flex-grow", "flex-grow"])
+        new CssClassData("flex-grow", ["-o-flex-grow", "-webkit-flex-grow", "flex-grow"], this.postfixValuesMap)
     ];
 }

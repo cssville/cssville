@@ -32,7 +32,7 @@ var ColorGenerator = /** @class */ (function (_super) {
             ["unset", ["unset"]]
         ]);
         _this.cssData = [
-            new cssClassData_1.CssClassData("color", ["color"])
+            new cssClassData_1.CssClassData("color", ["color"], _this.postfixValuesMap)
         ];
         return _this;
     }

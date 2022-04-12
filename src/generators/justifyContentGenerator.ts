@@ -21,6 +21,6 @@ export class JustifyContentGenerator extends GeneratorBase {
         ["unset", ["unset"]]
     ]);
     cssData = [
-        new CssClassData("justify-content", ["-o-justify-content", "-webkit-justify-content", "justify-content"])
+        new CssClassData("justify-content", ["-o-justify-content", "-webkit-justify-content", "justify-content"], this.postfixValuesMap)
     ];
 }

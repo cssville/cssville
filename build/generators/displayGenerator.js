@@ -52,7 +52,7 @@ var DisplayGenerator = /** @class */ (function (_super) {
             ["unset", ["unset"]]
         ]);
         _this.cssData = [
-            new cssClassData_1.CssClassData("d", ["display"])
+            new cssClassData_1.CssClassData("d", ["display"], _this.postfixValuesMap)
         ];
         return _this;
     }

@@ -7,11 +7,10 @@ var GeneratorBase = /** @class */ (function () {
         this.cssData = [];
     }
     GeneratorBase.prototype.generate = function (prefix) {
-        var _this = this;
         if (prefix === void 0) { prefix = ""; }
         var cssPart = "";
         this.cssData.forEach(function (data) {
-            cssPart += data.css(prefix, _this.postfixValuesMap);
+            cssPart += data.css(prefix);
         });
         return cssPart;
     };

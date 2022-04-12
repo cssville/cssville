@@ -37,7 +37,7 @@ var HeightGenerator = /** @class */ (function (_super) {
             ["64px", ["64px"]]
         ]);
         _this.cssData = [
-            new cssClassData_1.CssClassData("h", ["height"])
+            new cssClassData_1.CssClassData("h", ["height"], _this.postfixValuesMap)
         ];
         return _this;
     }

@@ -16,12 +16,12 @@ export class MarginGenerator extends GeneratorBase {
         ["unset", ["unset"]]
     ]);
     cssData = [
-        new CssClassData("m", ["margin"]),
-        new CssClassData("mt", ["margin-top"]),
-        new CssClassData("mb", ["margin-bottom"]),
-        new CssClassData("ml", ["margin-left"]),
-        new CssClassData("mr", ["margin-right"]),
-        new CssClassData("mx", ["margin-left", "margin-right"]),
-        new CssClassData("my", ["margin-top", "margin-bottom"]),
+        new CssClassData("m", ["margin"], this.postfixValuesMap),
+        new CssClassData("mt", ["margin-top"], this.postfixValuesMap),
+        new CssClassData("mb", ["margin-bottom"], this.postfixValuesMap),
+        new CssClassData("ml", ["margin-left"], this.postfixValuesMap),
+        new CssClassData("mr", ["margin-right"], this.postfixValuesMap),
+        new CssClassData("mx", ["margin-left", "margin-right"], this.postfixValuesMap),
+        new CssClassData("my", ["margin-top", "margin-bottom"], this.postfixValuesMap),
     ];
 }

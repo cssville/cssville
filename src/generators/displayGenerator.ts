@@ -32,6 +32,6 @@ export class DisplayGenerator extends GeneratorBase {
         ["unset", ["unset"]]
     ]);
     cssData = [
-        new CssClassData("d", ["display"])
+        new CssClassData("d", ["display"], this.postfixValuesMap)
     ];
 }
