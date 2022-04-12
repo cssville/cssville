@@ -22,10 +22,16 @@ export class CssClassData {
     public postfixValuesMap: Map<string, string[]>;
     public cssParts: Map<string, string>;
 
-    css(prefix: string = ""): string {
+    getCss(prefix: string = "", classes: string[]): string {
         var css = "";
         this.cssParts.forEach((value: string, key: string) => {
-            css += `.${prefix === "" ? "" : `${prefix}-`}${key} { ${value}} `;            
+            var className = `${prefix === "" ? "" : `${prefix}-`}${key}`;
+            if (classes.length === 0) {
+                css += `.${className} { ${value}} `;
+            } 
+            if (classes.length > 0 && classes.indexOf(className) >= 0) {
+                css += `.${className} { ${value}} `;
+            }
         });
         return css;
     }

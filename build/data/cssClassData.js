@@ -19,11 +19,17 @@ var CssClassData = /** @class */ (function () {
             _this.cssParts.set(_this.className + "-" + postfix, innerProperties);
         });
     }
-    CssClassData.prototype.css = function (prefix) {
+    CssClassData.prototype.getCss = function (prefix, classes) {
         if (prefix === void 0) { prefix = ""; }
         var css = "";
         this.cssParts.forEach(function (value, key) {
-            css += "." + (prefix === "" ? "" : prefix + "-") + key + " { " + value + "} ";
+            var className = "" + (prefix === "" ? "" : prefix + "-") + key;
+            if (classes.length === 0) {
+                css += "." + className + " { " + value + "} ";
+            }
+            if (classes.length > 0 && classes.indexOf(className) >= 0) {
+                css += "." + className + " { " + value + "} ";
+            }
         });
         return css;
     };

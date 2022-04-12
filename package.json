@@ -12,6 +12,7 @@
     "clean": "rimraf build",
     "build": "tsc",
     "generate": "node build/generate.js build/cssville.css",
+    "generate-pattern": "node build/generate.js build/cssville.small.css test",
     "watch:build": "tsc --watch",
     "watch:server": "lite-server -c lite-server-config.json",
     "copy-files": "copyfiles -u 1 src/**/*.html src/**/*.css src/**/*.svg src/**/*.ico src/CNAME build/",

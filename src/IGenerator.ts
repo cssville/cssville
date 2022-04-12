@@ -1,3 +1,7 @@
+import { CssClassData } from "./data/cssClassData";
+
 export interface IGenerator {
-    generate(prefix: string): string;
+    postfixValuesMap: Map<string, string[]>;
+    cssData: CssClassData[];
+    generate(prefix: string, classes: string[]): string;
   }

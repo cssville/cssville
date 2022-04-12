@@ -25,32 +25,33 @@ var textAlignGenerator_1 = require("./generators/textAlignGenerator");
 var Cssville = /** @class */ (function () {
     function Cssville() {
     }
-    Cssville.css = function () {
+    Cssville.getCss = function (classes) {
+        if (classes === void 0) { classes = []; }
         var css = "";
-        var prefixValueMap = new Map([
-            ["xl", "1280px"],
-            ["lg", "1012px"],
-            ["md", "768px"],
-            ["sm", "544px"],
-            ["xs", "320px"],
-        ]);
         for (var x = 0; x < Cssville.generators.length; x++) {
             var g = Cssville.generators[x];
-            var cssPart = g.generate("");
+            var cssPart = g.generate("", classes);
             css += cssPart;
         }
-        prefixValueMap.forEach(function (value, key) {
+        this.prefixValueMap.forEach(function (value, key) {
             var innerCss = "";
             var prefix = key;
             for (var x = 0; x < Cssville.generators.length; x++) {
                 var g = Cssville.generators[x];
-                var cssPartForPrefix = g.generate(prefix);
+                var cssPartForPrefix = g.generate(prefix, classes);
                 innerCss += cssPartForPrefix;
             }
             css += "@media (max-width: " + value + ") { " + innerCss + "} ";
         });
         return css;
     };
+    Cssville.prefixValueMap = new Map([
+        ["xl", "1280px"],
+        ["lg", "1012px"],
+        ["md", "768px"],
+        ["sm", "544px"],
+        ["xs", "320px"],
+    ]);
     Cssville.generators = [
         new alignItemsGenerator_1.AlignItemsGenerator(),
         new borderRadiusGenerator_1.BorderRadiusGenerator(),

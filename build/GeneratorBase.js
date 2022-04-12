@@ -6,11 +6,12 @@ var GeneratorBase = /** @class */ (function () {
         this.postfixValuesMap = new Map();
         this.cssData = [];
     }
-    GeneratorBase.prototype.generate = function (prefix) {
+    GeneratorBase.prototype.generate = function (prefix, classes) {
         if (prefix === void 0) { prefix = ""; }
+        if (classes === void 0) { classes = []; }
         var cssPart = "";
         this.cssData.forEach(function (data) {
-            cssPart += data.css(prefix);
+            cssPart += data.getCss(prefix, classes);
         });
         return cssPart;
     };
