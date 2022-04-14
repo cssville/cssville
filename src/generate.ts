@@ -23,19 +23,34 @@ if(!extensions) {
     var css = Cssville.getCss();
     fs.writeFile(path, css, () => { console.log("done: " + path); });    
 } else {
-    var classes = [];
+    var classes:  string[] = [];
     var exArray = extensions.split(",");
     var files = getFiles(dir).filter(fn => exArray.filter(e => fn.endsWith(e)).length > 0);
     files.forEach(file => {
         file = dir + '/' + file;
-        console.log(file);
-        fs.readFile(file, (err, data) => {
-            if (err) throw err;
-            var content = data.toString();
-            console.log(content);
-        });
+        var content = fs.readFileSync(file).toString();
+        let className = "className=";
+        let pos = 0;
+        var cssClasses = "";
+        while (content.indexOf(className, pos) != -1) {
+            pos = content.indexOf(className, pos) + className.length;
+            if(content[pos] === '"') {
+                var end = content.indexOf('"', pos + 1);
+                if(end - pos > 1) {
+                    cssClasses = content.substring(pos + 1, end);
+                    cssClasses.split(" ").forEach(c => {
+                        if(classes.indexOf(c) === -1) {
+                            classes.push(c);
+                        }
+                    });
+                    console.log(cssClasses);
+                }
+                pos=end;
+            }
+        }
+        console.log(`File ${file} processed`);       
     });
-    var testClasses = ["fw-bold", "sm-d-none", "w-12", "p-1", "sm-p-1", "sm-p-0"];
-    var css = Cssville.getCss(testClasses);
+    console.log(`All css: `, classes.join(","));
+    var css = Cssville.getCss(classes);
     fs.writeFile(path, css, () => { console.log("done: " + path + " with pattern " + extensions + " for dir " + dir); });  
 }

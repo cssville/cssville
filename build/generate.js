@@ -33,16 +33,30 @@ else {
     var files = getFiles(dir).filter(function (fn) { return exArray.filter(function (e) { return fn.endsWith(e); }).length > 0; });
     files.forEach(function (file) {
         file = dir + '/' + file;
-        console.log(file);
-        fs.readFile(file, function (err, data) {
-            if (err)
-                throw err;
-            var content = data.toString();
-            console.log(content);
-        });
+        var content = fs.readFileSync(file).toString();
+        var className = "className=";
+        var pos = 0;
+        var cssClasses = "";
+        while (content.indexOf(className, pos) != -1) {
+            pos = content.indexOf(className, pos) + className.length;
+            if (content[pos] === '"') {
+                var end = content.indexOf('"', pos + 1);
+                if (end - pos > 1) {
+                    cssClasses = content.substring(pos + 1, end);
+                    cssClasses.split(" ").forEach(function (c) {
+                        if (classes.indexOf(c) === -1) {
+                            classes.push(c);
+                        }
+                    });
+                    console.log(cssClasses);
+                }
+                pos = end;
+            }
+        }
+        console.log("File " + file + " processed");
     });
-    var testClasses = ["fw-bold", "sm-d-none", "w-12", "p-1", "sm-p-1", "sm-p-0"];
-    var css = cssville_1.Cssville.getCss(testClasses);
+    console.log("All css: ", classes.join(","));
+    var css = cssville_1.Cssville.getCss(classes);
     fs.writeFile(path, css, function () { console.log("done: " + path + " with pattern " + extensions + " for dir " + dir); });
 }
 //# sourceMappingURL=generate.js.map
