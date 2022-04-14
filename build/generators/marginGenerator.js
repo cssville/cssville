@@ -36,13 +36,13 @@ var MarginGenerator = /** @class */ (function (_super) {
             ["unset", ["unset"]]
         ]);
         _this.cssData = [
-            new cssClassData_1.CssClassData("m", ["margin"]),
-            new cssClassData_1.CssClassData("mt", ["margin-top"]),
-            new cssClassData_1.CssClassData("mb", ["margin-bottom"]),
-            new cssClassData_1.CssClassData("ml", ["margin-left"]),
-            new cssClassData_1.CssClassData("mr", ["margin-right"]),
-            new cssClassData_1.CssClassData("mx", ["margin-left", "margin-right"]),
-            new cssClassData_1.CssClassData("my", ["margin-top", "margin-bottom"]),
+            new cssClassData_1.CssClassData("m", ["margin"], _this.postfixValuesMap),
+            new cssClassData_1.CssClassData("mt", ["margin-top"], _this.postfixValuesMap),
+            new cssClassData_1.CssClassData("mb", ["margin-bottom"], _this.postfixValuesMap),
+            new cssClassData_1.CssClassData("ml", ["margin-left"], _this.postfixValuesMap),
+            new cssClassData_1.CssClassData("mr", ["margin-right"], _this.postfixValuesMap),
+            new cssClassData_1.CssClassData("mx", ["margin-left", "margin-right"], _this.postfixValuesMap),
+            new cssClassData_1.CssClassData("my", ["margin-top", "margin-bottom"], _this.postfixValuesMap),
         ];
         return _this;
     }

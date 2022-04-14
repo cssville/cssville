@@ -36,11 +36,11 @@ var BorderRadiusGenerator = /** @class */ (function (_super) {
             ["unset", ["unset"]]
         ]);
         _this.cssData = [
-            new cssClassData_1.CssClassData("br", ["-ms-border-radius", "border-radius"]),
-            new cssClassData_1.CssClassData("br-top-left", ["-ms-border-top-left-radius", "border-top-left-radius"]),
-            new cssClassData_1.CssClassData("br-top-right", ["-ms-border-top-right-radius", "border-top-right-radius"]),
-            new cssClassData_1.CssClassData("br-bottom-right", ["-ms-border-bottom-right-radius", "border-bottom-right-radius"]),
-            new cssClassData_1.CssClassData("br-bottom-left", ["-ms-border-bottom-left-radius", "border-bottom-left-radius"])
+            new cssClassData_1.CssClassData("br", ["-ms-border-radius", "border-radius"], _this.postfixValuesMap),
+            new cssClassData_1.CssClassData("br-top-left", ["-ms-border-top-left-radius", "border-top-left-radius"], _this.postfixValuesMap),
+            new cssClassData_1.CssClassData("br-top-right", ["-ms-border-top-right-radius", "border-top-right-radius"], _this.postfixValuesMap),
+            new cssClassData_1.CssClassData("br-bottom-right", ["-ms-border-bottom-right-radius", "border-bottom-right-radius"], _this.postfixValuesMap),
+            new cssClassData_1.CssClassData("br-bottom-left", ["-ms-border-bottom-left-radius", "border-bottom-left-radius"], _this.postfixValuesMap)
         ];
         return _this;
     }

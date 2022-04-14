@@ -12,6 +12,6 @@ export class TextDecorationGenerator extends GeneratorBase {
         ["unset", ["unset"]]
     ]);
     cssData = [
-        new CssClassData("text-decoration", ["text-decoration"])
+        new CssClassData("text-decoration", ["text-decoration"], this.postfixValuesMap)
     ];
 }

@@ -32,7 +32,7 @@ var TextDecorationGenerator = /** @class */ (function (_super) {
             ["unset", ["unset"]]
         ]);
         _this.cssData = [
-            new cssClassData_1.CssClassData("text-decoration", ["text-decoration"])
+            new cssClassData_1.CssClassData("text-decoration", ["text-decoration"], _this.postfixValuesMap)
         ];
         return _this;
     }

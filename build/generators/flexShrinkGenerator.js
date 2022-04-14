@@ -33,7 +33,7 @@ var FlexShrinkGenerator = /** @class */ (function (_super) {
             ["unset", ["unset"]]
         ]);
         _this.cssData = [
-            new cssClassData_1.CssClassData("flex-shrink", ["-o-flex-shrink", "-webkit-flex-shrink", "flex-shrink"])
+            new cssClassData_1.CssClassData("flex-shrink", ["-o-flex-shrink", "-webkit-flex-shrink", "flex-shrink"], _this.postfixValuesMap)
         ];
         return _this;
     }

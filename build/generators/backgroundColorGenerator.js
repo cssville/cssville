@@ -32,7 +32,7 @@ var BackgroundColorGenerator = /** @class */ (function (_super) {
             ["unset", ["unset"]]
         ]);
         _this.cssData = [
-            new cssClassData_1.CssClassData("bg-color", ["background-color"])
+            new cssClassData_1.CssClassData("bg-color", ["background-color"], _this.postfixValuesMap)
         ];
         return _this;
     }

@@ -22,6 +22,6 @@ export class FontWeightGenerator extends GeneratorBase {
         ["unset", ["unset"]]
     ]);
     cssData = [
-        new CssClassData("fw", ["font-weight"])
+        new CssClassData("fw", ["font-weight"], this.postfixValuesMap)
     ];
 }

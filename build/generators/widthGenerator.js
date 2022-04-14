@@ -55,9 +55,9 @@ var WidthGenerator = /** @class */ (function (_super) {
             ["64px", ["64px"]]
         ]);
         _this.cssData = [
-            new cssClassData_1.CssClassData("w", ["width"]),
-            new cssClassData_1.CssClassData("max-w", ["max-width"]),
-            new cssClassData_1.CssClassData("min-w", ["min-width"])
+            new cssClassData_1.CssClassData("w", ["width"], _this.postfixValuesMap),
+            new cssClassData_1.CssClassData("max-w", ["max-width"], _this.postfixValuesMap),
+            new cssClassData_1.CssClassData("min-w", ["min-width"], _this.postfixValuesMap)
         ];
         return _this;
     }

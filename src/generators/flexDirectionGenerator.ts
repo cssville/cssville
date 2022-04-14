@@ -13,6 +13,6 @@ export class FlexDirectionGenerator extends GeneratorBase {
         ["unset", ["unset"]]
     ]);
     cssData = [
-        new CssClassData("flex-direction", ["flex-direction"])
+        new CssClassData("flex-direction", ["flex-direction"], this.postfixValuesMap)
     ];
 }

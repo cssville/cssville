@@ -23,6 +23,14 @@ import { TextAlignGenerator } from "./generators/textAlignGenerator";
 
 export class Cssville {
     
+    public static prefixValueMap = new Map([
+        ["xl", "1280px"],
+        ["lg", "1012px"],
+        ["md", "768px"],
+        ["sm", "544px"],
+        ["xs", "320px"],
+    ]);
+
     public static generators: IGenerator[] = 
     [
         new AlignItemsGenerator(),
@@ -48,26 +56,19 @@ export class Cssville {
         new PositionGenerator(),
     ];
 
-    static css() : string {
+    static getCss(classes: string[] = []) : string {
         var css = "";
-        var prefixValueMap = new Map([
-            ["xl", "1280px"],
-            ["lg", "1012px"],
-            ["md", "768px"],
-            ["sm", "544px"],
-            ["xs", "320px"],
-        ]);
         for (var x = 0; x < Cssville.generators.length; x++) {
             const g = Cssville.generators[x];
-            var cssPart = g.generate("");
+            var cssPart = g.generate("", classes);
             css += cssPart;
         }
-        prefixValueMap.forEach((value: string, key: string) => {
+        this.prefixValueMap.forEach((value: string, key: string) => {
             var innerCss = "";
             var prefix = key;
             for (var x = 0; x < Cssville.generators.length; x++) {
                 const g = Cssville.generators[x];
-                var cssPartForPrefix = g.generate(prefix);
+                var cssPartForPrefix = g.generate(prefix, classes);
                 innerCss += cssPartForPrefix;
             }
             css += `@media (max-width: ${value}) { ${innerCss}} `;

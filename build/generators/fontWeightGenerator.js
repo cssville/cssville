@@ -42,7 +42,7 @@ var FontWeightGenerator = /** @class */ (function (_super) {
             ["unset", ["unset"]]
         ]);
         _this.cssData = [
-            new cssClassData_1.CssClassData("fw", ["font-weight"])
+            new cssClassData_1.CssClassData("fw", ["font-weight"], _this.postfixValuesMap)
         ];
         return _this;
     }

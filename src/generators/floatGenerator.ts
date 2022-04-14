@@ -12,6 +12,6 @@ export class FloatGenerator extends GeneratorBase {
         ["unset", ["unset"]]
     ]);
     cssData = [
-        new CssClassData("float", ["float"])
+        new CssClassData("float", ["float"], this.postfixValuesMap)
     ];
 }

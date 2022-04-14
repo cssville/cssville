@@ -12,6 +12,6 @@ export class ColorGenerator extends GeneratorBase {
         ["unset", ["unset"]]
     ]);
     cssData = [
-        new CssClassData("color", ["color"])
+        new CssClassData("color", ["color"], this.postfixValuesMap)
     ];
 }

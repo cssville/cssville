@@ -14,6 +14,6 @@ export class PositionGenerator extends GeneratorBase {
         ["unset", ["unset"]]
     ]);
     cssData = [
-        new CssClassData("position", ["position"]),
+        new CssClassData("position", ["position"], this.postfixValuesMap),
     ];
 }

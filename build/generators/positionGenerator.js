@@ -34,7 +34,7 @@ var PositionGenerator = /** @class */ (function (_super) {
             ["unset", ["unset"]]
         ]);
         _this.cssData = [
-            new cssClassData_1.CssClassData("position", ["position"]),
+            new cssClassData_1.CssClassData("position", ["position"], _this.postfixValuesMap),
         ];
         return _this;
     }

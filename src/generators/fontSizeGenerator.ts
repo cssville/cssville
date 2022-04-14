@@ -24,6 +24,6 @@ export class FontSizeGenerator extends GeneratorBase {
         ["unset", ["unset"]]
     ]);
     cssData = [
-        new CssClassData("fs", ["font-size"])
+        new CssClassData("fs", ["font-size"], this.postfixValuesMap)
     ];
 }

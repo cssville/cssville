@@ -21,6 +21,6 @@ export class AlignItemsGenerator extends GeneratorBase {
         ["unset", ["unset"]]
     ]);
     cssData = [
-        new CssClassData("align-items", ["-ms-align-items", "-o-align-items", "-webkit-align-items", "align-items"])
+        new CssClassData("align-items", ["-ms-align-items", "-o-align-items", "-webkit-align-items", "align-items"], this.postfixValuesMap)
     ];
 }

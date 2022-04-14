@@ -29,7 +29,7 @@ var CursorGenerator = /** @class */ (function (_super) {
             ["default", ["default"]]
         ]);
         _this.cssData = [
-            new cssClassData_1.CssClassData("cursor", ["cursor"])
+            new cssClassData_1.CssClassData("cursor", ["cursor"], _this.postfixValuesMap)
         ];
         return _this;
     }

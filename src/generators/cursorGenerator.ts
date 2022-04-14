@@ -9,6 +9,6 @@ export class CursorGenerator extends GeneratorBase {
         ["default", ["default"]]
     ]);
     cssData = [
-        new CssClassData("cursor", ["cursor"])
+        new CssClassData("cursor", ["cursor"], this.postfixValuesMap)
     ];
 }

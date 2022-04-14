@@ -20,6 +20,6 @@ export class TextAlignGenerator extends GeneratorBase {
         ["unset", ["unset"]]
     ]);
     cssData = [
-        new CssClassData("text-align", ["text-align"])
+        new CssClassData("text-align", ["text-align"], this.postfixValuesMap)
     ];
 }

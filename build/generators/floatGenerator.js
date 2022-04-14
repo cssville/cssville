@@ -32,7 +32,7 @@ var FloatGenerator = /** @class */ (function (_super) {
             ["unset", ["unset"]]
         ]);
         _this.cssData = [
-            new cssClassData_1.CssClassData("float", ["float"])
+            new cssClassData_1.CssClassData("float", ["float"], _this.postfixValuesMap)
         ];
         return _this;
     }

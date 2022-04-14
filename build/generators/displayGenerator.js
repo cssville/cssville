@@ -43,6 +43,8 @@ var DisplayGenerator = /** @class */ (function (_super) {
             ["block-flow-root", ["block flow-root"]],
             ["table", ["table"]],
             ["table-row", ["table-row"]],
+            ["table-column", ["table-column"]],
+            ["table-cell", ["table-cell"]],
             ["list-item", ["list-item"]],
             ["inherit", ["inherit"]],
             ["initial", ["initial"]],
@@ -50,7 +52,7 @@ var DisplayGenerator = /** @class */ (function (_super) {
             ["unset", ["unset"]]
         ]);
         _this.cssData = [
-            new cssClassData_1.CssClassData("d", ["display"])
+            new cssClassData_1.CssClassData("d", ["display"], _this.postfixValuesMap)
         ];
         return _this;
     }

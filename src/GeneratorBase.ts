@@ -8,10 +8,10 @@ export class GeneratorBase implements IGenerator {
     public postfixValuesMap: Map<string, string[]> = new Map();
     public cssData: CssClassData[] = [];
 
-    generate(prefix: string = ""): string {
+    generate(prefix: string = "", classes: string[] = []): string {
         var cssPart = "";
         this.cssData.forEach(data => {
-            cssPart += data.css(prefix, this.postfixValuesMap);
+            cssPart += data.getCss(prefix, classes);
         });
         return cssPart;
     }

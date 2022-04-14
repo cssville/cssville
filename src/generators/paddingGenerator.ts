@@ -15,12 +15,12 @@ export class PaddingGenerator extends GeneratorBase {
         ["unset", ["unset"]]
     ]);
     cssData = [
-        new CssClassData("p", ["padding"]),
-        new CssClassData("pt", ["padding-top"]),
-        new CssClassData("pb", ["padding-bottom"]),
-        new CssClassData("pl", ["padding-left"]),
-        new CssClassData("pr", ["padding-right"]),
-        new CssClassData("px", ["padding-left", "padding-right"]),
-        new CssClassData("py", ["padding-top", "padding-bottom"]),
+        new CssClassData("p", ["padding"], this.postfixValuesMap),
+        new CssClassData("pt", ["padding-top"], this.postfixValuesMap),
+        new CssClassData("pb", ["padding-bottom"], this.postfixValuesMap),
+        new CssClassData("pl", ["padding-left"], this.postfixValuesMap),
+        new CssClassData("pr", ["padding-right"], this.postfixValuesMap),
+        new CssClassData("px", ["padding-left", "padding-right"], this.postfixValuesMap),
+        new CssClassData("py", ["padding-top", "padding-bottom"], this.postfixValuesMap),
     ];
 }

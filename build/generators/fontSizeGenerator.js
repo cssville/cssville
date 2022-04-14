@@ -44,7 +44,7 @@ var FontSizeGenerator = /** @class */ (function (_super) {
             ["unset", ["unset"]]
         ]);
         _this.cssData = [
-            new cssClassData_1.CssClassData("fs", ["font-size"])
+            new cssClassData_1.CssClassData("fs", ["font-size"], _this.postfixValuesMap)
         ];
         return _this;
     }
