@@ -1,25 +1,27 @@
 {
   "name": "cssville",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "main": "cssville.css",
   "style": "cssville.css",
   "files": [
     "LICENSE.md",
-    "cssville.css"
+    "cssville.css",
+    "cssville.bundle.js"
   ],
   "scripts": {
     "clean": "rimraf build",
-    "build": "tsc",
-    "generate": "node build/generate.js build/cssville.css",
-    "generate-pattern": "node build/generate.js build/cssville.small.css Web/Content jsx,html",
+    "build": "webpack",
+    "generate": "node build/cssville.bundle.js build/cssville.css",
+    "generate-pattern": "node build/cssville.bundle.js build/cssville.small.css Web/Content jsx,html",
     "watch:build": "tsc --watch",
     "watch:server": "lite-server -c lite-server-config.json",
     "copy-files": "copyfiles -u 1 src/**/*.html src/**/*.css src/**/*.svg src/**/*.ico src/CNAME build/",
     "copy-css": "copyfiles -u 1 build/cssville.css .",
+    "copy-js": "copyfiles -u 1 build/cssville.bundle.js .",
     "copy-css-src": "copyfiles -u 1 build/cssville.css src/",
-    "start": "npm-run-all clean build copy-files generate copy-css copy-css-src --parallel watch:build watch:server --print-label",
-    "deploy-prepare": "npm-run-all clean build copy-files generate copy-css copy-css-src"
+    "start": "npm-run-all clean build copy-files generate copy-css copy-js copy-css-src --parallel watch:build watch:server --print-label",
+    "deploy-prepare": "npm-run-all clean build copy-files generate copy-css copy-js copy-css-src"
   },
   "repository": {
     "type": "git",
@@ -38,6 +40,10 @@
     "lite-server": "^2.6.1",
     "nodemon": "^2.0.12",
     "npm-run-all": "^4.1.5",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "ts-loader": "^9.2.8",
+    "typescript": "^4.6.3",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2"
   }
 }
