@@ -43,14 +43,14 @@ if(!extensions) {
                             classes.push(c);
                         }
                     });
-                    console.log(cssClasses);
                 }
                 pos=end;
             }
         }
         console.log(`File ${file} processed`);       
     });
-    console.log(`All css: `, classes.join(","));
     var css = Cssville.getCss(classes);
-    fs.writeFile(path, css, () => { console.log("done: " + path + " with pattern " + extensions + " for dir " + dir); });  
+    fs.writeFile(path, css, () => { 
+        console.log(`Done: '${path}' with pattern '${extensions}' for dir '${dir}'`); 
+    });  
 }
