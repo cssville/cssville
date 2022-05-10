@@ -1,8 +1,13 @@
 import fs = require('fs');
 import { Cssville } from './cssville';
+import pathModule = require('path');
 
 function getFiles(pathDir: string): string[] {
     const files = [];
+    if (!fs.existsSync(pathDir)) {
+        console.error(`Directory '${pathModule.resolve(pathDir)}' not found!`);
+        return files;
+    }
     for (const file of fs.readdirSync(pathDir)) {
         const fullPath = pathDir + '/' + file;
         if (fs.lstatSync(fullPath).isDirectory())
@@ -29,7 +34,8 @@ if(!extensions) {
     files.forEach(file => {
         file = dir + '/' + file;
         var content = fs.readFileSync(file).toString();
-        let className = "className=";
+        var ext = pathModule.extname(file);
+        let className = ext === ".jsx" ? "className=" : "class=";
         let pos = 0;
         var cssClasses = "";
         while (content.indexOf(className, pos) != -1) {
