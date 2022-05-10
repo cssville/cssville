@@ -14,7 +14,8 @@ export class HeightGenerator extends GeneratorBase {
         ["24px", ["24px"]],
         ["32px", ["32px"]],
         ["48px", ["48px"]],
-        ["64px", ["64px"]]
+        ["64px", ["64px"]],
+        ["100", ["100%"]],
     ]);
     cssData = [
         new CssClassData("h", ["height"], this.postfixValuesMap)
