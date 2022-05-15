@@ -18,6 +18,8 @@ export class HeightGenerator extends GeneratorBase {
         ["100", ["100%"]],
     ]);
     cssData = [
-        new CssClassData("h", ["height"], this.postfixValuesMap)
+        new CssClassData("h", ["height"], this.postfixValuesMap),
+        new CssClassData("max-h", ["max-height"], this.postfixValuesMap),
+        new CssClassData("min-h", ["min-height"], this.postfixValuesMap)
     ];
 }
