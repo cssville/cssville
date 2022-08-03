@@ -19,9 +19,9 @@ function getFiles(pathDir: string): string[] {
         for (const file of fs.readdirSync(dir)) {
             const fullPath = dir + '/' + file;
             if (fs.lstatSync(fullPath).isDirectory())
-                getFiles(fullPath).forEach(x => files.push(file + '/' + x));
+                getFiles(fullPath).forEach(x => files.push(x));
             else
-                files.push(file);
+                files.push(fullPath);
         }
     }
     return files;
@@ -41,7 +41,6 @@ if(!extensions) {
     var exArray = extensions.split(",");
     var files = getFiles(dir).filter(fn => exArray.filter(e => fn.endsWith(e)).length > 0);
     files.forEach(file => {
-        file = dir + '/' + file;
         var content = fs.readFileSync(file).toString();
         var ext = pathModule.extname(file);
         let className = ext === ".jsx" || ext === ".tsx" ? "className=" : "class=";
