@@ -4,16 +4,25 @@ import pathModule = require('path');
 
 function getFiles(pathDir: string): string[] {
     const files = [];
-    if (!fs.existsSync(pathDir)) {
-        console.error(`Directory '${pathModule.resolve(pathDir)}' not found!`);
-        return files;
+    const dirs = [];
+    if (pathDir.indexOf(',') > -1) {
+        dirs.push(...pathDir.split(','));
+    } else {
+        dirs.push(pathDir);
     }
-    for (const file of fs.readdirSync(pathDir)) {
-        const fullPath = pathDir + '/' + file;
-        if (fs.lstatSync(fullPath).isDirectory())
-            getFiles(fullPath).forEach(x => files.push(file + '/' + x));
-        else
-            files.push(file);
+    for (const dir of dirs) {
+        console.log(`Reading files from ${dir}`);
+        if (!fs.existsSync(dir)) {
+            console.error(`Directory '${pathModule.resolve(dir)}' not found!`);
+            return files;
+        }
+        for (const file of fs.readdirSync(dir)) {
+            const fullPath = dir + '/' + file;
+            if (fs.lstatSync(fullPath).isDirectory())
+                getFiles(fullPath).forEach(x => files.push(file + '/' + x));
+            else
+                files.push(file);
+        }
     }
     return files;
 }
@@ -35,7 +44,7 @@ if(!extensions) {
         file = dir + '/' + file;
         var content = fs.readFileSync(file).toString();
         var ext = pathModule.extname(file);
-        let className = ext === ".jsx" ? "className=" : "class=";
+        let className = ext === ".jsx" || ext === ".tsx" ? "className=" : "class=";
         let pos = 0;
         var cssClasses = "";
         while (content.indexOf(className, pos) != -1) {
