@@ -27,10 +27,10 @@ export class CssClassData {
         this.cssParts.forEach((value: string, key: string) => {
             var className = `${prefix === "" ? "" : `${prefix}-`}${key}`;
             if (classes.length === 0) {
-                css += `.${className} { ${value}} `;
+                css += `.${className} {${value}} `;
             } 
             if (classes.length > 0 && classes.indexOf(className) >= 0) {
-                css += `.${className} { ${value}} `;
+                css += `.${className} {${value}} `;
             }
         });
         return css;

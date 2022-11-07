@@ -20,6 +20,7 @@ import { BorderRadiusGenerator } from "./generators/borderRadiusGenerator";
 import { CursorGenerator } from "./generators/cursorGenerator";
 import { BackgroundColorGenerator } from "./generators/backgroundColorGenerator";
 import { TextAlignGenerator } from "./generators/textAlignGenerator";
+import { WordBreakGenerator } from "./generators/wordBreakGenerator";
 
 export class Cssville {
     
@@ -51,6 +52,7 @@ export class Cssville {
         new HeightGenerator(),
         new JustifyContentGenerator(),
         new WidthGenerator(),
+        new WordBreakGenerator(),
         new TextAlignGenerator(),
         new TextDecorationGenerator(),
         new PositionGenerator(),
