@@ -21,6 +21,7 @@ import { CursorGenerator } from "./generators/cursorGenerator";
 import { BackgroundColorGenerator } from "./generators/backgroundColorGenerator";
 import { TextAlignGenerator } from "./generators/textAlignGenerator";
 import { WordBreakGenerator } from "./generators/wordBreakGenerator";
+import { WhiteSpaceGenerator } from "./generators/whiteSpaceGenerator";
 
 export class Cssville {
     
@@ -52,6 +53,7 @@ export class Cssville {
         new HeightGenerator(),
         new JustifyContentGenerator(),
         new WidthGenerator(),
+        new WhiteSpaceGenerator(),
         new WordBreakGenerator(),
         new TextAlignGenerator(),
         new TextDecorationGenerator(),
