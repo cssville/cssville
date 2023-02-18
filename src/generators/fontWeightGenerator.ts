@@ -16,12 +16,9 @@ export class FontWeightGenerator extends GeneratorBase {
         ["700", ["700"]],
         ["800", ["800"]],
         ["900", ["900"]],
-        ["inherit", ["inherit"]],
-        ["initial", ["initial"]],
-        ["revert", ["revert"]],
-        ["unset", ["unset"]]
     ]);
+    list = ["inherit", "initial", "revert", "unset"];
     cssData = [
-        new CssClassData("fw", ["font-weight"], this.postfixValuesMap)
+        new CssClassData("fw", ["font-weight"], this.list, this.postfixValuesMap)
     ];
 }

@@ -10,18 +10,15 @@ export class MarginGenerator extends GeneratorBase {
         ["4", ["32px"]],
         ["5", ["64px"]],
         ["auto", ["auto"]],
-        ["inherit", ["inherit"]],
-        ["initial", ["initial"]],
-        ["revert", ["revert"]],
-        ["unset", ["unset"]]
     ]);
+    list = ["inherit", "initial", "revert", "unset"];
     cssData = [
-        new CssClassData("m", ["margin"], this.postfixValuesMap),
-        new CssClassData("mt", ["margin-top"], this.postfixValuesMap),
-        new CssClassData("mb", ["margin-bottom"], this.postfixValuesMap),
-        new CssClassData("ml", ["margin-left"], this.postfixValuesMap),
-        new CssClassData("mr", ["margin-right"], this.postfixValuesMap),
-        new CssClassData("mx", ["margin-left", "margin-right"], this.postfixValuesMap),
-        new CssClassData("my", ["margin-top", "margin-bottom"], this.postfixValuesMap),
+        new CssClassData("m", ["margin"], this.list, this.postfixValuesMap),
+        new CssClassData("mt", ["margin-top"], this.list, this.postfixValuesMap),
+        new CssClassData("mb", ["margin-bottom"], this.list, this.postfixValuesMap),
+        new CssClassData("ml", ["margin-left"], this.list, this.postfixValuesMap),
+        new CssClassData("mr", ["margin-right"], this.list, this.postfixValuesMap),
+        new CssClassData("mx", ["margin-left", "margin-right"], this.list, this.postfixValuesMap),
+        new CssClassData("my", ["margin-top", "margin-bottom"], this.list, this.postfixValuesMap),
     ];
 }

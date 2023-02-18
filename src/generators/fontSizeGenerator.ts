@@ -18,12 +18,9 @@ export class FontSizeGenerator extends GeneratorBase {
         ["3rem", ["3rem"]],
         ["4rem", ["4rem"]],
         ["5rem", ["5rem"]],
-        ["inherit", ["inherit"]],
-        ["initial", ["initial"]],
-        ["revert", ["revert"]],
-        ["unset", ["unset"]]
     ]);
+    list = ["inherit", "initial", "revert", "unset"];
     cssData = [
-        new CssClassData("fs", ["font-size"], this.postfixValuesMap)
+        new CssClassData("fs", ["font-size"], this.list, this.postfixValuesMap)
     ];
 }

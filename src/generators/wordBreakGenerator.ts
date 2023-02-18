@@ -3,12 +3,12 @@ import { GeneratorBase } from "../GeneratorBase";
 
 export class WordBreakGenerator extends GeneratorBase {
     postfixValuesMap = new Map([
-        ["normal", ["normal"]],
         ["break-all", ["break-all"]],
         ["keep-all", ["keep-all"]],
         ["break-word", ["break-word"]]
     ]);
+    list = ["normal"];
     cssData = [
-        new CssClassData("word-break", ["word-break"], this.postfixValuesMap)
+        new CssClassData("word-break", ["word-break"], this.list, this.postfixValuesMap)
     ];
 }

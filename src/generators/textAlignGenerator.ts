@@ -14,12 +14,9 @@ export class TextAlignGenerator extends GeneratorBase {
         ["justify", ["justify"]],
         ["justify-all", ["justify-all"]],
         ["match-parent", ["match-parent"]],
-        ["inherit", ["inherit"]],
-        ["initial", ["initial"]],
-        ["revert", ["revert"]],
-        ["unset", ["unset"]]
     ]);
+    list = ["inherit", "initial", "revert", "unset"];
     cssData = [
-        new CssClassData("text-align", ["text-align"], this.postfixValuesMap)
+        new CssClassData("text-align", ["text-align"], this.list, this.postfixValuesMap)
     ];
 }

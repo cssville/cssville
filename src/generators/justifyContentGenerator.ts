@@ -15,12 +15,9 @@ export class JustifyContentGenerator extends GeneratorBase {
         ["stretch", ["stretch"]],
         ["safe-center", ["safe center"]],
         ["unsafe-center", ["unsafe center"]],
-        ["inherit", ["inherit"]],
-        ["initial", ["initial"]],
-        ["revert", ["revert"]],
-        ["unset", ["unset"]]
     ]);
+    list = ["inherit", "initial", "revert", "unset"];
     cssData = [
-        new CssClassData("justify-content", ["-o-justify-content", "-webkit-justify-content", "justify-content"], this.postfixValuesMap)
+        new CssClassData("justify-content", ["-o-justify-content", "-webkit-justify-content", "justify-content"], this.list, this.postfixValuesMap)
     ];
 }

@@ -2,16 +2,8 @@ import { CssClassData } from "../data/cssClassData";
 import { GeneratorBase } from "../GeneratorBase";
 
 export class ColorGenerator extends GeneratorBase {
-    postfixValuesMap = new Map([
-        ["black", ["black"]],
-        ["white", ["white"]],
-        ["transparent", ["transparent"]],
-        ["inherit", ["inherit"]],
-        ["initial", ["initial"]],
-        ["revert", ["revert"]],
-        ["unset", ["unset"]]
-    ]);
+    list = ["black", "white", "transparent", "inherit", "initial", "revert", "unset"];
     cssData = [
-        new CssClassData("color", ["color"], this.postfixValuesMap)
+        new CssClassData("color", ["color"], this.list)
     ];
 }

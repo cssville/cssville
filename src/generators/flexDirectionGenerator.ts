@@ -7,12 +7,9 @@ export class FlexDirectionGenerator extends GeneratorBase {
         ["row-reverse", ["row-reverse"]],
         ["column", ["column"]],
         ["column-reverse", ["column-reverse"]],
-        ["inherit", ["inherit"]],
-        ["initial", ["initial"]],
-        ["revert", ["revert"]],
-        ["unset", ["unset"]]
     ]);
+    list = ["inherit", "initial", "revert", "unset"];
     cssData = [
-        new CssClassData("flex-direction", ["flex-direction"], this.postfixValuesMap)
+        new CssClassData("flex-direction", ["flex-direction"], this.list, this.postfixValuesMap)
     ];
 }

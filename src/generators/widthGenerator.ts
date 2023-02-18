@@ -19,10 +19,6 @@ export class WidthGenerator extends GeneratorBase {
         ["10", ["83.333%"]],
         ["11", ["91.666%"]],
         ["12", ["100%"]],
-        ["inherit", ["inherit"]],
-        ["initial", ["initial"]],
-        ["revert", ["revert"]],
-        ["unset", ["unset"]],
         ["xs", ["320px"]],
         ["sm", ["544px"]],
         ["md", ["768px"]],
@@ -34,9 +30,10 @@ export class WidthGenerator extends GeneratorBase {
         ["48px", ["48px"]],
         ["64px", ["64px"]]
     ]);
+    list = ["inherit", "initial", "revert", "unset"];
     cssData = [
-        new CssClassData("w", ["width"], this.postfixValuesMap),
-        new CssClassData("max-w", ["max-width"], this.postfixValuesMap),
-        new CssClassData("min-w", ["min-width"], this.postfixValuesMap)
+        new CssClassData("w", ["width"], this.list, this.postfixValuesMap),
+        new CssClassData("max-w", ["max-width"], this.list, this.postfixValuesMap),
+        new CssClassData("min-w", ["min-width"], this.list, this.postfixValuesMap)
     ];
 }

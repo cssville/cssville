@@ -6,12 +6,9 @@ export class FloatGenerator extends GeneratorBase {
         ["left", ["left"]],
         ["right", ["right"]],
         ["none", ["none"]],
-        ["inherit", ["inherit"]],
-        ["initial", ["initial"]],
-        ["revert", ["revert"]],
-        ["unset", ["unset"]]
     ]);
+    list = ["inherit", "initial", "revert", "unset"];
     cssData = [
-        new CssClassData("float", ["float"], this.postfixValuesMap)
+        new CssClassData("float", ["float"], this.list, this.postfixValuesMap)
     ];
 }

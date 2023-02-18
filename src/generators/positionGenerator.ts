@@ -8,12 +8,9 @@ export class PositionGenerator extends GeneratorBase {
         ["absolute", ["absolute"]],
         ["fixed", ["fixed"]],
         ["sticky", ["sticky"]],
-        ["inherit", ["inherit"]],
-        ["initial", ["initial"]],
-        ["revert", ["revert"]],
-        ["unset", ["unset"]]
     ]);
+    list = ["inherit", "initial", "revert", "unset"];
     cssData = [
-        new CssClassData("position", ["position"], this.postfixValuesMap),
+        new CssClassData("position", ["position"], this.list, this.postfixValuesMap),
     ];
 }

@@ -7,12 +7,9 @@ export class FlexGrowGenerator extends GeneratorBase {
         ["1", ["1"]],
         ["2", ["2"]],
         ["3", ["3"]],
-        ["inherit", ["inherit"]],
-        ["initial", ["initial"]],
-        ["revert", ["revert"]],
-        ["unset", ["unset"]]
     ]);
+    list = ["inherit", "initial", "revert", "unset"];
     cssData = [
-        new CssClassData("flex-grow", ["-o-flex-grow", "-webkit-flex-grow", "flex-grow"], this.postfixValuesMap)
+        new CssClassData("flex-grow", ["-o-flex-grow", "-webkit-flex-grow", "flex-grow"], this.list, this.postfixValuesMap)
     ];
 }

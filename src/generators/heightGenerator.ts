@@ -6,10 +6,6 @@ export class HeightGenerator extends GeneratorBase {
         ["auto", ["auto"]],
         ["max-content", ["max-content"]],
         ["min-content", ["min-content"]],
-        ["inherit", ["inherit"]],
-        ["initial", ["initial"]],
-        ["revert", ["revert"]],
-        ["unset", ["unset"]],
         ["16px", ["16px"]],
         ["24px", ["24px"]],
         ["32px", ["32px"]],
@@ -17,9 +13,10 @@ export class HeightGenerator extends GeneratorBase {
         ["64px", ["64px"]],
         ["100", ["100%"]],
     ]);
+    list = ["inherit", "initial", "revert", "unset"];
     cssData = [
-        new CssClassData("h", ["height"], this.postfixValuesMap),
-        new CssClassData("max-h", ["max-height"], this.postfixValuesMap),
-        new CssClassData("min-h", ["min-height"], this.postfixValuesMap)
+        new CssClassData("h", ["height"], this.list, this.postfixValuesMap),
+        new CssClassData("max-h", ["max-height"], this.list, this.postfixValuesMap),
+        new CssClassData("min-h", ["min-height"], this.list, this.postfixValuesMap)
     ];
 }

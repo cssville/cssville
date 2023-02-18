@@ -26,12 +26,9 @@ export class DisplayGenerator extends GeneratorBase {
         ["table-column", ["table-column"]],
         ["table-cell", ["table-cell"]],
         ["list-item", ["list-item"]],
-        ["inherit", ["inherit"]],
-        ["initial", ["initial"]],
-        ["revert", ["revert"]],
-        ["unset", ["unset"]]
     ]);
+    list = ["inherit", "initial", "revert", "unset"];
     cssData = [
-        new CssClassData("d", ["display"], this.postfixValuesMap)
+        new CssClassData("d", ["display"], this.list, this.postfixValuesMap)
     ];
 }

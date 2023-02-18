@@ -7,12 +7,9 @@ export class FlexShrinkGenerator extends GeneratorBase {
         ["1", ["1"]],
         ["2", ["2"]],
         ["3", ["3"]],
-        ["inherit", ["inherit"]],
-        ["initial", ["initial"]],
-        ["revert", ["revert"]],
-        ["unset", ["unset"]]
     ]);
+    list = ["inherit", "initial", "revert", "unset"];
     cssData = [
-        new CssClassData("flex-shrink", ["-o-flex-shrink", "-webkit-flex-shrink", "flex-shrink"], this.postfixValuesMap)
+        new CssClassData("flex-shrink", ["-o-flex-shrink", "-webkit-flex-shrink", "flex-shrink"], this.list, this.postfixValuesMap)
     ];
 }

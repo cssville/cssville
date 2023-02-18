@@ -2,16 +2,8 @@ import { CssClassData } from "../data/cssClassData";
 import { GeneratorBase } from "../GeneratorBase";
 
 export class BackgroundColorGenerator extends GeneratorBase {
-    postfixValuesMap = new Map([
-        ["black", ["black"]],
-        ["white", ["white"]],
-        ["transparent", ["transparent"]],
-        ["inherit", ["inherit"]],
-        ["initial", ["initial"]],
-        ["revert", ["revert"]],
-        ["unset", ["unset"]]
-    ]);
+    flatValues = ["black", "white", "transparent", "inherit", "initial", "revert", "unset"];
     cssData = [
-        new CssClassData("bg-color", ["background-color"], this.postfixValuesMap)
+        new CssClassData("bg-color", ["background-color"], this.flatValues)
     ];
 }
