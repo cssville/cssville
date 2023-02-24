@@ -5,11 +5,12 @@ module.exports = {
   mode: "development",
   devtool: "inline-source-map",
   entry: {
-    main: "./src/generate.ts",
+    cssville: "./src/generate.ts",
+    web: "./src/index.ts",
   },
   output: {
     path: path.resolve(__dirname, './build'),
-    filename: "cssville.bundle.js" // <--- Will be compiled to this single file
+    filename: "[name].bundle.js" // <--- Will be compiled to this single file
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js"],
