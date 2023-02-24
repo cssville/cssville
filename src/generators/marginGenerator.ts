@@ -9,9 +9,8 @@ export class MarginGenerator extends GeneratorBase {
         ["3", ["16px"]],
         ["4", ["32px"]],
         ["5", ["64px"]],
-        ["auto", ["auto"]],
     ]);
-    list = ["inherit", "initial", "revert", "unset"];
+    list = ["auto", "inherit", "initial", "revert", "unset"];
     cssData = [
         new CssClassData("m", ["margin"], this.list, this.postfixValuesMap),
         new CssClassData("mt", ["margin-top"], this.list, this.postfixValuesMap),

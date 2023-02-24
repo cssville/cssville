@@ -3,9 +3,6 @@ import { GeneratorBase } from "../GeneratorBase";
 
 export class WidthGenerator extends GeneratorBase {
     postfixValuesMap = new Map([
-        ["max-content", ["max-content"]],
-        ["min-content", ["min-content"]],
-        ["fit-content", ["fit-content"]],
         ["0", ["0%"]],
         ["1", ["8.333%"]],
         ["2", ["16.666%"]],
@@ -24,13 +21,8 @@ export class WidthGenerator extends GeneratorBase {
         ["md", ["768px"]],
         ["lg", ["1012px"]],
         ["xl", ["1280px"]],
-        ["16px", ["16px"]],
-        ["24px", ["24px"]],
-        ["32px", ["32px"]],
-        ["48px", ["48px"]],
-        ["64px", ["64px"]]
     ]);
-    list = ["inherit", "initial", "revert", "unset"];
+    list = ["max-content", "min-content", "fit-content", "16px", "24px", "32px", "48px", "64px", "inherit", "initial", "revert", "unset"];
     cssData = [
         new CssClassData("w", ["width"], this.list, this.postfixValuesMap),
         new CssClassData("max-w", ["max-width"], this.list, this.postfixValuesMap),
