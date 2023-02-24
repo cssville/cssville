@@ -16,7 +16,7 @@
     "generate-pattern": "node build/cssville.bundle.js build/cssville.small.css Web/Content jsx,html",
     "watch:build": "tsc --watch",
     "watch:server": "lite-server -c lite-server-config.json",
-    "copy-files": "copyfiles -u 1 src/**/*.html src/**/*.css src/**/*.svg src/**/*.ico src/CNAME build/",
+    "copy-files": "copyfiles -u 1 src/**/*.html src/**/*.css src/**/*.svg src/**/*.ico src/**/*.png src/CNAME build/",
     "copy-css": "copyfiles -u 1 build/cssville.css .",
     "copy-js": "copyfiles -u 1 build/cssville.bundle.js .",
     "copy-css-src": "copyfiles -u 1 build/cssville.css src/",

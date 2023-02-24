@@ -9,9 +9,26 @@ function docReady(fn: () => void) {
 }
 
 let hasCopied = false;
+const entityMap = new Map<string, string>(Object.entries({
+  "&": "&amp;",
+  "<": "&lt;",
+  ">": "&gt;",
+  '"': '&quot;',
+  "'": '&#39;',
+  "/": '&#x2F;'
+}))
+
+function escape_html(source: string) {
+  return String(source).replace(/[&<>"'\/]/g, (s: string) => entityMap.get(s)!);
+}
 
 docReady(function () {
   console.log("doc ready")
+  var ex = document.getElementById("example") as HTMLInputElement;
+  var exCode = document.getElementById("example-code") as HTMLInputElement;
+  console.log(ex.innerHTML)
+  console.log(escape_html(ex.innerHTML))
+  exCode.innerHTML = escape_html(ex.innerHTML);
   document.getElementById("copy")?.addEventListener('click', async function(){
       var copyText = document.getElementById("input-copy") as HTMLInputElement;
       var copyIcon = document.getElementById("copy-icon") as HTMLImageElement;

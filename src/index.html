@@ -23,6 +23,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/stackoverflow-dark.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
     <script>if(!sessionStorage.getItem("_swa")&&document.referrer.indexOf(location.protocol+"//"+location.host)!== 0){fetch("https://counter.dev/track?"+new URLSearchParams({referrer:document.referrer,screen:screen.width+"x"+screen.height,user:"elv1s42k",utcoffset:"3"}))};sessionStorage.setItem("_swa","1");</script>
   </head>
   <body class="p-0 m-0 min-w-xs">
@@ -56,8 +58,8 @@
               Apply pre-defined classes directly in your HTML
               and create a web UI ready for production.</p>
           </div>
-          <div class="w-6 d-flex justify-content-center lg-w-12">
-            <img src="city.svg" alt="city" class="max-w-sm lg-w-12"/>
+          <div class="w-6 py-3 d-flex justify-content-center lg-w-12">
+            <img src="city.svg" alt="city" class="max-w-12"/>
           </div>
         </div>
         <div class="py-2 lg-py-0">
@@ -71,7 +73,39 @@
           </div>
         </div>
       </div>
+      <h2 class="fs-xx-large m-0 pb-4 md-fs-xx-large">
+        Demo
+      </h2>
+      <div class="d-flex lg-flex-direction-column-reverse lg-pt-4">
+        <div class="py-3 w-6 lg-w-12">
+          <pre>
+            <code id="example-code" class="language-html br-2"></code>
+          </pre>
+        </div>
+        <div id="example" class="w-6 py-3 d-flex justify-content-center lg-w-12">
+  <div class="m-3 d-flex position-relative">
+    <img src="house.png" alt="house" class="w-12 max-w-12 br-3 object-fit-cover"/>
+    <div class="d-flex position-absolute h-100 w-12">
+      <div class="d-flex flex-direction-column p-3 w-12">
+        <img src="star.svg" alt="star" class="h-24px w-24px"/>
+        <div class="flex-grow-1"></div>
+        <div class="d-flex w-12">
+          <img src="profile.svg" alt="star" class="h-48px w-48px bg-color-white br-50p"/>
+          <div class="d-flex justify-content-center pl-2 flex-direction-column flex-grow-1">
+            <span class="fw-bold color-white">Naomi Rivers</span>
+            <span class="fs-small color-white">Available for hire</span>
+          </div>
+          <div class="d-flex align-items-flex-end">
+            <img src="bookmark.svg" alt="star" class="h-24px w-24px"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
     </div>
     <script src="web.bundle.js"></script>
+    <script>hljs.highlightAll();</script>
   </body>
 </html>
