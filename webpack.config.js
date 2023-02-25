@@ -9,7 +9,7 @@ module.exports = {
     web: "./src/index.ts",
   },
   output: {
-    path: path.resolve(__dirname, './build'),
+    path: path.resolve(__dirname, './src'),
     filename: "[name].bundle.js" // <--- Will be compiled to this single file
   },
   resolve: {

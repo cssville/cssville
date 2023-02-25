@@ -22,3 +22,7 @@ html, body {
 .code {
     font-family: 'JetBrains Mono', monospace;
 }
+
+.bg-grey {
+    background-color: #f6f6f6;
+}

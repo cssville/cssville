@@ -1,5 +1,5 @@
 {
     "port": 8000,
-    "files": ["./build/**/*.{html,htm,css,js,ico,svg}"],
-    "server": { "baseDir": "./build" }
+    "files": ["./src/**/*.{html,htm,css,js,ico,svg}"],
+    "server": { "baseDir": "./src" }
   }

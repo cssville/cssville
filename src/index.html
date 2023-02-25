@@ -23,7 +23,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/stackoverflow-dark.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/stackoverflow-light.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
     <script>if(!sessionStorage.getItem("_swa")&&document.referrer.indexOf(location.protocol+"//"+location.host)!== 0){fetch("https://counter.dev/track?"+new URLSearchParams({referrer:document.referrer,screen:screen.width+"x"+screen.height,user:"elv1s42k",utcoffset:"3"}))};sessionStorage.setItem("_swa","1");</script>
   </head>
@@ -73,17 +73,13 @@
           </div>
         </div>
       </div>
-      <h2 class="fs-xx-large m-0 pb-4 md-fs-xx-large">
+      <h2 class="fs-xx-large m-0 pb-3 md-fs-xx-large">
         Demo
       </h2>
-      <div class="d-flex lg-flex-direction-column-reverse lg-pt-4">
-        <div class="py-3 w-6 lg-w-12">
-          <pre>
-            <code id="example-code" class="language-html br-2"></code>
-          </pre>
-        </div>
-        <div id="example" class="w-6 py-3 d-flex justify-content-center lg-w-12">
-  <div class="m-3 d-flex position-relative">
+      <div class="d-flex flex-direction-column position-relative bg-grey br-3 pt-3">
+        <div class="w-12 d-flex justify-content-center">
+          <div id="example" class="w-12 d-flex justify-content-center">
+  <div class="d-flex w-12 position-relative max-w-sm mx-3">
     <img src="house.png" alt="house" class="w-12 max-w-12 br-3 object-fit-cover"/>
     <div class="d-flex position-absolute h-100 w-12">
       <div class="d-flex flex-direction-column p-3 w-12">
@@ -102,6 +98,12 @@
       </div>
     </div>
   </div>
+          </div>
+        </div>
+        <div class="w-12">
+          <pre class="m-0">
+            <code id="example-code" class="language-html br-2"></code>
+          </pre>
         </div>
       </div>
     </div>
