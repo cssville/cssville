@@ -23,6 +23,7 @@ import { TextAlignGenerator } from "./generators/textAlignGenerator";
 import { WordBreakGenerator } from "./generators/wordBreakGenerator";
 import { WhiteSpaceGenerator } from "./generators/whiteSpaceGenerator";
 import { ObjectFitGenerator } from "./generators/objectFitGenerator";
+import { OpacityGenerator } from "./generators/opacityGenerator";
 
 export class Cssville {
     
@@ -54,6 +55,7 @@ export class Cssville {
         new HeightGenerator(),
         new JustifyContentGenerator(),
         new ObjectFitGenerator(),
+        new OpacityGenerator(),
         new WidthGenerator(),
         new WhiteSpaceGenerator(),
         new WordBreakGenerator(),

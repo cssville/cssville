@@ -26,8 +26,6 @@ docReady(function () {
   console.log("doc ready")
   var ex = document.getElementById("example") as HTMLInputElement;
   var exCode = document.getElementById("example-code") as HTMLInputElement;
-  console.log(ex.innerHTML)
-  console.log(escape_html(ex.innerHTML))
   exCode.innerHTML = escape_html(ex.innerHTML);
   document.getElementById("copy")?.addEventListener('click', async function(){
       var copyText = document.getElementById("input-copy") as HTMLInputElement;

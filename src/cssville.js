@@ -25,6 +25,7 @@ var textAlignGenerator_1 = require("./generators/textAlignGenerator");
 var wordBreakGenerator_1 = require("./generators/wordBreakGenerator");
 var whiteSpaceGenerator_1 = require("./generators/whiteSpaceGenerator");
 var objectFitGenerator_1 = require("./generators/objectFitGenerator");
+var opacityGenerator_1 = require("./generators/opacityGenerator");
 var Cssville = /** @class */ (function () {
     function Cssville() {
     }
@@ -74,6 +75,7 @@ var Cssville = /** @class */ (function () {
         new heightGenerator_1.HeightGenerator(),
         new justifyContentGenerator_1.JustifyContentGenerator(),
         new objectFitGenerator_1.ObjectFitGenerator(),
+        new opacityGenerator_1.OpacityGenerator(),
         new widthGenerator_1.WidthGenerator(),
         new whiteSpaceGenerator_1.WhiteSpaceGenerator(),
         new wordBreakGenerator_1.WordBreakGenerator(),

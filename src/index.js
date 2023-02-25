@@ -61,8 +61,6 @@ docReady(function () {
     console.log("doc ready");
     var ex = document.getElementById("example");
     var exCode = document.getElementById("example-code");
-    console.log(ex.innerHTML);
-    console.log(escape_html(ex.innerHTML));
     exCode.innerHTML = escape_html(ex.innerHTML);
     (_a = document.getElementById("copy")) === null || _a === void 0 ? void 0 : _a.addEventListener('click', function () {
         return __awaiter(this, void 0, void 0, function () {
