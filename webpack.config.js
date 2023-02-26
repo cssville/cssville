@@ -6,7 +6,7 @@ module.exports = {
   devtool: "inline-source-map",
   entry: {
     cssville: "./src/generate.ts",
-    web: "./src/index.ts",
+    web: "./src/index.tsx",
   },
   output: {
     path: path.resolve(__dirname, './src'),

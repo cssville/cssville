@@ -1,3 +1,8 @@
+import { Cssville } from "./cssville";
+import * as ReactDOM from 'react-dom/client';
+import React = require("react");
+import { ReactNode } from "react";
+
 function docReady(fn: () => void) {
     // see if DOM is already available
     if (document.readyState === "complete" || document.readyState === "interactive") {
@@ -27,6 +32,14 @@ docReady(function () {
   var ex = document.getElementById("example") as HTMLInputElement;
   var exCode = document.getElementById("example-code") as HTMLInputElement;
   exCode.innerHTML = escape_html(ex.innerHTML);
+
+  const root = ReactDOM.createRoot(document.getElementById('root'));
+  const nodes: ReactNode[] = [];
+  Cssville.generators.forEach((g, i) => {
+    nodes[nodes.length] = g.getUIComponent();
+  })
+  root.render(<>{nodes}</>);
+
   document.getElementById("copy")?.addEventListener('click', async function(){
       var copyText = document.getElementById("input-copy") as HTMLInputElement;
       var copyIcon = document.getElementById("copy-icon") as HTMLImageElement;

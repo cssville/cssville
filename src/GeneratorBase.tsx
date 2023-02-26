@@ -1,10 +1,14 @@
+import { ReactFragment, ReactNode } from "react";
+import React = require("react");
 import { CssClassData } from "./data/cssClassData";
 import { IGenerator } from "./IGenerator";
 
 export class GeneratorBase implements IGenerator {
+    public constructor (name: string) {
+        this.name = name;
+    }
 
-    public constructor () { }
-
+    public name: string = "";
     public postfixValuesMap: Map<string, string[]> = new Map();
     public cssData: CssClassData[] = [];
 
@@ -14,5 +18,9 @@ export class GeneratorBase implements IGenerator {
             cssPart += data.getCss(prefix, classes);
         });
         return cssPart;
+    }
+
+    getUIComponent(): ReactNode {
+        return (<div className="pb-3">{this.name}</div>);
     }
 }
