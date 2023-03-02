@@ -9,18 +9,15 @@ export class PaddingGenerator extends GeneratorBase {
         ["3", ["16px"]],
         ["4", ["32px"]],
         ["5", ["64px"]],
-        ["inherit", ["inherit"]],
-        ["initial", ["initial"]],
-        ["revert", ["revert"]],
-        ["unset", ["unset"]]
     ]);
+    list = ["inherit", "initial", "revert", "unset"];
     cssData = [
-        new CssClassData("p", ["padding"], this.postfixValuesMap),
-        new CssClassData("pt", ["padding-top"], this.postfixValuesMap),
-        new CssClassData("pb", ["padding-bottom"], this.postfixValuesMap),
-        new CssClassData("pl", ["padding-left"], this.postfixValuesMap),
-        new CssClassData("pr", ["padding-right"], this.postfixValuesMap),
-        new CssClassData("px", ["padding-left", "padding-right"], this.postfixValuesMap),
-        new CssClassData("py", ["padding-top", "padding-bottom"], this.postfixValuesMap),
+        new CssClassData("p", ["padding"], this.list, this.postfixValuesMap),
+        new CssClassData("pt", ["padding-top"], this.list, this.postfixValuesMap),
+        new CssClassData("pb", ["padding-bottom"], this.list, this.postfixValuesMap),
+        new CssClassData("pl", ["padding-left"], this.list, this.postfixValuesMap),
+        new CssClassData("pr", ["padding-right"], this.list, this.postfixValuesMap),
+        new CssClassData("px", ["padding-left", "padding-right"], this.list, this.postfixValuesMap),
+        new CssClassData("py", ["padding-top", "padding-bottom"], this.list, this.postfixValuesMap),
     ];
 }

@@ -35,7 +35,7 @@ if(!path) {
 }
 if(!extensions) { 
     var css = Cssville.getCss();
-    fs.writeFile(path, css, () => { console.log("done: " + path); });    
+    fs.writeFile(path, css, () => { console.log("Done: " + path); });    
 } else {
     var classes:  string[] = [];
     var exArray = extensions.split(",");

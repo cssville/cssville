@@ -20,6 +20,10 @@ import { BorderRadiusGenerator } from "./generators/borderRadiusGenerator";
 import { CursorGenerator } from "./generators/cursorGenerator";
 import { BackgroundColorGenerator } from "./generators/backgroundColorGenerator";
 import { TextAlignGenerator } from "./generators/textAlignGenerator";
+import { WordBreakGenerator } from "./generators/wordBreakGenerator";
+import { WhiteSpaceGenerator } from "./generators/whiteSpaceGenerator";
+import { ObjectFitGenerator } from "./generators/objectFitGenerator";
+import { OpacityGenerator } from "./generators/opacityGenerator";
 
 export class Cssville {
     
@@ -33,27 +37,31 @@ export class Cssville {
 
     public static generators: IGenerator[] = 
     [
-        new AlignItemsGenerator(),
-        new BorderRadiusGenerator(),
-        new BackgroundColorGenerator(),
-        new ColorGenerator(),
-        new CursorGenerator(),
-        new PaddingGenerator(),
-        new MarginGenerator(),
-        new DisplayGenerator(),
-        new FlexDirectionGenerator(),
-        new FlexGrowGenerator(),
-        new FlexShrinkGenerator(),
-        new FlexWrapGenerator(),
-        new FloatGenerator(),
-        new FontSizeGenerator(),
-        new FontWeightGenerator(),
-        new HeightGenerator(),
-        new JustifyContentGenerator(),
-        new WidthGenerator(),
-        new TextAlignGenerator(),
-        new TextDecorationGenerator(),
-        new PositionGenerator(),
+        new AlignItemsGenerator("align-items"),
+        new BorderRadiusGenerator("border-radius"),
+        new BackgroundColorGenerator("background-color"),
+        new ColorGenerator("color"),
+        new CursorGenerator("cursor"),
+        new DisplayGenerator("display"),
+        new FlexDirectionGenerator("flex-direction"),
+        new FlexGrowGenerator("flex-grow"),
+        new FlexShrinkGenerator("flex-shrink"),
+        new FlexWrapGenerator("flex-wrap"),
+        new FloatGenerator("float"),
+        new FontSizeGenerator("font-size"),
+        new FontWeightGenerator("font-weight"),
+        new HeightGenerator("height"),
+        new JustifyContentGenerator("justify-content"),
+        new MarginGenerator("margin"),
+        new ObjectFitGenerator("object-fit"),
+        new OpacityGenerator("opacity"),
+        new PaddingGenerator("padding"),
+        new PositionGenerator("position"),
+        new TextAlignGenerator("text-align"),
+        new TextDecorationGenerator("text-decoration"),
+        new WidthGenerator("width"),
+        new WhiteSpaceGenerator("white-space"),
+        new WordBreakGenerator("word-break"),
     ];
 
     static getCss(classes: string[] = []) : string {

@@ -16,7 +16,6 @@ jobs:
       - run: npm install npm@latest -g
       - run: npm install typescript -g
       - run: npm install
-      - run: npm run build
       - run: npm run deploy-prepare
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
@@ -25,11 +24,10 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source-directory: 'build'
+          source-directory: 'src'
           destination-github-username: 'cssville'
           destination-repository-name: 'cssville.github.io'
           target-branch: main
-
 
   deploy:
     runs-on: ubuntu-latest
@@ -44,7 +42,6 @@ jobs:
       - run: npm install npm@latest -g
       - run: npm install typescript -g
       - run: npm install
-      - run: npm run build
       - run: npm run deploy-prepare
       - run: npm -v
       - run: npm pack ./

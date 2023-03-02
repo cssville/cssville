@@ -23,6 +23,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/nnfx-light.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
     <script>if(!sessionStorage.getItem("_swa")&&document.referrer.indexOf(location.protocol+"//"+location.host)!== 0){fetch("https://counter.dev/track?"+new URLSearchParams({referrer:document.referrer,screen:screen.width+"x"+screen.height,user:"elv1s42k",utcoffset:"3"}))};sessionStorage.setItem("_swa","1");</script>
   </head>
   <body class="p-0 m-0 min-w-xs">
@@ -56,8 +58,8 @@
               Apply pre-defined classes directly in your HTML
               and create a web UI ready for production.</p>
           </div>
-          <div class="w-6 d-flex justify-content-center lg-w-12">
-            <img src="city.svg" alt="city" class="max-w-sm lg-w-12"/>
+          <div class="w-6 py-3 d-flex justify-content-center lg-w-12">
+            <img src="city.svg" alt="city" class="max-w-12"/>
           </div>
         </div>
         <div class="py-2 lg-py-0">
@@ -71,7 +73,54 @@
           </div>
         </div>
       </div>
+      <h2 class="fs-xx-large m-0 pb-3 md-fs-xx-large">
+        Demo
+      </h2>
+      <div class="d-flex flex-direction-column position-relative bg-grey br-3 pt-3 mb-5">
+        <div class="w-12 d-flex justify-content-center">
+          <div id="example" class="w-12 d-flex justify-content-center">
+  <div class="d-flex w-12 position-relative max-w-sm">
+    <img src="house.png" class="w-12 max-w-12 br-3 object-fit-cover"/>
+    <div class="d-flex position-absolute h-100 w-12">
+      <div class="d-flex flex-direction-column p-3 w-12">
+        <img src="star.svg" class="h-24px w-24px"/>
+        <div class="flex-grow-1"></div>
+        <div class="d-flex w-12">
+          <img src="profile.svg" class="h-48px w-48px bg-color-white br-50p"/>
+          <div class="d-flex justify-content-center pl-2 flex-direction-column flex-grow-1">
+            <span class="fw-bold color-white">Naomi Rivers</span>
+            <span class="fs-small color-white opacity-07">Available for hire</span>
+          </div>
+          <div class="d-flex align-items-flex-end">
+            <img src="bookmark.svg" class="h-24px w-24px"/>
+          </div>
+        </div>
+      </div>
     </div>
-    <script src="index.js"></script>
+  </div>
+          </div>
+        </div>
+        <div class="max-w-md mx-auto">
+          <pre class="m-0">
+            <code id="example-code" class="language-html br-2"></code>
+          </pre>
+        </div>
+      </div>
+      <h2 class="fs-xx-large m-0 pb-3 md-fs-xx-large">
+        CSS properties
+      </h2>
+      <div id="root"></div>
+    </div>
+    <div class="d-flex align-items-center justify-content-center w-12 mt-3 py-3 bg-grey opacity-07">
+      <span>© Cssville 2023 - hosted by</span>
+      <a class="h-24px text-decoration-none" href="https://github.com/" target="_blank"><img src="github.svg" class="h-16px w-16px m-1"/></a>
+      <span><a class="text-decoration-none" href="https://github.com/" target="_blank">GitHub</a>, protected by </span>
+      <a class="h-24px text-decoration-none" href="https://cloudback.it/" target="_blank"><img src="cloudback.svg" class="h-16px w-16px m-1"/></a>      
+      <span><a class="text-decoration-none" href="https://cloudback.it/" target="_blank">Cloudback</a>, created by Evgeniy K.</span>
+      <a class="h-24px text-decoration-none" href="https://twitter.com/elv1s42" target="_blank"><img src="twitter.svg" class="h-16px w-16px m-1"/></a>
+      <a class="h-24px text-decoration-none" href="https://github.com/elv1s42" target="_blank"><img src="github.svg" class="h-16px w-16px m-1"/></a>
+    </div>
+    <script src="web.bundle.js"></script>
+    <script>hljs.highlightAll();</script>
   </body>
 </html>
