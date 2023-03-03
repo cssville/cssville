@@ -2,6 +2,7 @@ import { Cssville } from "./cssville";
 import * as ReactDOM from 'react-dom/client';
 import React = require("react");
 import { ReactNode } from "react";
+import hljs from 'highlight.js';
 
 function docReady(fn: () => void) {
     // see if DOM is already available
@@ -28,7 +29,6 @@ function escape_html(source: string) {
 }
 
 docReady(function () {
-  console.log("doc ready")
   var ex = document.getElementById("example") as HTMLInputElement;
   var exCode = document.getElementById("example-code") as HTMLInputElement;
   exCode.innerHTML = escape_html(ex.innerHTML);
@@ -39,7 +39,7 @@ docReady(function () {
     nodes[nodes.length] = g.getUIComponent();
   })
   root.render(<>{nodes}</>);
-
+  hljs.highlightAll();
   document.getElementById("copy")?.addEventListener('click', async function(){
       var copyText = document.getElementById("input-copy") as HTMLInputElement;
       var copyIcon = document.getElementById("copy-icon") as HTMLImageElement;
