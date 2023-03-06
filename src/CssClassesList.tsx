@@ -6,7 +6,7 @@ export const CssClassesList = (props: any) => {
     const [active, setActive] = useState(0);
     return (
         <>
-            <div className="fs-medium pb-2 d-flex flex-wrap-wrap">
+            <div className="w-12 fs-medium pb-2 d-flex flex-wrap-wrap">
                 {props.data.map((value: any, i: number) => {
                     var cl = value.cssClass;
                     return (
@@ -16,7 +16,7 @@ export const CssClassesList = (props: any) => {
                         </a>);
                 })}
             </div>
-            <div key={`come-example-${active}`} className="w-12 bg-grey p-3 br-3">
+            <div key={`come-example-${active}`} className="max-w-12 bg-grey p-3 br-3">
                 <pre className="m-0">
                     <code className="language-css hljs br-2 max-w-sm mx-auto"
                         dangerouslySetInnerHTML={{
