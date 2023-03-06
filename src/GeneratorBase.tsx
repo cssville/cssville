@@ -4,7 +4,6 @@ import { CssClassData } from "./data/cssClassData";
 import { IGenerator } from "./IGenerator";
 import { CssClassesList } from "./CssClassesList";
 import { getClasses } from "./parser";
-import hljs from 'highlight.js';
 
 export class GeneratorBase implements IGenerator {
     public constructor(name: string) {

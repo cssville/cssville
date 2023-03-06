@@ -10,8 +10,8 @@ export const CssClassesList = (props: any) => {
                 {props.data.map((value: any, i: number) => {
                     var cl = value.cssClass;
                     return (
-                        <a key={`class-${cl}`} onClick={(e) => { setActive(i)}}
-                            className={`cursor-pointer fs-small m-1 text-decoration-none border br-2 px-2 py-1 ${i === active ? "opacity-1 bg-grey fw-bold" : "opacity-05"}`}>
+                        <a key={`class-${cl}`} onClick={(e) => { setActive(i) }}
+                            className={`cursor-pointer fs-small m-1 text-decoration-none border br-2 px-2 ${i === active ? "opacity-1 bg-grey fw-bold" : "opacity-05"}`}>
                             {cl}
                         </a>);
                 })}

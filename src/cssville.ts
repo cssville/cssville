@@ -81,7 +81,7 @@ export class Cssville {
                 var cssPartForPrefix = g.generate(prefix, classes);
                 innerCss += cssPartForPrefix;
             }
-            css += `@media (max-width: ${value}) { ${innerCss}} `;
+            css += `@media screen and (max-width: ${value}) { ${innerCss}} `;
         });
         return css;
     }
