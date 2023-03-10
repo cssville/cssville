@@ -41,7 +41,7 @@ docReady(function () {
     <p className="pb-3 m-0">
       The same classes can be used with predefined screen-size prefixes. When prefix is used, the style is applied only for specific screen resolution.
       See the example below for the
-      <span className="fs-small text-decoration-none border br-2 px-2 opacity-1 bg-grey fw-bold">d-flex</span> property:
+      <span className="fs-small code text-decoration-none border br-2 px-2 opacity-1 bg-grey fw-bold">d-flex</span> property:
     </p>
   ];
   Cssville.prefixValueMap.forEach((val, prefix) => {
