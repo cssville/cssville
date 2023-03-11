@@ -7,8 +7,12 @@ html, body {
     background-color: #22272e;
 }
 
-.red {
-    background-color: #FF6584;
+.green {
+    color: #6FAC6F;
+}
+
+.bg-green {
+    background-color: #6FAC6F;
 }
 
 .grey {
