@@ -1,6 +1,5 @@
 html, body {
     color: #343A40;
-    /*font-family: 'Nunito', sans-serif;*/
     font-family: 'Inter', sans-serif;
 }
 
@@ -14,10 +13,6 @@ html, body {
 
 .grey {
     color: #cccccc;
-}
-
-.npm {
-    color: #8ddb8c;
 }
 
 .code {
