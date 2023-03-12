@@ -27,51 +27,56 @@
     <script>if(!sessionStorage.getItem("_swa")&&document.referrer.indexOf(location.protocol+"//"+location.host)!== 0){fetch("https://counter.dev/track?"+new URLSearchParams({referrer:document.referrer,screen:screen.width+"x"+screen.height,user:"elv1s42k",utcoffset:"3"}))};sessionStorage.setItem("_swa","1");</script>
   </head>
   <body class="p-0 m-0">
-    <div class="mx-auto max-w-lg py-3 px-5 lg-px-4 md-px-3 sm-px-2">
-      <div class="d-flex flex-direction-row pb-5 lg-pb-0">
-        <a href="/" class="d-flex text-decoration-none green">
-          <img src="cssville.svg" alt="logo" class="h-64px w-64px"/>
-          <div class="d-flex align-items-flex-end justify-content-center sm-d-none pl-2 pb-2">
-            <span class="fw-800 fs-x-large">Cssville</span>
-          </div>
-        </a>
-        <div class="flex-grow-1"></div>
-        <div class="d-flex align-items-flex-end sm-align-items-center justify-content-center">
-          <a class="d-flex px-3 py-2 text-decoration-none color-white bg-green br-2" 
-            href="https://github.com/cssville/cssville" target="_blank" rel="noopener">
-            <img src="mark-github.svg" alt="mark-github" class="h-24px w-24px"/>
-            <div class="d-flex align-items-flex-end justify-content-center xs-d-none px-2">
-              <span class="fs-large fw-bold">Open source</span>
+    <div class="w-12 position-relative">
+      <div class="position-absolute h-100"><img src="bg.svg" class="w-12 h-100 object-fit-cover"/></div>
+      <div class="position-relative mx-auto max-w-lg py-3 px-5 lg-px-4 md-px-3 sm-px-2">
+        <div class="d-flex flex-direction-row pb-5 lg-pb-0">
+          <a href="/" class="d-flex text-decoration-none green">
+            <img src="cssville.svg" alt="logo" class="h-32px w-32px py-2"/>
+            <div class="d-flex align-items-center justify-content-center sm-d-none pl-2">
+              <span class="fw-600 fs-x-large code">cssville</span>
             </div>
           </a>
-        </div>
-      </div>
-      <div class="d-flex py-5 flex-direction-column lg-my-0">
-        <h1 class="fs-xxx-large m-0 pb-4 md-fs-xx-large text-align-center">
-          Construct your UI with ready-to-use CSS utility classes
-        </h1>
-        <div class="d-flex lg-flex-direction-column-reverse lg-pt-4">
-          <div class="d-flex align-items-center justify-content-center py-3 w-6 lg-w-12">
-            <p class="fs-x-large p-0 m-0 lg-py-3 md-fs-large">
-              Cssville is a utility-first CSS framework with zero dependencies.
-              Apply pre-defined classes directly to your HTML
-              and create a web UI ready for production.</p>
-          </div>
-          <div class="w-6 py-3 d-flex justify-content-center lg-w-12">
-            <img src="city.svg" alt="city" class="max-w-12"/>
+          <div class="flex-grow-1"></div>
+          <div class="d-flex align-items-center justify-content-center">
+            <a class="d-flex px-3 py-2 text-decoration-none color-white bg-green br-2" 
+              href="https://github.com/cssville/cssville" target="_blank" rel="noopener">
+              <img src="mark-github.svg" alt="mark-github" class="h-24px w-24px"/>
+              <div class="d-flex align-items-flex-end justify-content-center xs-d-none px-2">
+                <span class="fs-large fw-bold">Open source</span>
+              </div>
+            </a>
           </div>
         </div>
-        <div class="py-2 lg-py-0">
-          <div id="copy" class="d-flex p-3 text-decoration-none color-black dark br-3 w-fit-content sm-p-2 sm-br-2 cursor-pointer">
-            <img src="chevron-right.svg" alt=">" class="h-24px w-24px pr-3 sm-pr-1"/>
-            <div class="d-flex align-items-center justify-content-center pr-4 sm-pr-3">
-              <span class="fs-large fw-bold code hljs sm-fs-medium"><span class="hljs-name">npm</span> install <span class="hljs-attr">cssville</span></span>
+        <div class="d-flex py-5 flex-direction-column lg-my-0">
+          <h1 class="fs-xxx-large m-0 pb-4 md-fs-xx-large text-align-center">
+            Construct your UI with ready-to-use CSS utility classes
+          </h1>
+          <div class="d-flex lg-flex-direction-column-reverse lg-pt-4">
+            <div class="d-flex align-items-center justify-content-center py-3 w-6 lg-w-12">
+              <p class="fs-x-large p-0 m-0 lg-py-3 md-fs-large">
+                Cssville is a utility-first CSS framework with zero dependencies.
+                Apply pre-defined classes directly to your HTML
+                and create a web UI ready for production.</p>
             </div>
-            <img id="copy-icon" src="copy.svg" alt="copy" class="h-24px w-24px pr-2"/>
-            <textarea id="input-copy" class="d-none" type="text">npm install cssville</textarea>
+            <div class="w-6 py-3 d-flex justify-content-center lg-w-12">
+              <img src="city.svg" alt="city" class="max-w-12"/>
+            </div>
+          </div>
+          <div class="py-2 lg-py-0">
+            <div id="copy" class="d-flex p-3 text-decoration-none color-black dark br-3 w-fit-content sm-p-2 sm-br-2 cursor-pointer">
+              <img src="chevron-right.svg" alt=">" class="h-24px w-24px pr-3 sm-pr-1"/>
+              <div class="d-flex align-items-center justify-content-center pr-4 sm-pr-3">
+                <span class="fs-large fw-bold code hljs sm-fs-medium"><span class="hljs-name">npm</span> install <span class="hljs-attr">cssville</span></span>
+              </div>
+              <img id="copy-icon" src="copy.svg" alt="copy" class="h-24px w-24px pr-2"/>
+              <textarea id="input-copy" class="d-none" type="text">npm install cssville</textarea>
+            </div>
           </div>
         </div>
       </div>
+    </div>
+    <div class="position-relative mx-auto max-w-lg py-3 px-5 lg-px-4 md-px-3 sm-px-2">
       <h2 class="fs-xx-large m-0 pb-3 md-fs-xx-large">
         About
       </h2>
