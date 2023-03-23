@@ -16,7 +16,7 @@ export const CssClassesList = (props: any) => {
                         </a>);
                 })}
             </div>
-            <div key={`come-example-${active}`} className="max-w-12 bg-grey p-3 br-3">
+            <div key={`come-example-${active}`} className="max-w-8 md-max-w-12 bg-grey p-3 br-3">
                 <pre className="m-0">
                     <code className="language-css hljs br-2 max-w-sm mx-auto"
                         dangerouslySetInnerHTML={{
