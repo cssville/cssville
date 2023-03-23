@@ -61,7 +61,7 @@ docReady(function () {
   })
   const rootNode = 
   <>
-    <h2 className="fs-xx-large m-0 pb-3 md-fs-xx-large">
+    <h2 className="fs-xx-large m-0 pb-4 md-fs-xx-large">
       CSS prefixes
     </h2>
     <p className="pb-3 m-0 max-w-8 md-max-w-12">
@@ -70,7 +70,7 @@ docReady(function () {
       <span className="fs-small code text-decoration-none border br-2 px-2 opacity-1 bg-grey fw-bold">d-flex</span> property:
     </p>
     <div className="pb-3 d-flex flex-wrap-wrap">{prefixesNodes}</div>
-    <h2 className="fs-xx-large m-0 pb-3 md-fs-xx-large">
+    <h2 className="fs-xx-large m-0 pb-4 md-fs-xx-large">
       CSS classes
     </h2>
     <p className="pb-3 m-0 max-w-8 md-max-w-12">
