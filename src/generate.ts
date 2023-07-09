@@ -1,5 +1,5 @@
 import fs = require('fs');
-import { Cssville } from './cssville';
+import Cssville from './cssville';
 import pathModule = require('path');
 
 function getFiles(pathDir: string): string[] {

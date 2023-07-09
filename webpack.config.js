@@ -7,7 +7,6 @@ module.exports = {
   entry: {
     generator: "./src/generate.ts",
     cssville: "./src/cssville.ts",
-    web: "./src/index.tsx",
   },
   output: {
     path: path.resolve(__dirname, './src'),

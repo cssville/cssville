@@ -1,4 +1,3 @@
-import { ReactNode } from "react";
 import { CssClassData } from "./data/cssClassData";
 
 export interface IGenerator {
@@ -6,5 +5,4 @@ export interface IGenerator {
   postfixValuesMap: Map<string, string[]>;
   cssData: CssClassData[];
   generate(prefix: string, classes: string[]): string;
-  getUIComponent(): ReactNode;
 }

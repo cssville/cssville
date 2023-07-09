@@ -1,9 +1,5 @@
-import { ReactFragment, ReactNode, useState } from "react";
-import React = require("react");
 import { CssClassData } from "./data/cssClassData";
 import { IGenerator } from "./IGenerator";
-import { CssClassesList } from "./CssClassesList";
-import { getClasses } from "./parser";
 
 export class GeneratorBase implements IGenerator {
     public constructor(name: string) {
@@ -20,18 +16,5 @@ export class GeneratorBase implements IGenerator {
             cssPart += data.getCss(prefix, classes);
         });
         return cssPart;
-    }
-
-    getUIComponent(): ReactNode {
-        let array = new Array();
-        this.cssData.map(d => getClasses(d.getCss("", []))).forEach(arr => {
-            array = array.concat(arr);
-        });
-        return (
-            <div key={`node-${this.name}`} className="pb-3">
-                <div className="fs-x-large fw-bold pb-2">{this.name}</div>
-                <CssClassesList data={array} />
-            </div>
-        );
     }
 }

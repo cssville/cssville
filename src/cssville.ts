@@ -26,7 +26,7 @@ import { ObjectFitGenerator } from "./generators/objectFitGenerator";
 import { OpacityGenerator } from "./generators/opacityGenerator";
 import { OverflowGenerator } from "./generators/overflowGenerator";
 
-export class Cssville {
+export default class Cssville {
     
     public static prefixValueMap = new Map([
         ["xl", "1280px"],
