@@ -1,21 +1,21 @@
 {
   "name": "cssville",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "",
   "main": "cssville.css",
   "style": "cssville.css",
   "files": [
     "LICENSE.md",
     "cssville.css",
-    "cssville.bundle.js"
+    "cssville.bundle.js",
+    "generator.bundle.js"
   ],
   "scripts": {
     "build": "webpack",
     "generate": "node src/cssville.bundle.js src/cssville.css",
     "copy-css": "copyfiles -u 1 src/cssville.css .",
-    "copy-js": "copyfiles -u 1 src/cssville.bundle.js .",
+    "copy-js": "copyfiles -u 1 src/cssville.bundle.js src/generator.bundle.js .",
     "copy": "npm-run-all copy-css copy-js",
-    "generate-pattern": "node src/cssville.bundle.js src/cssville.small.css Web/Content jsx,html",
     "watch:build": "webpack --watch",
     "watch:server": "lite-server -c lite-server-config.json",
     "start": "npm-run-all build generate --parallel watch:build watch:server --print-label",

@@ -5,7 +5,8 @@ module.exports = {
   mode: "development",
   devtool: "inline-source-map",
   entry: {
-    cssville: "./src/generate.ts",
+    generator: "./src/generate.ts",
+    cssville: "./src/cssville.ts",
     web: "./src/index.tsx",
   },
   output: {
