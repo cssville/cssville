@@ -5,3 +5,4 @@
 node_modules
 *.d.ts
 !/src/cssville.bundle.d.ts
+!/cssville.bundle.d.ts
