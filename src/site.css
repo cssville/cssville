@@ -1,22 +1,22 @@
 html, body {
     color: #343A40;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 .dark {
-    background-color: #343A40;
+    background-color: #22272e;
 }
 
-.red {
-    background-color: #FF6584;
+.green {
+    color: #6FAC6F;
+}
+
+.bg-green {
+    background-color: #6FAC6F;
 }
 
 .grey {
     color: #cccccc;
-}
-
-.npm {
-    color: #F4F442;
 }
 
 .code {
@@ -25,4 +25,8 @@ html, body {
 
 .bg-grey {
     background-color: #f6f6f6;
+}
+
+.border {
+    border: solid 1px #ccc;
 }

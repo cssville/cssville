@@ -1,10 +1,12 @@
-import { ReactFragment, ReactNode } from "react";
+import { ReactFragment, ReactNode, useState } from "react";
 import React = require("react");
 import { CssClassData } from "./data/cssClassData";
 import { IGenerator } from "./IGenerator";
+import { CssClassesList } from "./CssClassesList";
+import { getClasses } from "./parser";
 
 export class GeneratorBase implements IGenerator {
-    public constructor (name: string) {
+    public constructor(name: string) {
         this.name = name;
     }
 
@@ -21,6 +23,15 @@ export class GeneratorBase implements IGenerator {
     }
 
     getUIComponent(): ReactNode {
-        return (<div className="pb-3">{this.name}</div>);
+        let array = new Array();
+        this.cssData.map(d => getClasses(d.getCss("", []))).forEach(arr => {
+            array = array.concat(arr);
+        });
+        return (
+            <div key={`node-${this.name}`} className="pb-3">
+                <div className="fs-x-large fw-bold pb-2">{this.name}</div>
+                <CssClassesList data={array} />
+            </div>
+        );
     }
 }

@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en-us">
-  <head>    
+  <head>
     <meta charset="utf-8" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
@@ -20,62 +20,101 @@
     <meta name="keywords" content="CSS utility-first framework" />
     <link rel="stylesheet" type="text/css" href="cssville.css">
     <link rel="stylesheet" type="text/css" href="site.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark-dimmed.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/nnfx-light.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-    <script>if(!sessionStorage.getItem("_swa")&&document.referrer.indexOf(location.protocol+"//"+location.host)!== 0){fetch("https://counter.dev/track?"+new URLSearchParams({referrer:document.referrer,screen:screen.width+"x"+screen.height,user:"elv1s42k",utcoffset:"3"}))};sessionStorage.setItem("_swa","1");</script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.counter.dev/script.js" data-id="9ee700d3-02c7-4729-ad2c-8fe4a56d9f01" data-utcoffset="3"></script>
+    <script async src="//static.getclicky.com/101411923.js"></script>
   </head>
-  <body class="p-0 m-0 min-w-xs">
-    <div class="mx-auto max-w-lg py-3 px-5 lg-px-4 md-px-3">
-      <div class="d-flex flex-direction-row pb-5 lg-pb-0">
-        <a href="/" class="d-flex">
-          <img src="logo.svg" alt="logo" class="h-64px w-64px"/>
-          <div class="d-flex align-items-center justify-content-center sm-d-none">
-            <img src="cssville.svg" alt="cssville" class="p-3"/>
-          </div>
-        </a>
-        <div class="flex-grow-1"></div>
-        <div class="d-flex align-items-center justify-content-center">
-          <a class="d-flex px-3 py-2 text-decoration-none color-white red br-2" 
-            href="https://github.com/cssville/cssville" target="_blank" rel="noopener">
-            <img src="mark-github.svg" alt="mark-github" class="h-24px w-24px"/>
-            <div class="d-flex align-items-center justify-content-center px-2">
-              <span class="fs-large fw-bold">Open source</span>
+  <body class="p-0 m-0">
+    <div class="w-12 position-relative">
+      <div class="position-absolute h-100 w-12">
+        <img src="bg.svg" class="w-12 h-100 object-fit-cover"/>
+      </div>
+      <div class="position-relative mx-auto max-w-lg px-5 lg-px-4 md-px-3 sm-px-2">
+        <div class="d-flex flex-direction-row pb-4 pt-3 lg-pb-0">
+          <a href="/" class="d-flex text-decoration-none green">
+            <img src="cssville.svg" alt="logo" class="h-32px w-32px py-2"/>
+            <div class="d-flex align-items-center justify-content-center sm-d-none pl-2">
+              <span class="fw-600 fs-x-large code">cssville</span>
             </div>
           </a>
-        </div>
-      </div>
-      <div class="d-flex py-5 flex-direction-column lg-my-0">
-        <h1 class="fs-xxx-large m-0 pb-4 md-fs-xx-large">
-          Construct your UI with ready-to-use CSS utility classes
-        </h1>
-        <div class="d-flex lg-flex-direction-column-reverse lg-pt-4">
-          <div class="d-flex align-items-center justify-content-center py-3 w-6 lg-w-12">
-            <p class="fs-x-large p-0 m-0 lg-py-3 md-fs-large">
-              <span class="fw-bold">Cssville</span> is a utility-first CSS framework with zero dependencies.
-              Apply pre-defined classes directly in your HTML
-              and create a web UI ready for production.</p>
-          </div>
-          <div class="w-6 py-3 d-flex justify-content-center lg-w-12">
-            <img src="city.svg" alt="city" class="max-w-12"/>
+          <div class="flex-grow-1"></div>
+          <div class="d-flex align-items-center justify-content-center">
+            <a class="d-flex px-3 py-2 text-decoration-none color-white bg-green br-2" 
+              href="https://github.com/cssville/cssville" target="_blank" rel="noopener">
+              <img src="mark-github.svg" alt="mark-github" class="h-24px w-24px"/>
+              <div class="d-flex align-items-flex-end justify-content-center xs-d-none px-2">
+                <span class="fs-large fw-bold">Open source</span>
+              </div>
+            </a>
           </div>
         </div>
-        <div class="py-2 lg-py-0">
-          <div id="copy" class="d-flex p-3 text-decoration-none color-black dark br-3 w-fit-content sm-p-2 sm-br-2 cursor-pointer">
-            <img src="chevron-right.svg" alt=">" class="h-24px w-24px pr-3 sm-pr-1"/>
-            <div class="d-flex align-items-center justify-content-center pr-4 sm-pr-3">
-              <span class="fs-large fw-bold code grey sm-fs-medium"><span class="npm">npm</span> install cssville</span>
+        <div class="d-flex py-5 flex-direction-column lg-my-0">
+          <div class="d-flex lg-flex-direction-column lg-pt-4">
+            <div class="d-flex flex-direction-column align-items-center justify-content-center py-3 w-7 lg-w-12">
+              <h1 class="fs-xxx-large m-0 pb-4 md-fs-xx-large">
+                Construct your UI with ready-to-use CSS utility classes
+              </h1>
+              <p class="fs-large p-0 m-0 lg-py-3 md-fs-large pr-4 md-pr-0">
+                Cssville is a utility-first CSS framework with zero dependencies.
+                Apply pre-defined classes directly to your HTML
+                and create a web UI ready for production.
+              </p>
             </div>
-            <img id="copy-icon" src="copy.svg" alt="copy" class="h-24px w-24px pr-2"/>
-            <textarea id="input-copy" class="d-none" type="text">npm install cssville</textarea>
+            <div class="w-5 py-3 d-flex justify-content-center lg-w-12">
+              <img src="city.svg" alt="city" class="max-w-12 lg-max-w-8 md-max-w-12"/>
+            </div>
+          </div>
+          <div class="py-2 lg-pt-4">
+            <div id="copy" class="d-flex p-3 text-decoration-none color-black dark br-3 w-fit-content sm-p-2 sm-br-2 cursor-pointer">
+              <img src="chevron-right.svg" alt=">" class="h-24px w-24px pr-3 sm-pr-1"/>
+              <div class="d-flex align-items-center justify-content-center pr-4 sm-pr-3">
+                <span class="fs-large fw-bold code hljs sm-fs-medium"><span class="hljs-name">npm</span> install <span class="hljs-attr">cssville</span></span>
+              </div>
+              <img id="copy-icon" src="copy.svg" alt="copy" class="h-24px w-24px pr-2"/>
+              <textarea id="input-copy" class="d-none" type="text">npm install cssville</textarea>
+            </div>
           </div>
         </div>
       </div>
-      <h2 class="fs-xx-large m-0 pb-3 md-fs-xx-large">
+    </div>
+    <div class="position-relative mx-auto max-w-lg py-4 px-5 lg-px-4 md-px-3 sm-px-2">
+      <h2 class="fs-xx-large m-0 pb-4 md-fs-xx-large">
+        About
+      </h2>
+      <div class="w-12 d-flex sm-flex-direction-column pb-4">
+        <div class="w-12 pr-5 sm-pr-0">
+          A CSS utility-first framework is a CSS framework that provides pre-built utility classes to style HTML elements. 
+          Unlike traditional CSS frameworks, where styles are defined in large blocks or files, utility-first frameworks provide small, 
+          reusable classes.
+        </div>
+        <div class="w-12 pr-5 sm-pr-0">
+          The advantage of utility-first frameworks is that they provide a very efficient way of creating and customizing styles. 
+          Because the classes are small and modular, it is easy to create new styles simply by combining and stacking classes together.           
+        </div>
+        <div class="w-12">
+          This approach also results in smaller CSS files and faster load times, making utility-first frameworks a popular choice for 
+          responsive web design and mobile-first development. Each class can be combined and customized to create any desired styling.
+        </div>
+      </div>
+      <h2 class="fs-xx-large m-0 pb-4 md-fs-xx-large">
         Demo
       </h2>
+      <p class="pb-3 m-0 max-w-8 md-max-w-12">
+        In a utility-first framework, each class is designed to target a specific aspect of the style, such as font size, color, margin, or padding. 
+        The classes are named according to the property they control, such as 
+        <span class="fs-small code text-decoration-none border br-2 px-2 opacity-1 bg-grey fw-bold">flex-direction-row</span>, 
+        <span class="fs-small code text-decoration-none border br-2 px-2 opacity-1 bg-grey fw-bold">cursor-pointer</span>, 
+        <span class="fs-small code text-decoration-none border br-2 px-2 opacity-1 bg-grey fw-bold">mx-4</span>, 
+        <span class="fs-small code text-decoration-none border br-2 px-2 opacity-1 bg-grey fw-bold">py-2</span>, 
+        and so on. 
+        These classes can be added directly to HTML elements, without the need for additional CSS styling.
+      </p>
+      <p class="pb-3 m-0">
+        The example below shows some classes in action:
+      </p>
       <div class="d-flex flex-direction-column position-relative bg-grey br-3 pt-3 mb-5">
         <div class="w-12 d-flex justify-content-center">
           <div id="example" class="w-12 d-flex justify-content-center">
@@ -100,27 +139,37 @@
   </div>
           </div>
         </div>
-        <div class="max-w-md mx-auto">
-          <pre class="m-0">
-            <code id="example-code" class="language-html br-2"></code>
+        <div class="d-flex justify-content-center">
+          <pre class="overflow-auto m-0">
+            <code id="example-code" class="language-xml br-2"></code>
           </pre>
         </div>
       </div>
-      <h2 class="fs-xx-large m-0 pb-3 md-fs-xx-large">
-        CSS properties
-      </h2>
       <div id="root"></div>
     </div>
-    <div class="d-flex align-items-center justify-content-center w-12 mt-3 py-3 bg-grey opacity-07">
-      <span>© Cssville 2023 - hosted by</span>
-      <a class="h-24px text-decoration-none" href="https://github.com/" target="_blank"><img src="github.svg" class="h-16px w-16px m-1"/></a>
-      <span><a class="text-decoration-none" href="https://github.com/" target="_blank">GitHub</a>, protected by </span>
-      <a class="h-24px text-decoration-none" href="https://cloudback.it/" target="_blank"><img src="cloudback.svg" class="h-16px w-16px m-1"/></a>      
-      <span><a class="text-decoration-none" href="https://cloudback.it/" target="_blank">Cloudback</a>, created by Evgeniy K.</span>
-      <a class="h-24px text-decoration-none" href="https://twitter.com/elv1s42" target="_blank"><img src="twitter.svg" class="h-16px w-16px m-1"/></a>
-      <a class="h-24px text-decoration-none" href="https://github.com/elv1s42" target="_blank"><img src="github.svg" class="h-16px w-16px m-1"/></a>
+    <div class="d-flex flex-direction-row md-flex-direction-column align-items-center justify-content-center w-12 mt-3 py-3 bg-grey opacity-07">
+      <div class="mr-3">
+        <span>© Cssville 2023</span>
+      </div>
+      <div class="d-flex flex-direction-row md-flex-direction-column">
+        <span class="d-flex align-items-center justify-content-center mr-2">
+          Hosted by 
+          <a class="h-24px text-decoration-none" href="https://github.com/" target="_blank">
+            <span class="d-flex align-items-center justify-content-center"><img src="github.svg" class="h-16px w-16px m-1"/> GitHub.</span>
+          </a>
+        </span>
+        <span class="d-flex align-items-center justify-content-center mr-2">
+          Protected by 
+          <a class="h-24px text-decoration-none" href="https://cloudback.it/" target="_blank">
+            <span class="d-flex align-items-center justify-content-center"><img src="cloudback.svg" class="h-16px w-16px m-1"/> Cloudback.</span>
+          </a>
+        </span>
+        <span class="d-flex align-items-center justify-content-center">
+          Created by Evgeniy K. 
+          <a class="h-24px text-decoration-none" href="https://twitter.com/elv1s42" target="_blank"><img src="twitter.svg" class="h-16px w-16px m-1"/></a>
+          <a class="h-24px text-decoration-none" href="https://github.com/elv1s42" target="_blank"><img src="github.svg" class="h-16px w-16px m-1"/></a></span>
+      </div>
     </div>
     <script src="web.bundle.js"></script>
-    <script>hljs.highlightAll();</script>
   </body>
 </html>

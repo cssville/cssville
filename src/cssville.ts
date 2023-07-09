@@ -24,6 +24,7 @@ import { WordBreakGenerator } from "./generators/wordBreakGenerator";
 import { WhiteSpaceGenerator } from "./generators/whiteSpaceGenerator";
 import { ObjectFitGenerator } from "./generators/objectFitGenerator";
 import { OpacityGenerator } from "./generators/opacityGenerator";
+import { OverflowGenerator } from "./generators/overflowGenerator";
 
 export class Cssville {
     
@@ -55,6 +56,7 @@ export class Cssville {
         new MarginGenerator("margin"),
         new ObjectFitGenerator("object-fit"),
         new OpacityGenerator("opacity"),
+        new OverflowGenerator("overflow"),
         new PaddingGenerator("padding"),
         new PositionGenerator("position"),
         new TextAlignGenerator("text-align"),
@@ -79,7 +81,7 @@ export class Cssville {
                 var cssPartForPrefix = g.generate(prefix, classes);
                 innerCss += cssPartForPrefix;
             }
-            css += `@media (max-width: ${value}) { ${innerCss}} `;
+            css += `@media screen and (max-width: ${value}) { ${innerCss}} `;
         });
         return css;
     }

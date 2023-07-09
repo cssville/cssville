@@ -1,22 +1,22 @@
 {
   "name": "cssville",
-  "version": "0.1.7",
+  "version": "0.2.1",
   "description": "",
   "main": "cssville.css",
   "style": "cssville.css",
   "files": [
     "LICENSE.md",
     "cssville.css",
-    "cssville.bundle.js"
+    "cssville.bundle.js",
+    "generator.bundle.js"
   ],
   "scripts": {
     "build": "webpack",
     "generate": "node src/cssville.bundle.js src/cssville.css",
     "copy-css": "copyfiles -u 1 src/cssville.css .",
-    "copy-js": "copyfiles -u 1 src/cssville.bundle.js .",
+    "copy-js": "copyfiles -u 1 src/cssville.bundle.js src/generator.bundle.js .",
     "copy": "npm-run-all copy-css copy-js",
-    "generate-pattern": "node src/cssville.bundle.js src/cssville.small.css Web/Content jsx,html",
-    "watch:build": "tsc --watch",
+    "watch:build": "webpack --watch",
     "watch:server": "lite-server -c lite-server-config.json",
     "start": "npm-run-all build generate --parallel watch:build watch:server --print-label",
     "deploy-prepare": "npm-run-all build generate copy"
@@ -33,10 +33,13 @@
   },
   "homepage": "https://github.com/cssville/cssville#readme",
   "devDependencies": {
+    "@types/highlight.js": "^10.1.0",
     "@types/node": "^16.6.2",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "copyfiles": "^2.4.1",
+    "highlight.js": "^11.7.0",
+    "highlightjs": "^9.16.2",
     "lite-server": "^2.6.1",
     "nodemon": "^2.0.12",
     "npm-run-all": "^4.1.5",
