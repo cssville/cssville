@@ -3,3 +3,5 @@
 *.sass.map
 *.scss.map
 node_modules
+*.d.ts
+!/src/cssville.bundle.d.ts

@@ -1,6 +1,6 @@
 {
   "name": "cssville",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "",
   "main": "cssville.css",
   "style": "cssville.css",
@@ -35,6 +35,7 @@
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "copyfiles": "^2.4.1",
+    "dts-bundle-webpack": "^1.0.2",
     "nodemon": "^2.0.12",
     "npm-run-all": "^4.1.5",
     "rimraf": "^3.0.2",
