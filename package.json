@@ -1,12 +1,13 @@
 {
   "name": "cssville",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "",
   "main": "cssville.css",
   "style": "cssville.css",
   "files": [
     "LICENSE.md",
     "cssville.css",
+    "cssville.bundle.d.ts",
     "cssville.bundle.js",
     "generator.bundle.js"
   ],
