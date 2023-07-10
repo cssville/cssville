@@ -1,22 +1,20 @@
 {
   "name": "cssville",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "",
   "main": "cssville.css",
   "style": "cssville.css",
   "files": [
     "LICENSE.md",
     "cssville.css",
-    "cssville.bundle.d.ts",
-    "cssville.bundle.js",
-    "generator.bundle.js"
+    "build/**/*.js",
+    "build/**/*.d.ts"
   ],
   "scripts": {
-    "build": "webpack",
-    "generate": "node src/cssville.bundle.js src/cssville.css",
-    "copy-css": "copyfiles -u 1 src/cssville.css .",
-    "copy-js": "copyfiles -u 1 src/cssville.bundle.js src/cssville.bundle.d.ts src/generator.bundle.js .",
-    "copy": "npm-run-all copy-css copy-js",
+    "build": "tsc",
+    "generate": "node build/generate.js build/cssville.css",
+    "copy-css": "copyfiles -u 1 build/cssville.css .",
+    "copy": "npm-run-all copy-css",
     "deploy-prepare": "npm-run-all build generate copy"
   },
   "repository": {
@@ -31,12 +29,8 @@
   },
   "homepage": "https://github.com/cssville/cssville#readme",
   "devDependencies": {
-    "@types/highlight.js": "^10.1.0",
     "@types/node": "^16.6.2",
-    "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.11",
     "copyfiles": "^2.4.1",
-    "dts-bundle-webpack": "^1.0.2",
     "nodemon": "^2.0.12",
     "npm-run-all": "^4.1.5",
     "rimraf": "^3.0.2",
@@ -44,9 +38,5 @@
     "typescript": "^4.6.3",
     "webpack": "^5.72.0",
     "webpack-cli": "^4.9.2"
-  },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
   }
 }

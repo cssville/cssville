@@ -1,5 +1,4 @@
 const path = require('path');
-const DtsBundleWebpack = require('dts-bundle-webpack');
 
 module.exports = {
   target: "node",  
@@ -19,13 +18,6 @@ module.exports = {
         "fs": false
     }
   },
-  plugins: [
-    new DtsBundleWebpack({
-      name: 'cssville',
-      main: 'src/cssville.d.ts',
-      out: 'cssville.bundle.d.ts',
-    }),
-  ],
   module: {
     rules: [
       { 

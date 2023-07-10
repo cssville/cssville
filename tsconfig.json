@@ -4,6 +4,13 @@
       "module": "commonjs",
       "lib": ["es5", "es6", "dom"],
       "rootDir": "src",
+      "outDir": "build",
       "declaration": true
-  }
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+  ]
 }
