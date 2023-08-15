@@ -11,6 +11,7 @@ import { FontWeightGenerator } from "./generators/fontWeightGenerator";
 import { WidthGenerator } from "./generators/widthGenerator";
 import { FontSizeGenerator } from "./generators/fontSizeGenerator";
 import { PositionGenerator } from "./generators/positionGenerator";
+import { AlignContentGenerator } from "./generators/alignContentGenerator";
 import { AlignItemsGenerator } from "./generators/alignItemsGenerator";
 import { JustifyContentGenerator } from "./generators/justifyContentGenerator";
 import { TextDecorationGenerator } from "./generators/textDecorationGenerator";
@@ -38,6 +39,7 @@ export default class Cssville {
 
     public static generators: IGenerator[] = 
     [
+        new AlignContentGenerator("align-content"),
         new AlignItemsGenerator("align-items"),
         new BorderRadiusGenerator("border-radius"),
         new BackgroundColorGenerator("background-color"),
