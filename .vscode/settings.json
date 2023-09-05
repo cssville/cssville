@@ -6,5 +6,7 @@
         "preconnect",
         "react"
     ],
-    "liveServer.settings.root": "/build"
+    "liveServer.settings.root": "/build",
+    "editor.detectIndentation": false,
+    "editor.tabSize": 2
 }

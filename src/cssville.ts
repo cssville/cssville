@@ -1,6 +1,6 @@
 import { IGenerator } from "./IGenerator";
-import { PaddingGenerator} from "./generators/paddingGenerator";
-import { MarginGenerator} from "./generators/marginGenerator";
+import { PaddingGenerator } from "./generators/paddingGenerator";
+import { MarginGenerator } from "./generators/marginGenerator";
 import { DisplayGenerator } from "./generators/displayGenerator";
 import { FlexDirectionGenerator } from "./generators/flexDirectionGenerator";
 import { FlexGrowGenerator } from "./generators/flexGrowGenerator";
@@ -28,63 +28,69 @@ import { OpacityGenerator } from "./generators/opacityGenerator";
 import { OverflowGenerator } from "./generators/overflowGenerator";
 
 export default class Cssville {
-    
-    public static prefixValueMap = new Map([
-        ["xl", "1280px"],
-        ["lg", "1012px"],
-        ["md", "768px"],
-        ["sm", "544px"],
-        ["xs", "320px"],
-    ]);
+  public static breakpoints = {
+    xl: "1280px",
+    lg: "1012px",
+    md: "768px",
+    sm: "544px",
+    xs: "320px",
+  };
 
-    public static generators: IGenerator[] = 
+  public static generators: IGenerator[] =
     [
-        new AlignContentGenerator("align-content"),
-        new AlignItemsGenerator("align-items"),
-        new BorderRadiusGenerator("border-radius"),
-        new BackgroundColorGenerator("background-color"),
-        new ColorGenerator("color"),
-        new CursorGenerator("cursor"),
-        new DisplayGenerator("display"),
-        new FlexDirectionGenerator("flex-direction"),
-        new FlexGrowGenerator("flex-grow"),
-        new FlexShrinkGenerator("flex-shrink"),
-        new FlexWrapGenerator("flex-wrap"),
-        new FloatGenerator("float"),
-        new FontSizeGenerator("font-size"),
-        new FontWeightGenerator("font-weight"),
-        new HeightGenerator("height"),
-        new JustifyContentGenerator("justify-content"),
-        new MarginGenerator("margin"),
-        new ObjectFitGenerator("object-fit"),
-        new OpacityGenerator("opacity"),
-        new OverflowGenerator("overflow"),
-        new PaddingGenerator("padding"),
-        new PositionGenerator("position"),
-        new TextAlignGenerator("text-align"),
-        new TextDecorationGenerator("text-decoration"),
-        new WidthGenerator("width"),
-        new WhiteSpaceGenerator("white-space"),
-        new WordBreakGenerator("word-break"),
+      new AlignContentGenerator("align-content"),
+      new AlignItemsGenerator("align-items"),
+      new BorderRadiusGenerator("border-radius"),
+      new BackgroundColorGenerator("background-color"),
+      new ColorGenerator("color"),
+      new CursorGenerator("cursor"),
+      new DisplayGenerator("display"),
+      new FlexDirectionGenerator("flex-direction"),
+      new FlexGrowGenerator("flex-grow"),
+      new FlexShrinkGenerator("flex-shrink"),
+      new FlexWrapGenerator("flex-wrap"),
+      new FloatGenerator("float"),
+      new FontSizeGenerator("font-size"),
+      new FontWeightGenerator("font-weight"),
+      new HeightGenerator("height"),
+      new JustifyContentGenerator("justify-content"),
+      new MarginGenerator("margin"),
+      new ObjectFitGenerator("object-fit"),
+      new OpacityGenerator("opacity"),
+      new OverflowGenerator("overflow"),
+      new PaddingGenerator("padding"),
+      new PositionGenerator("position"),
+      new TextAlignGenerator("text-align"),
+      new TextDecorationGenerator("text-decoration"),
+      new WidthGenerator("width"),
+      new WhiteSpaceGenerator("white-space"),
+      new WordBreakGenerator("word-break"),
     ];
 
-    static getCss(classes: string[] = []) : string {
-        var css = "";
-        for (var x = 0; x < Cssville.generators.length; x++) {
-            const g = Cssville.generators[x];
-            var cssPart = g.generate("", classes);
-            css += cssPart;
-        }
-        this.prefixValueMap.forEach((value: string, key: string) => {
-            var innerCss = "";
-            var prefix = key;
-            for (var x = 0; x < Cssville.generators.length; x++) {
-                const g = Cssville.generators[x];
-                var cssPartForPrefix = g.generate(prefix, classes);
-                innerCss += cssPartForPrefix;
-            }
-            css += `@media screen and (max-width: ${value}) { ${innerCss}} `;
-        });
-        return css;
+  static getCss(classes: string[] = []): string {
+    var css = "";
+    var breakpointsCss = "";
+    const breakpointNames = Object.keys(this.breakpoints);
+    for (const breakpointName of breakpointNames) {
+      const breakpointValue = this.breakpoints[breakpointName];
+      breakpointsCss += ` --cssville-${breakpointName}-breakpoint: ${breakpointValue};`;
     }
+    css += `:root {${breakpointsCss}} `;
+    for (var x = 0; x < Cssville.generators.length; x++) {
+      const g = Cssville.generators[x];
+      var cssPart = g.generate("", classes);
+      css += cssPart;
+    }
+    for (const breakpointName of breakpointNames) {
+      var v = `--cssville-${breakpointName}-breakpoint`;
+      var innerCss = "";
+      for (var x = 0; x < Cssville.generators.length; x++) {
+        const g = Cssville.generators[x];
+        var cssPartForPrefix = g.generate(breakpointName, classes);
+        innerCss += cssPartForPrefix;
+      }
+      css += `@media screen and (max-width: var(${v})) { ${innerCss}} `;
+    }
+    return css;
+  }
 }
