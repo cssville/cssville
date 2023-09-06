@@ -1,14 +1,12 @@
 {
   "name": "cssville",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "",
   "main": "cssville.css",
   "style": "cssville.css",
   "files": [
     "LICENSE.md",
-    "cssville.css",
-    "build/**/*.js",
-    "build/**/*.d.ts"
+    "cssville.css"
   ],
   "scripts": {
     "build": "tsc",
@@ -27,7 +25,7 @@
   "bugs": {
     "url": "https://github.com/cssville/cssville/issues"
   },
-  "homepage": "https://github.com/cssville/cssville#readme",
+  "homepage": "https://cssville.xyz",
   "devDependencies": {
     "@types/node": "^16.6.2",
     "copyfiles": "^2.4.1",
