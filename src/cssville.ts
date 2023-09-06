@@ -26,15 +26,10 @@ import { WhiteSpaceGenerator } from "./generators/whiteSpaceGenerator";
 import { ObjectFitGenerator } from "./generators/objectFitGenerator";
 import { OpacityGenerator } from "./generators/opacityGenerator";
 import { OverflowGenerator } from "./generators/overflowGenerator";
+import CssvilleBreakpoints from "./breakpoints";
+import CssvilleColors from "./colors";
 
 export default class Cssville {
-  public static breakpoints = {
-    xl: "1280px",
-    lg: "1012px",
-    md: "768px",
-    sm: "544px",
-    xs: "320px",
-  };
 
   public static generators: IGenerator[] =
     [
@@ -70,12 +65,18 @@ export default class Cssville {
   static getCss(classes: string[] = []): string {
     var css = "";
     var breakpointsCss = "";
-    const breakpointNames = Object.keys(this.breakpoints);
+    const breakpointNames = Object.keys(CssvilleBreakpoints.breakpoints);
     for (const breakpointName of breakpointNames) {
-      const breakpointValue = this.breakpoints[breakpointName];
+      const breakpointValue = CssvilleBreakpoints.breakpoints[breakpointName];
       breakpointsCss += ` --cssville-${breakpointName}-breakpoint: ${breakpointValue};`;
     }
-    css += `:root {${breakpointsCss}} `;
+    var colorsCss = "";
+    const colorNames = Object.keys(CssvilleColors.basicColors);
+    for (const colorName of colorNames) {
+      const breakpointValue = CssvilleColors.basicColors[colorName];
+      colorsCss += ` --cssville-${colorName}-color: ${breakpointValue};`;
+    }
+    css += `:root {${breakpointsCss}}{${colorsCss}} `;
     for (var x = 0; x < Cssville.generators.length; x++) {
       const g = Cssville.generators[x];
       var cssPart = g.generate("", classes);
