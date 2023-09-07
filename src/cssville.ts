@@ -26,8 +26,9 @@ import { WhiteSpaceGenerator } from "./generators/whiteSpaceGenerator";
 import { ObjectFitGenerator } from "./generators/objectFitGenerator";
 import { OpacityGenerator } from "./generators/opacityGenerator";
 import { OverflowGenerator } from "./generators/overflowGenerator";
-import CssvilleBreakpoints from "./breakpoints";
-import CssvilleColors from "./colors";
+import CssvilleBreakpoints from "./vars/breakpoints";
+import CssvilleColors from "./vars/colors";
+import { IVar } from "./IVar";
 
 export default class Cssville {
 
@@ -62,35 +63,36 @@ export default class Cssville {
       new WordBreakGenerator("word-break"),
     ];
 
+  public static variables: IVar[][] =
+    [
+      CssvilleBreakpoints.breakpoints,
+      CssvilleColors.basicColors,
+    ];
+
   static getCss(classes: string[] = []): string {
     var css = "";
-    var breakpointsCss = "";
-    const breakpointNames = Object.keys(CssvilleBreakpoints.breakpoints);
-    for (const breakpointName of breakpointNames) {
-      const breakpointValue = CssvilleBreakpoints.breakpoints[breakpointName];
-      breakpointsCss += ` --cssville-${breakpointName}-breakpoint: ${breakpointValue};`;
+    var allVarsCss = "";
+    for (var varsCollection of this.variables) {
+      var collectionCss = "";
+      for (var v of varsCollection) {
+        collectionCss += ` ${v.css}`;
+      }
+      allVarsCss += ` ${collectionCss}`;
     }
-    var colorsCss = "";
-    const colorNames = Object.keys(CssvilleColors.basicColors);
-    for (const colorName of colorNames) {
-      const breakpointValue = CssvilleColors.basicColors[colorName];
-      colorsCss += ` --cssville-${colorName}-color: ${breakpointValue};`;
-    }
-    css += `:root {${breakpointsCss}}{${colorsCss}} `;
+    css += `:root {${allVarsCss}} `;
     for (var x = 0; x < Cssville.generators.length; x++) {
       const g = Cssville.generators[x];
       var cssPart = g.generate("", classes);
       css += cssPart;
     }
-    for (const breakpointName of breakpointNames) {
-      var v = `--cssville-${breakpointName}-breakpoint`;
+    for (const breakpoint of CssvilleBreakpoints.breakpoints) {
       var innerCss = "";
       for (var x = 0; x < Cssville.generators.length; x++) {
         const g = Cssville.generators[x];
-        var cssPartForPrefix = g.generate(breakpointName, classes);
+        var cssPartForPrefix = g.generate(breakpoint.name, classes);
         innerCss += cssPartForPrefix;
       }
-      css += `@media screen and (max-width: var(${v})) { ${innerCss}} `;
+      css += `@media screen and (max-width: ${breakpoint.var}) { ${innerCss}} `;
     }
     return css;
   }
