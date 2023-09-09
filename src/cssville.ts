@@ -26,9 +26,13 @@ import { WhiteSpaceGenerator } from "./generators/whiteSpaceGenerator";
 import { ObjectFitGenerator } from "./generators/objectFitGenerator";
 import { OpacityGenerator } from "./generators/opacityGenerator";
 import { OverflowGenerator } from "./generators/overflowGenerator";
+import { BorderGenerator } from "./generators/borderGenerator";
 import CssvilleBreakpoints from "./vars/breakpoints";
 import CssvilleColors from "./vars/colors";
 import { IVar } from "./IVar";
+import CssvilleBorder from "./vars/border";
+import { BoxShadowGenerator } from "./generators/boxShadowGenerator";
+import CssvilleShadow from "./vars/shadow";
 
 export default class Cssville {
 
@@ -36,7 +40,9 @@ export default class Cssville {
     [
       new AlignContentGenerator("align-content"),
       new AlignItemsGenerator("align-items"),
+      new BorderGenerator("border"),
       new BorderRadiusGenerator("border-radius"),
+      new BoxShadowGenerator("box-shadow"),
       new BackgroundColorGenerator("background-color"),
       new ColorGenerator("color"),
       new CursorGenerator("cursor"),
@@ -67,6 +73,9 @@ export default class Cssville {
     [
       CssvilleBreakpoints.breakpoints,
       CssvilleColors.basicColors,
+      CssvilleColors.colorsPalette,
+      CssvilleBorder.vars,
+      CssvilleShadow.vars,
     ];
 
   static getCss(classes: string[] = []): string {
