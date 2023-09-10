@@ -8,6 +8,7 @@ export class VarBase implements IVar {
     this.varName = `--cssville-${name}-${category}`;
     this.var = `var(${this.varName})`;
     this.css = `${this.varName}: ${value};`;
+    this.postfixValue = [this.name, [this.var]]
   }
 
   public category: string = "";
@@ -16,4 +17,5 @@ export class VarBase implements IVar {
   public varName: string;
   public var: string;
   public css: string;
+  public postfixValue: [string, string[]];
 }

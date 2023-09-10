@@ -5,4 +5,5 @@ export interface IVar {
   varName: string;
   var: string;
   css: string;
+  postfixValue: [string, string[]];
 }
