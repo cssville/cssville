@@ -1,12 +1,46 @@
 {
-    "cSpell.words": [
-        "copyfiles",
-        "jsxdev",
-        "nowrap",
-        "preconnect",
-        "react"
-    ],
-    "liveServer.settings.root": "/build",
-    "editor.detectIndentation": false,
-    "editor.tabSize": 2
+  "cSpell.words": [
+    "copyfiles",
+    "jsxdev",
+    "nowrap",
+    "preconnect",
+    "react"
+  ],
+  "liveServer.settings.root": "/build",
+  "editor.detectIndentation": false,
+  "editor.tabSize": 2,
+  "colorInfo.languages": [
+    {
+      "selector": "css",
+      "colors": "css"
+    },
+    {
+      "selector": "sass",
+      "colors": "css"
+    },
+    {
+      "selector": "scss",
+      "colors": "css"
+    },
+    {
+      "selector": "less",
+      "colors": "css"
+    },
+    {
+      "selector": "html",
+      "colors": "css"
+    },
+    {
+      "selector": "typescript",
+      "colors": "css"
+    },
+    {
+      "selector": "typescriptreact",
+      "colors": "css"
+    },
+    {
+      "selector": "javascript",
+      "colors": "css"
+    }
+  ]
 }
