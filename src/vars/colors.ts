@@ -21,6 +21,7 @@ import TealColors from "./color/teal";
 import YellowColors from "./color/yellow";
 
 export default class CssvilleColors {
+  
   public static hexToRgb(hex: string, alpha: number = 1.0): string {
     hex = hex.replace(/^#/, '');
     const r = parseInt(hex.slice(0, 2), 16);
@@ -60,4 +61,6 @@ export default class CssvilleColors {
     ...GreyColors.colors,
     ...BlueGreyColors.colors,
   ];
+
+  public static colorsPalettePostfixValues : [string, string[]][] = this.colorsPalette.map(e => e.postfixValue)
 }
