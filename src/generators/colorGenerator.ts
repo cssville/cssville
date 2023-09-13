@@ -8,6 +8,6 @@ export class ColorGenerator extends GeneratorBase {
   ]);
   list = ["black", "white", "transparent", "inherit", "initial", "revert", "unset"];
   cssData = [
-    new CssClassData("color", ["color"], this.list)
+    new CssClassData("color", ["color"], this.list, this.postfixValuesMap)
   ];
 }
