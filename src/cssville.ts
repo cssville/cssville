@@ -101,7 +101,7 @@ export default class Cssville {
         var cssPartForPrefix = g.generate(breakpoint.name, classes);
         innerCss += cssPartForPrefix;
       }
-      css += `@media screen and (max-width: ${breakpoint.var}) { ${innerCss}} `;
+      css += `@media screen and (max-width: ${breakpoint.value}) { ${innerCss}} `;
     }
     return css;
   }
