@@ -8,6 +8,7 @@ import { FlexWrapGenerator } from "./generators/flexWrapGenerator";
 import { FlexShrinkGenerator } from "./generators/flexShrinkGenerator";
 import { FloatGenerator } from "./generators/floatGenerator";
 import { FontWeightGenerator } from "./generators/fontWeightGenerator";
+import { FontFamilyGenerator } from "./generators/fontFamilyGenerator";
 import { WidthGenerator } from "./generators/widthGenerator";
 import { FontSizeGenerator } from "./generators/fontSizeGenerator";
 import { PositionGenerator } from "./generators/positionGenerator";
@@ -33,6 +34,7 @@ import { IVar } from "./IVar";
 import CssvilleBorder from "./vars/border";
 import { BoxShadowGenerator } from "./generators/boxShadowGenerator";
 import CssvilleShadow from "./vars/shadow";
+import CssvilleFontFamily from "./vars/fontFamily";
 
 export default class Cssville {
 
@@ -52,6 +54,7 @@ export default class Cssville {
       new FlexShrinkGenerator("flex-shrink"),
       new FlexWrapGenerator("flex-wrap"),
       new FloatGenerator("float"),
+      new FontFamilyGenerator("font-family"),
       new FontSizeGenerator("font-size"),
       new FontWeightGenerator("font-weight"),
       new HeightGenerator("height"),
@@ -72,11 +75,17 @@ export default class Cssville {
   public static variables: IVar[][] =
     [
       CssvilleBreakpoints.breakpoints,
+      CssvilleFontFamily.vars,
       CssvilleColors.basicColors,
       CssvilleColors.colorsPalette,
       CssvilleBorder.vars,
       CssvilleShadow.vars,
     ];
+
+  public static rootValues: Map<string, IVar> = new Map([
+    ["font-family", CssvilleFontFamily.primary],
+    ["color", CssvilleColors.text],
+  ]);
 
   static getCss(classes: string[] = []): string {
     var css = "";
@@ -88,16 +97,19 @@ export default class Cssville {
       }
       allVarsCss += ` ${collectionCss}`;
     }
+    for (const [key, value] of this.rootValues) {
+      allVarsCss += ` ${key}: ${value.var};`;
+    }
     css += `:root {${allVarsCss}} `;
-    for (var x = 0; x < Cssville.generators.length; x++) {
-      const g = Cssville.generators[x];
+    for (var x = 0; x < this.generators.length; x++) {
+      const g = this.generators[x];
       var cssPart = g.generate("", classes);
       css += cssPart;
     }
     for (const breakpoint of CssvilleBreakpoints.breakpoints) {
       var innerCss = "";
-      for (var x = 0; x < Cssville.generators.length; x++) {
-        const g = Cssville.generators[x];
+      for (var x = 0; x < this.generators.length; x++) {
+        const g = this.generators[x];
         var cssPartForPrefix = g.generate(breakpoint.name, classes);
         innerCss += cssPartForPrefix;
       }
