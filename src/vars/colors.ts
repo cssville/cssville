@@ -30,7 +30,7 @@ export default class CssvilleColors {
     return `rgb(${r}, ${g}, ${b})`;
   }
 
-  public static text = new VarBase("color", "text", BlueGreyColors.blueGrey800.var);
+  public static text = new VarBase("color", "text", BlueGreyColors.blueGrey900.var);
   public static border = new VarBase("color", "border", BlueGreyColors.blueGrey100.var);
   public static shadow = new VarBase("color", "shadow", "rgba(140, 149, 159, 0.2)");
 
