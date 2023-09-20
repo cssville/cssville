@@ -30,13 +30,17 @@ export class CssClassData {
 
   getCss(prefix: string = "", classes: string[]): string {
     var css = "";
+    var postfix = "hover";
     this.cssParts.forEach((value: string, key: string) => {
       var className = `${prefix === "" ? "" : `${prefix}-`}${key}`;
+      var classNameWithPostfix = `${prefix === "" ? "" : `${prefix}-`}${key}-${postfix}`;
       if (classes.length === 0) {
         css += `.${className} {${value}} `;
+        css += `.${classNameWithPostfix}:hover {${value}} `;
       }
       if (classes.length > 0 && classes.indexOf(className) >= 0) {
         css += `.${className} {${value}} `;
+        css += `.${classNameWithPostfix}:hover {${value}} `;
       }
     });
     return css;
