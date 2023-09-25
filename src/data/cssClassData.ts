@@ -13,12 +13,15 @@ export class CssClassData {
     this.postfixValuesMap.forEach((value: string[], key: string) => {
       var postfix = key;
       var innerProperties = "";
+      var innerPropertiesIm = "";
       this.cssProperties.forEach(cssProperty => {
         value.forEach(v => {
           innerProperties += `${cssProperty}: ${v}; `;
+          innerPropertiesIm += `${cssProperty}: ${v} !important; `;
         });
       });
       this.cssParts.set(`${this.className}-${postfix}`, innerProperties);
+      this.cssParts.set(`${this.className}-${postfix}-i`, innerPropertiesIm);
     });
   }
 
