@@ -5,7 +5,7 @@ export class HeightGenerator extends GeneratorBase {
     postfixValuesMap = new Map([
         ["100", ["100%"]],
     ]);
-    list = ["auto", "max-content", "min-content", "100vh", "16px", "24px", "32px", "48px", "64px", "inherit", "initial", "revert", "unset"];
+    list = ["auto", "max-content", "min-content", "100vh", "1px", "8px", "16px", "24px", "32px", "48px", "64px", "inherit", "initial", "revert", "unset"];
     cssData = [
         new CssClassData("h", ["height"], this.list, this.postfixValuesMap),
         new CssClassData("max-h", ["max-height"], this.list, this.postfixValuesMap),

@@ -9,6 +9,11 @@ export class MarginGenerator extends GeneratorBase {
         ["3", ["16px"]],
         ["4", ["32px"]],
         ["5", ["64px"]],
+        ["-1", ["-4px"]],
+        ["-2", ["-8px"]],
+        ["-3", ["-16px"]],
+        ["-4", ["-32px"]],
+        ["-5", ["-64px"]],
     ]);
     list = ["auto", "inherit", "initial", "revert", "unset"];
     cssData = [
