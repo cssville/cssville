@@ -35,6 +35,7 @@ import CssvilleBorder from "./vars/border";
 import { BoxShadowGenerator } from "./generators/boxShadowGenerator";
 import CssvilleShadow from "./vars/shadow";
 import CssvilleFontFamily from "./vars/fontFamily";
+import { ZIndexGenerator } from "./generators/zIndexGenerator";
 
 export default class Cssville {
 
@@ -70,6 +71,7 @@ export default class Cssville {
       new WidthGenerator("width"),
       new WhiteSpaceGenerator("white-space"),
       new WordBreakGenerator("word-break"),
+      new ZIndexGenerator("z-index"),
     ];
 
   public static variables: IVar[][] =

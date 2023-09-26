@@ -23,7 +23,7 @@ export class WidthGenerator extends GeneratorBase {
     ["lg", [CssvilleBreakpoints.lg.var]],
     ["xl", [CssvilleBreakpoints.xl.var]],
   ]);
-  list = ["max-content", "min-content", "fit-content", "16px", "24px", "32px", "48px", "64px", "inherit", "initial", "revert", "unset"];
+  list = ["max-content", "min-content", "fit-content", "1px", "8px", "16px", "24px", "32px", "48px", "64px", "inherit", "initial", "revert", "unset"];
   cssData = [
     new CssClassData("w", ["width"], this.list, this.postfixValuesMap),
     new CssClassData("max-w", ["max-width"], this.list, this.postfixValuesMap),
