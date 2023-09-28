@@ -8,10 +8,10 @@ export class BorderRadiusGenerator extends GeneratorBase {
         ["2", ["8px"]],
         ["3", ["16px"]],
         ["4", ["32px"]],
-        ["5", ["64px"]],
-        ["50p", ["50%"]],
+        ["5", ["48px"]],
+        ["6", ["64px"]],
     ]);
-    list = ["inherit", "initial", "revert", "unset"];
+    list = ["inherit", "initial", "revert", "unset", "9999px"];
     cssData = [
         new CssClassData("br", ["-ms-border-radius", "border-radius"], this.list, this.postfixValuesMap),
         new CssClassData("br-top-left", ["-ms-border-top-left-radius", "border-top-left-radius"], this.list, this.postfixValuesMap),

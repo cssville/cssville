@@ -1,11 +1,11 @@
 import { CssClassData } from "../data/cssClassData";
 import { GeneratorBase } from "../GeneratorBase";
 import CssvilleBorder from "../vars/border";
-import CssvilleColors from "../vars/colors";
+import UiColors from "../vars/ui";
 
 export class BorderGenerator extends GeneratorBase {
     postfixValuesMap = new Map([
-        ["1", [`${CssvilleBorder.width.var} solid ${CssvilleColors.border.var}`]],
+        ["1", [`${CssvilleBorder.width.var} solid ${UiColors.border.var}`]],
     ]);
     list = ["none"];
     cssData = [

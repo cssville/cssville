@@ -30,6 +30,7 @@ import { OverflowGenerator } from "./generators/overflowGenerator";
 import { BorderGenerator } from "./generators/borderGenerator";
 import CssvilleBreakpoints from "./vars/breakpoints";
 import CssvilleColors from "./vars/colors";
+import UiColors from "./vars/ui";
 import { IVar } from "./IVar";
 import CssvilleBorder from "./vars/border";
 import { BoxShadowGenerator } from "./generators/boxShadowGenerator";
@@ -78,7 +79,6 @@ export default class Cssville {
     [
       CssvilleBreakpoints.breakpoints,
       CssvilleFontFamily.vars,
-      CssvilleColors.basicColors,
       CssvilleColors.colorsPalette,
       CssvilleBorder.vars,
       CssvilleShadow.vars,
@@ -86,7 +86,7 @@ export default class Cssville {
 
   public static rootValues: Map<string, IVar> = new Map([
     ["font-family", CssvilleFontFamily.primary],
-    ["color", CssvilleColors.text],
+    ["color", UiColors.text],
   ]);
 
   static getCss(classes: string[] = []): string {

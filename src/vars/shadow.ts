@@ -7,7 +7,7 @@ export default class CssvilleShadow {
   public static lg = new VarBase("lg", "shadow", "0px 8px 24px 0px");
   public static md = new VarBase("md", "shadow", "0px 6px 12px 0px");
   public static sm = new VarBase("sm", "shadow", "0px 4px 8px 0px");
-  public static xs = new VarBase("sm", "shadow", "0px 2px 4px 0px");
+  public static xs = new VarBase("xs", "shadow", "0px 2px 4px 0px");
 
   public static vars : IVar[] = [
     this.xl,
