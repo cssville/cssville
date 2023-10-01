@@ -47,8 +47,8 @@ export default class Cssville {
       new BorderGenerator("border"),
       new BorderRadiusGenerator("border-radius"),
       new BoxShadowGenerator("box-shadow"),
-      new BackgroundColorGenerator("background-color"),
-      new ColorGenerator("color"),
+      new BackgroundColorGenerator("background-color", false),
+      new ColorGenerator("color", false),
       new CursorGenerator("cursor"),
       new DisplayGenerator("display"),
       new FlexDirectionGenerator("flex-direction"),
@@ -111,9 +111,11 @@ export default class Cssville {
     for (const breakpoint of CssvilleBreakpoints.breakpoints) {
       var innerCss = "";
       for (var x = 0; x < this.generators.length; x++) {
-        const g = this.generators[x];
-        var cssPartForPrefix = g.generate(breakpoint.name, classes);
-        innerCss += cssPartForPrefix;
+        const generator = this.generators[x];
+        if (generator.generateCssForBreakpoints) {
+          var cssPartForPrefix = generator.generate(breakpoint.name, classes);
+          innerCss += cssPartForPrefix;
+        }
       }
       css += `@media screen and (max-width: ${breakpoint.value}) { ${innerCss}} `;
     }
