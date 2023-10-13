@@ -1,18 +1,18 @@
 import { CssClassData } from "../data/cssClassData";
-import { GeneratorBase } from "../GeneratorBase";
+import { Generator } from "../Generator";
 import CssvilleBorder from "../vars/border";
-import CssvilleColors from "../vars/colors";
+import ThemeColors from "../vars/themeColors";
 
-export class BorderGenerator extends GeneratorBase {
-    postfixValuesMap = new Map([
-        ["1", [`${CssvilleBorder.width.var} solid ${CssvilleColors.border.var}`]],
+export class BorderGenerator extends Generator {
+    cssClassToValuesMap = new Map([
+        ["1", [`${CssvilleBorder.width.var} solid ${ThemeColors.border.var}`]],
     ]);
     list = ["none"];
     cssData = [
-        new CssClassData("border", ["border"], this.list, this.postfixValuesMap),
-        new CssClassData("border-top", ["border-top"], this.list, this.postfixValuesMap),
-        new CssClassData("border-bottom", ["border-bottom"], this.list, this.postfixValuesMap),
-        new CssClassData("border-left", ["border-left"], this.list, this.postfixValuesMap),
-        new CssClassData("border-right", ["border-right"], this.list, this.postfixValuesMap),
+        new CssClassData("border", ["border"], this.list, this.cssClassToValuesMap),
+        new CssClassData("border-top", ["border-top"], this.list, this.cssClassToValuesMap),
+        new CssClassData("border-bottom", ["border-bottom"], this.list, this.cssClassToValuesMap),
+        new CssClassData("border-left", ["border-left"], this.list, this.cssClassToValuesMap),
+        new CssClassData("border-right", ["border-right"], this.list, this.cssClassToValuesMap),
     ];
 }

@@ -1,9 +1,9 @@
 import { CssClassData } from "../data/cssClassData";
-import { GeneratorBase } from "../GeneratorBase";
+import { Generator } from "../Generator";
 import CssvilleBreakpoints from "../vars/breakpoints";
 
-export class WidthGenerator extends GeneratorBase {
-  postfixValuesMap = new Map([
+export class WidthGenerator extends Generator {
+  cssClassToValuesMap = new Map([
     ["0", ["0%"]],
     ["1", ["8.333%"]],
     ["2", ["16.666%"]],
@@ -25,8 +25,8 @@ export class WidthGenerator extends GeneratorBase {
   ]);
   list = ["max-content", "min-content", "fit-content", "1px", "8px", "16px", "24px", "32px", "48px", "64px", "inherit", "initial", "revert", "unset"];
   cssData = [
-    new CssClassData("w", ["width"], this.list, this.postfixValuesMap),
-    new CssClassData("max-w", ["max-width"], this.list, this.postfixValuesMap),
-    new CssClassData("min-w", ["min-width"], this.list, this.postfixValuesMap)
+    new CssClassData("w", ["width"], this.list, this.cssClassToValuesMap),
+    new CssClassData("max-w", ["max-width"], this.list, this.cssClassToValuesMap),
+    new CssClassData("min-w", ["min-width"], this.list, this.cssClassToValuesMap)
   ];
 }

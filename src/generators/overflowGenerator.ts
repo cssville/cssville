@@ -1,7 +1,7 @@
 import { CssClassData } from "../data/cssClassData";
-import { GeneratorBase } from "../GeneratorBase";
+import { Generator } from "../Generator";
 
-export class OverflowGenerator extends GeneratorBase {
+export class OverflowGenerator extends Generator {
     list = ["visible", "hidden", "scroll", "auto"];
     cssData = [
         new CssClassData("overflow", ["overflow"], this.list),

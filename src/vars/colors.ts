@@ -1,5 +1,5 @@
 import { IVar } from "../IVar";
-import { VarBase } from "../VarBase";
+import ThemeColors from "./themeColors";
 import AmberColors from "./color/amber";
 import BlueColors from "./color/blue";
 import BlueGreyColors from "./color/blueGrey";
@@ -22,44 +22,27 @@ import YellowColors from "./color/yellow";
 
 export default class CssvilleColors {
   
-  public static hexToRgb(hex: string, alpha: number = 1.0): string {
-    hex = hex.replace(/^#/, '');
-    const r = parseInt(hex.slice(0, 2), 16);
-    const g = parseInt(hex.slice(2, 4), 16);
-    const b = parseInt(hex.slice(4, 6), 16);
-    return `rgb(${r}, ${g}, ${b})`;
-  }
-
-  public static text = new VarBase("color", "text", BlueGreyColors.blueGrey900.var);
-  public static border = new VarBase("color", "border", BlueGreyColors.blueGrey100.var);
-  public static shadow = new VarBase("color", "shadow", "rgba(140, 149, 159, 0.2)");
-
-  public static basicColors : IVar[] = [
-    this.text,
-    this.border,
-    this.shadow,
-  ];
-
   public static colorsPalette : IVar[] = [
-    ...RedColors.colors,
-    ...PinkColors.colors,
-    ...PurpleColors.colors,
-    ...DeepPurpleColors.colors,
-    ...IndigoColors.colors,
-    ...BlueColors.colors,
-    ...LightBlueColors.colors,
-    ...CyanColors.colors,
-    ...TealColors.colors,
-    ...GreenColors.colors,
-    ...LightGreenColors.colors,
-    ...LimeColors.colors,
-    ...YellowColors.colors,
-    ...AmberColors.colors,
-    ...OrangeColors.colors,
-    ...DeepOrangeColors.colors,
-    ...BrownColors.colors,
-    ...GreyColors.colors,
-    ...BlueGreyColors.colors,
+    ...RedColors.collection.vars,
+    ...PinkColors.collection.vars,
+    ...PurpleColors.collection.vars,
+    ...DeepPurpleColors.collection.vars,
+    ...IndigoColors.collection.vars,
+    ...BlueColors.collection.vars,
+    ...LightBlueColors.collection.vars,
+    ...CyanColors.collection.vars,
+    ...TealColors.collection.vars,
+    ...GreenColors.collection.vars,
+    ...LightGreenColors.collection.vars,
+    ...LimeColors.collection.vars,
+    ...YellowColors.collection.vars,
+    ...AmberColors.collection.vars,
+    ...OrangeColors.collection.vars,
+    ...DeepOrangeColors.collection.vars,
+    ...BrownColors.collection.vars,
+    ...GreyColors.collection.vars,
+    ...BlueGreyColors.collection.vars,
+    ...ThemeColors.colors
   ];
 
   public static colorsPalettePostfixValues : [string, string[]][] = this.colorsPalette.map(e => e.postfixValue)

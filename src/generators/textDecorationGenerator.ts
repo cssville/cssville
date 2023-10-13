@@ -1,7 +1,7 @@
 import { CssClassData } from "../data/cssClassData";
-import { GeneratorBase } from "../GeneratorBase";
+import { Generator } from "../Generator";
 
-export class TextDecorationGenerator extends GeneratorBase {
+export class TextDecorationGenerator extends Generator {
     list = ["underline", "overline", "none", "inherit", "initial", "revert", "unset"];
     cssData = [
         new CssClassData("text-decoration", ["text-decoration"], this.list)

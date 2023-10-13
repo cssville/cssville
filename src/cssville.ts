@@ -30,6 +30,7 @@ import { OverflowGenerator } from "./generators/overflowGenerator";
 import { BorderGenerator } from "./generators/borderGenerator";
 import CssvilleBreakpoints from "./vars/breakpoints";
 import CssvilleColors from "./vars/colors";
+import ThemeColors from "./vars/themeColors";
 import { IVar } from "./IVar";
 import CssvilleBorder from "./vars/border";
 import { BoxShadowGenerator } from "./generators/boxShadowGenerator";
@@ -37,7 +38,7 @@ import CssvilleShadow from "./vars/shadow";
 import CssvilleFontFamily from "./vars/fontFamily";
 import { ZIndexGenerator } from "./generators/zIndexGenerator";
 
-export default class Cssville {
+export class Cssville {
 
   public static generators: IGenerator[] =
     [
@@ -46,8 +47,8 @@ export default class Cssville {
       new BorderGenerator("border"),
       new BorderRadiusGenerator("border-radius"),
       new BoxShadowGenerator("box-shadow"),
-      new BackgroundColorGenerator("background-color"),
-      new ColorGenerator("color"),
+      new BackgroundColorGenerator("background-color", false),
+      new ColorGenerator("color", false),
       new CursorGenerator("cursor"),
       new DisplayGenerator("display"),
       new FlexDirectionGenerator("flex-direction"),
@@ -74,11 +75,12 @@ export default class Cssville {
       new ZIndexGenerator("z-index"),
     ];
 
+  public static breakpoints: IVar[] = CssvilleBreakpoints.breakpoints;
+
   public static variables: IVar[][] =
     [
-      CssvilleBreakpoints.breakpoints,
+      this.breakpoints,
       CssvilleFontFamily.vars,
-      CssvilleColors.basicColors,
       CssvilleColors.colorsPalette,
       CssvilleBorder.vars,
       CssvilleShadow.vars,
@@ -86,7 +88,7 @@ export default class Cssville {
 
   public static rootValues: Map<string, IVar> = new Map([
     ["font-family", CssvilleFontFamily.primary],
-    ["color", CssvilleColors.text],
+    ["color", ThemeColors.text],
   ]);
 
   static getCss(classes: string[] = []): string {
@@ -108,12 +110,14 @@ export default class Cssville {
       var cssPart = g.generate("", classes);
       css += cssPart;
     }
-    for (const breakpoint of CssvilleBreakpoints.breakpoints) {
+    for (const breakpoint of this.breakpoints) {
       var innerCss = "";
       for (var x = 0; x < this.generators.length; x++) {
-        const g = this.generators[x];
-        var cssPartForPrefix = g.generate(breakpoint.name, classes);
-        innerCss += cssPartForPrefix;
+        const generator = this.generators[x];
+        if (generator.generateCssForBreakpoints) {
+          var cssPartForPrefix = generator.generate(breakpoint.name, classes);
+          innerCss += cssPartForPrefix;
+        }
       }
       css += `@media screen and (max-width: ${breakpoint.value}) { ${innerCss}} `;
     }

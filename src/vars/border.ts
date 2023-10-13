@@ -1,9 +1,9 @@
 import { IVar } from "../IVar";
-import { VarBase } from "../VarBase";
+import { Var } from "../Var";
 
 export default class CssvilleBorder {
   
-  public static width = new VarBase("width", "border", "1px");
+  public static width = new Var("width", "border", "1px");
 
   public static vars : IVar[] = [
     this.width,

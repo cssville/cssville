@@ -1,13 +1,13 @@
 import { IVar } from "../IVar";
-import { VarBase } from "../VarBase";
+import { Var } from "../Var";
 
 export default class CssvilleBreakpoints {
   
-  public static xs = new VarBase("breakpoint", "xs", "320px");
-  public static sm = new VarBase("breakpoint", "sm", "544px");
-  public static md = new VarBase("breakpoint", "md", "768px");
-  public static lg = new VarBase("breakpoint", "lg", "1012px");
-  public static xl = new VarBase("breakpoint", "xl", "1280px");
+  public static xs = new Var("breakpoint", "xs", "320px");
+  public static sm = new Var("breakpoint", "sm", "544px");
+  public static md = new Var("breakpoint", "md", "768px");
+  public static lg = new Var("breakpoint", "lg", "1012px");
+  public static xl = new Var("breakpoint", "xl", "1280px");
 
   public static breakpoints : IVar[] = [
     this.xs,
