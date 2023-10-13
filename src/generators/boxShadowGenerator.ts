@@ -1,18 +1,18 @@
 import { CssClassData } from "../data/cssClassData";
-import { GeneratorBase } from "../GeneratorBase";
+import { Generator } from "../Generator";
 import CssvilleShadow from "../vars/shadow";
-import UiColors from "../vars/ui";
+import ThemeColors from "../vars/themeColors";
 
-export class BoxShadowGenerator extends GeneratorBase {
-    postfixValuesMap = new Map([
-        ["xs", [`${CssvilleShadow.xs.var} ${UiColors.shadow.var}`]],
-        ["sm", [`${CssvilleShadow.sm.var} ${UiColors.shadow.var}`]],
-        ["md", [`${CssvilleShadow.md.var} ${UiColors.shadow.var}`]],
-        ["lg", [`${CssvilleShadow.lg.var} ${UiColors.shadow.var}`]],
-        ["xl", [`${CssvilleShadow.xl.var} ${UiColors.shadow.var}`]],
+export class BoxShadowGenerator extends Generator {
+    cssClassToValuesMap = new Map([
+        ["xs", [`${CssvilleShadow.xs.var} ${ThemeColors.shadow.var}`]],
+        ["sm", [`${CssvilleShadow.sm.var} ${ThemeColors.shadow.var}`]],
+        ["md", [`${CssvilleShadow.md.var} ${ThemeColors.shadow.var}`]],
+        ["lg", [`${CssvilleShadow.lg.var} ${ThemeColors.shadow.var}`]],
+        ["xl", [`${CssvilleShadow.xl.var} ${ThemeColors.shadow.var}`]],
     ]);
     list = ["none"];
     cssData = [
-        new CssClassData("box-shadow", ["box-shadow"], this.list, this.postfixValuesMap),
+        new CssClassData("box-shadow", ["box-shadow"], this.list, this.cssClassToValuesMap),
     ];
 }

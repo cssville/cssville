@@ -1,6 +1,5 @@
 import { IVar } from "../IVar";
-import { VarBase } from "../VarBase";
-import UiColors from "./ui";
+import ThemeColors from "./themeColors";
 import AmberColors from "./color/amber";
 import BlueColors from "./color/blue";
 import BlueGreyColors from "./color/blueGrey";
@@ -43,7 +42,7 @@ export default class CssvilleColors {
     ...BrownColors.collection.vars,
     ...GreyColors.collection.vars,
     ...BlueGreyColors.collection.vars,
-    ...UiColors.colors
+    ...ThemeColors.colors
   ];
 
   public static colorsPalettePostfixValues : [string, string[]][] = this.colorsPalette.map(e => e.postfixValue)

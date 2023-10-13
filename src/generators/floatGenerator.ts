@@ -1,7 +1,7 @@
 import { CssClassData } from "../data/cssClassData";
-import { GeneratorBase } from "../GeneratorBase";
+import { Generator } from "../Generator";
 
-export class FloatGenerator extends GeneratorBase {
+export class FloatGenerator extends Generator {
     list = ["left", "right", "none", "inherit", "initial", "revert", "unset"];
     cssData = [
         new CssClassData("float", ["float"], this.list)

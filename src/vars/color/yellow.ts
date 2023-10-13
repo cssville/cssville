@@ -1,5 +1,5 @@
 import { IVar } from "../../IVar";
-import { VarBase } from "../../VarBase";
+import { Var } from "../../Var";
 import ColorCollection from "./ColorCollection";
 
 export default class YellowColors {

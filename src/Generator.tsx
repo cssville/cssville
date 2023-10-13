@@ -1,7 +1,7 @@
 import { CssClassData } from "./data/cssClassData";
 import { IGenerator } from "./IGenerator";
 
-export class GeneratorBase implements IGenerator {
+export class Generator implements IGenerator {
   public constructor(name: string, generateCssForBreakpoints: boolean = true) {
     this.name = name;
     this.generateCssForBreakpoints = generateCssForBreakpoints;
@@ -9,7 +9,7 @@ export class GeneratorBase implements IGenerator {
 
   public name: string = "";
   public generateCssForBreakpoints: boolean;
-  public postfixValuesMap: Map<string, string[]> = new Map();
+  public cssClassToValuesMap: Map<string, string[]> = new Map();
   public cssData: CssClassData[] = [];
 
   generate(prefix: string = "", classes: string[] = []): string {

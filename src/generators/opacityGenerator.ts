@@ -1,8 +1,8 @@
 import { CssClassData } from "../data/cssClassData";
-import { GeneratorBase } from "../GeneratorBase";
+import { Generator } from "../Generator";
 
-export class OpacityGenerator extends GeneratorBase {
-    postfixValuesMap = new Map([
+export class OpacityGenerator extends Generator {
+    cssClassToValuesMap = new Map([
         ["0", ["0"]],
         ["01", ["0.1"]],
         ["02", ["0.2"]],
@@ -17,6 +17,6 @@ export class OpacityGenerator extends GeneratorBase {
     ]);
     list = ["inherit", "initial", "revert", "revert-layer", "unset"];
     cssData = [
-        new CssClassData("opacity", ["opacity"], this.list, this.postfixValuesMap),
+        new CssClassData("opacity", ["opacity"], this.list, this.cssClassToValuesMap),
     ];
 }

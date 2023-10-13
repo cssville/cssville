@@ -1,8 +1,8 @@
 import { CssClassData } from "../data/cssClassData";
-import { GeneratorBase } from "../GeneratorBase";
+import { Generator } from "../Generator";
 
-export class DisplayGenerator extends GeneratorBase {
-    postfixValuesMap = new Map([
+export class DisplayGenerator extends Generator {
+    cssClassToValuesMap = new Map([
         ["block-flow", ["block flow"]],
         ["inline-flow", ["inline flow"]],
         ["inline-flow-root", ["inline flow-root"]],
@@ -15,6 +15,6 @@ export class DisplayGenerator extends GeneratorBase {
     list = ["block", "inline", "inline-block", "flex", "inline-flex", "inherit", "grid", "inline-grid",
         "flow-root", "none", "contents", "table", "table-row", "table-column", "table-cell", "list-item", "initial", "revert", "unset"];
     cssData = [
-        new CssClassData("d", ["display"], this.list, this.postfixValuesMap)
+        new CssClassData("d", ["display"], this.list, this.cssClassToValuesMap)
     ];
 }

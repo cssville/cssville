@@ -1,7 +1,6 @@
 import { IVar } from "./IVar";
-import hexToRgba from "./utils";
 
-export class VarBase implements IVar {
+export class Var implements IVar {
   public constructor(category: string, name: string, value: string) {
     this.category = category;
     this.name = name;

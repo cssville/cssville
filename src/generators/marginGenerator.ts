@@ -1,8 +1,8 @@
 import { CssClassData } from "../data/cssClassData";
-import { GeneratorBase } from "../GeneratorBase";
+import { Generator } from "../Generator";
 
-export class MarginGenerator extends GeneratorBase {
-    postfixValuesMap = new Map([
+export class MarginGenerator extends Generator {
+    cssClassToValuesMap = new Map([
         ["0", ["0px"]],
         ["1", ["4px"]],
         ["2", ["8px"]],
@@ -17,12 +17,12 @@ export class MarginGenerator extends GeneratorBase {
     ]);
     list = ["auto", "inherit", "initial", "revert", "unset"];
     cssData = [
-        new CssClassData("m", ["margin"], this.list, this.postfixValuesMap),
-        new CssClassData("mt", ["margin-top"], this.list, this.postfixValuesMap),
-        new CssClassData("mb", ["margin-bottom"], this.list, this.postfixValuesMap),
-        new CssClassData("ml", ["margin-left"], this.list, this.postfixValuesMap),
-        new CssClassData("mr", ["margin-right"], this.list, this.postfixValuesMap),
-        new CssClassData("mx", ["margin-left", "margin-right"], this.list, this.postfixValuesMap),
-        new CssClassData("my", ["margin-top", "margin-bottom"], this.list, this.postfixValuesMap),
+        new CssClassData("m", ["margin"], this.list, this.cssClassToValuesMap),
+        new CssClassData("mt", ["margin-top"], this.list, this.cssClassToValuesMap),
+        new CssClassData("mb", ["margin-bottom"], this.list, this.cssClassToValuesMap),
+        new CssClassData("ml", ["margin-left"], this.list, this.cssClassToValuesMap),
+        new CssClassData("mr", ["margin-right"], this.list, this.cssClassToValuesMap),
+        new CssClassData("mx", ["margin-left", "margin-right"], this.list, this.cssClassToValuesMap),
+        new CssClassData("my", ["margin-top", "margin-bottom"], this.list, this.cssClassToValuesMap),
     ];
 }
