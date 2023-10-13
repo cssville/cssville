@@ -38,7 +38,7 @@ import CssvilleShadow from "./vars/shadow";
 import CssvilleFontFamily from "./vars/fontFamily";
 import { ZIndexGenerator } from "./generators/zIndexGenerator";
 
-export default class Cssville {
+export class Cssville {
 
   public static generators: IGenerator[] =
     [
@@ -75,9 +75,11 @@ export default class Cssville {
       new ZIndexGenerator("z-index"),
     ];
 
+  public static breakpoints: IVar[] = CssvilleBreakpoints.breakpoints;
+
   public static variables: IVar[][] =
     [
-      CssvilleBreakpoints.breakpoints,
+      this.breakpoints,
       CssvilleFontFamily.vars,
       CssvilleColors.colorsPalette,
       CssvilleBorder.vars,
@@ -108,7 +110,7 @@ export default class Cssville {
       var cssPart = g.generate("", classes);
       css += cssPart;
     }
-    for (const breakpoint of CssvilleBreakpoints.breakpoints) {
+    for (const breakpoint of this.breakpoints) {
       var innerCss = "";
       for (var x = 0; x < this.generators.length; x++) {
         const generator = this.generators[x];

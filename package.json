@@ -9,11 +9,12 @@
     "cssville.css"
   ],
   "scripts": {
-    "build": "webpack",
-    "generate": "node build/cssville.bundle.js build/cssville.css",
+    "build:node": "webpack --config webpack.node.js",
+    "build:ts": "tsc",
+    "generate": "node gen/generator.bundle.js build/cssville.css",
     "copy-css": "copyfiles -u 1 build/cssville.css .",
     "copy": "npm-run-all copy-css",
-    "deploy-prepare": "npm-run-all build generate copy"
+    "deploy-prepare": "npm-run-all build:node generate copy"
   },
   "repository": {
     "type": "git",
@@ -33,8 +34,12 @@
     "npm-run-all": "^4.1.5",
     "rimraf": "^3.0.2",
     "ts-loader": "^9.5.0",
-    "typescript": "^4.6.3",
+    "typescript": "^5.3.0-dev.20231013",
     "webpack": "^5.88.2",
     "webpack-cli": "^4.9.2"
+  },
+  "dependencies": {
+    "dts-bundle-webpack": "^1.0.2",
+    "webpack-merge": "^5.9.0"
   }
 }
