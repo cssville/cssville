@@ -9,7 +9,7 @@ import LightBlueColors from "./color/lightBlue";
 import YellowColors from "./color/yellow";
 
 export default class ThemeColors {
-  
+
   public static text = new Var("color", "text", BlueGreyColors.collection.colors["900"].color.var);
   public static link = new Var("color", "link", BlueColors.collection.colors["800"].color.var);
   public static success = new Var("color", "success", GreenColors.collection.colors["600"].color.var);
@@ -23,14 +23,18 @@ export default class ThemeColors {
   public static background = new Var("color", "bg", "white");
   public static foreground = new Var("color", "fg", "white");
 
-  public static colors : IVar[] = [
+  public static colors: IVar[] = [
     this.text,
     this.link,
+    this.success,
+    this.info,
+    this.warning,
+    this.error,
     this.border,
-    this.shadow,    
+    this.shadow,
     this.primary,
     this.secondary,
     this.background,
     this.foreground
-  ];  
+  ];
 }
