@@ -37,6 +37,7 @@ import { BoxShadowGenerator } from "./generators/boxShadowGenerator";
 import CssvilleShadow from "./vars/shadow";
 import CssvilleFontFamily from "./vars/fontFamily";
 import { ZIndexGenerator } from "./generators/zIndexGenerator";
+import { LineHeightGenerator } from "./generators/lineHeightGenerator";
 
 export class Cssville {
 
@@ -61,6 +62,7 @@ export class Cssville {
       new FontWeightGenerator("font-weight"),
       new HeightGenerator("height"),
       new JustifyContentGenerator("justify-content"),
+      new LineHeightGenerator("line-height"),
       new MarginGenerator("margin"),
       new ObjectFitGenerator("object-fit"),
       new OpacityGenerator("opacity"),
