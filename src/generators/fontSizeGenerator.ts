@@ -3,7 +3,6 @@ import { Generator } from "../Generator";
 
 export class FontSizeGenerator extends Generator {
     cssClassToValuesMap = new Map([
-        ["xxx-large", ["48px", "xxx-large"]],
         ["2xs", ["11px"]],
         ["xs", ["12px"]],
         ["sm", ["14px"]],
@@ -17,6 +16,7 @@ export class FontSizeGenerator extends Generator {
         ["6xl", ["57px"]],
         ["7xl", ["69px"]],
         ["8xl", ["80px"]],
+        ["xxx-large", ["48px", "xxx-large"]],
     ]);
     list = ["smaller", "larger", "xx-small", "x-small", "small", "medium", "large",
         "x-large", "xx-large"];
