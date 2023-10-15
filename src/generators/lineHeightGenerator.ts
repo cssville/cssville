@@ -18,6 +18,6 @@ export class LineHeightGenerator extends Generator {
         ["8xl", ["88px"]],
     ]);
     cssData = [
-        new CssClassData("fs", ["font-size"], [], this.cssClassToValuesMap)
+        new CssClassData("lh", ["line-height"], [], this.cssClassToValuesMap)
     ];
 }
