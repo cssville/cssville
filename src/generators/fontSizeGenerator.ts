@@ -3,6 +3,7 @@ import { Generator } from "../Generator";
 
 export class FontSizeGenerator extends Generator {
     cssClassToValuesMap = new Map([
+        ["3xs", ["10px"]],
         ["2xs", ["11px"]],
         ["xs", ["12px"]],
         ["sm", ["14px"]],
