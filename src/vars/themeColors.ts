@@ -12,14 +12,16 @@ export default class ThemeColors {
 
   public static text = new Var("color", "text", BlueGreyColors.collection.colors["900"].color.var);
   public static link = new Var("color", "link", BlueColors.collection.colors["800"].color.var);
+
   public static success = new Var("color", "success", GreenColors.collection.colors["600"].color.var);
   public static info = new Var("color", "info", LightBlueColors.collection.colors["600"].color.var);
   public static warning = new Var("color", "warning", YellowColors.collection.colors["600"].color.var);
   public static error = new Var("color", "error", DeepOrangeColors.collection.colors["600"].color.var);
-  public static border = new Var("color", "border", BlueGreyColors.collection.colors["100"].color.var);
-  public static shadow = new Var("color", "shadow", BlueGreyColors.collection.colors["300"].opacityColors[2].var);
   public static primary = new Var("color", "primary", BlueColors.collection.colors["600"].color.var);
   public static secondary = new Var("color", "secondary", CyanColors.collection.colors["300"].color.var);
+  
+  public static border = new Var("color", "border", BlueGreyColors.collection.colors["100"].color.var);
+  public static shadow = new Var("color", "shadow", BlueGreyColors.collection.colors["300"].opacityColors[2].var);
   public static background = new Var("color", "bg", "white");
   public static foreground = new Var("color", "fg", "white");
 

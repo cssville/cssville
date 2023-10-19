@@ -38,6 +38,9 @@ import CssvilleShadow from "./vars/shadow";
 import CssvilleFontFamily from "./vars/fontFamily";
 import { ZIndexGenerator } from "./generators/zIndexGenerator";
 import { LineHeightGenerator } from "./generators/lineHeightGenerator";
+import { BorderColorGenerator } from "./generators/borderColorGenerator";
+import { BorderStyleGenerator } from "./generators/borderStyleGenerator";
+import { BorderWidthGenerator } from "./generators/borderWidthGenerator";
 
 export class Cssville {
 
@@ -45,7 +48,10 @@ export class Cssville {
     [
       new AlignContentGenerator("align-content"),
       new AlignItemsGenerator("align-items"),
-      new BorderGenerator("border"),
+      new BorderGenerator("border", false),
+      new BorderColorGenerator("border-color", false),
+      new BorderStyleGenerator("border-style", false),
+      new BorderWidthGenerator("border-width", false),
       new BorderRadiusGenerator("border-radius"),
       new BoxShadowGenerator("box-shadow"),
       new BackgroundColorGenerator("background-color", false),
