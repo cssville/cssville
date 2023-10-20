@@ -10,10 +10,10 @@ export default class CssvilleBreakpoints {
   public static xl = new Var("breakpoint", "xl", "1280px");
 
   public static breakpoints : IVar[] = [
-    this.xs,
-    this.sm,
-    this.md,
-    this.lg,
     this.xl,
+    this.lg,
+    this.md,
+    this.sm,
+    this.xs,
   ];
 }
