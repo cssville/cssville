@@ -41,6 +41,7 @@ import { LineHeightGenerator } from "./generators/lineHeightGenerator";
 import { BorderColorGenerator } from "./generators/borderColorGenerator";
 import { BorderStyleGenerator } from "./generators/borderStyleGenerator";
 import { BorderWidthGenerator } from "./generators/borderWidthGenerator";
+import { TextWrapGenerator } from "./generators/textWrapGenerator";
 
 export class Cssville {
 
@@ -77,6 +78,7 @@ export class Cssville {
       new PositionGenerator("position"),
       new TextAlignGenerator("text-align"),
       new TextDecorationGenerator("text-decoration"),
+      new TextWrapGenerator("text-wrap"),
       new WidthGenerator("width"),
       new WhiteSpaceGenerator("white-space"),
       new WordBreakGenerator("word-break"),
