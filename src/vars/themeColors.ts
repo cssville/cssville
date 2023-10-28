@@ -44,7 +44,7 @@ export default class ThemeColors {
   public static secondary = new Var("color", "secondary", BlueGreyColors.collection.colors["900"].color.var);
   public static secondaryBg = new Var("color", "bg-secondary", GreyColors.collection.colors["50"].color.var);
   public static secondaryBorder = new Var("color", "border-secondary", BlueGreyColors.collection.colors["100"].color.var);
-  public static secondaryHover = new Var("color", "hover-secondary", BlueGreyColors.collection.colors["100"].color.var);
+  public static secondaryHover = new Var("color", "hover-secondary", GreyColors.collection.colors["100"].color.var);
   
   public static border = new Var("color", "border", BlueGreyColors.collection.colors["100"].color.var);
   public static shadow = new Var("color", "shadow", BlueGreyColors.collection.colors["300"].opacityColors[2].var);
