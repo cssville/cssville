@@ -19,26 +19,32 @@ export default class ThemeColors {
   public static success = new Var("color", "success", LightGreenColors.collection.colors["900"].color.var);
   public static successBg = new Var("color", "bg-success", LightGreenColors.collection.colors["100"].color.var);
   public static successBorder = new Var("color", "border-success", LightGreenColors.collection.colors["700"].color.var);
+  public static successHover = new Var("color", "hover-success", LightGreenColors.collection.colors["200"].color.var);
 
   public static info = new Var("color", "info", LightBlueColors.collection.colors["900"].color.var);
   public static infoBg = new Var("color", "bg-info", LightBlueColors.collection.colors["100"].color.var);
   public static infoBorder = new Var("color", "border-info", LightBlueColors.collection.colors["700"].color.var);
+  public static infoHover = new Var("color", "hover-info", LightBlueColors.collection.colors["200"].color.var);
 
   public static warning = new Var("color", "warning", YellowColors.collection.colors["900"].color.var);
   public static warningBg = new Var("color", "bg-warning", YellowColors.collection.colors["100"].color.var);
   public static warningBorder = new Var("color", "border-warning", YellowColors.collection.colors["700"].color.var);
+  public static warningHover = new Var("color", "hover-warning", YellowColors.collection.colors["200"].color.var);
 
   public static error = new Var("color", "error", RedColors.collection.colors["900"].color.var);
   public static errorBg = new Var("color", "bg-error", RedColors.collection.colors["100"].color.var);
   public static errorBorder = new Var("color", "border-error", RedColors.collection.colors["700"].color.var);
+  public static errorHover = new Var("color", "hover-error", RedColors.collection.colors["200"].color.var);
 
   public static primary = new Var("color", "primary", BlueColors.collection.colors["900"].color.var);
   public static primaryBg = new Var("color", "bg-primary", BlueColors.collection.colors["100"].color.var);
   public static primaryBorder = new Var("color", "border-primary", BlueColors.collection.colors["700"].color.var);
+  public static primaryHover = new Var("color", "hover-primary", BlueColors.collection.colors["200"].color.var);
 
   public static secondary = new Var("color", "secondary", BlueGreyColors.collection.colors["900"].color.var);
   public static secondaryBg = new Var("color", "bg-secondary", GreyColors.collection.colors["50"].color.var);
   public static secondaryBorder = new Var("color", "border-secondary", BlueGreyColors.collection.colors["100"].color.var);
+  public static secondaryHover = new Var("color", "hover-secondary", BlueGreyColors.collection.colors["100"].color.var);
   
   public static border = new Var("color", "border", BlueGreyColors.collection.colors["100"].color.var);
   public static shadow = new Var("color", "shadow", BlueGreyColors.collection.colors["300"].opacityColors[2].var);
@@ -69,6 +75,13 @@ export default class ThemeColors {
     this.errorBorder,
     this.primaryBorder,
     this.secondaryBorder,
+
+    this.successHover,
+    this.infoHover,
+    this.warningHover,
+    this.errorHover,
+    this.primaryHover,
+    this.secondaryHover,
 
     this.border,
     this.shadow,
