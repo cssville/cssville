@@ -1,6 +1,6 @@
 {
   "name": "cssville",
-  "version": "0.6.6",
+  "version": "0.6.7",
   "description": "",
   "main": "cssville.css",
   "style": "cssville.css",
@@ -23,7 +23,7 @@
   },
   "homepage": "https://cssville.xyz",
   "devDependencies": {
-    "cssville-generators": "^0.2.0",
+    "cssville-generators": "^0.3.0",
     "@types/node": "^16.18.58"
   }
 }
